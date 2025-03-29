@@ -1,4 +1,4 @@
-# Nome do projeto
+# Smart Finance
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
