@@ -14,7 +14,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 * Gustavo de Faria Melo
 * Samuel Aguiar Carvalho gusmão
 * Thiago Fernandes Lemos
-* Nome completo do aluno 6
+* Gustavo victor de paula
 
 ## Professor
 
