@@ -53,20 +53,8 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 
 * <a href="presentation/README.md">Apresentação do projeto</a>
 
-## Dicas 
 
-> **IMPORTANTE: APAGUE ESTA SEÇÃO DE DICAS ANTES DE ENTREGAR SEU TRABALHO**
 
-No desenvolvimento deste trabalho, o grupo deverá utilizar este repositório como local para entrega de todos os artefatos a serem produzidos. Em especial, o grupo deverá providenciar a alteração dos seguintes arquivos:
-
-* **Capa do projeto** (Este arquivo aqui): informação básica sobre o projeto, alunos do grupo e professores responsáveis;
-* **Arquivo CITATION.cff**: utilizado para referenciar o projeto;
-* **Pasta docs**: documentação completa do projeto;
-* **Pasta presentation**: apresentação do projeto;
-* **Pasta src**: todos os arquivos resultantes da programação do software;
-* **Pasta templates**: templates de arquivos úteis ao longo desta disciplina. Essa pasta deve ser removida antes da entrega da versão final do trabalho.
-
-Toda a documentação do projeto é realizado por meio do Markdown, uma linguagem de formatação adotada pelo GitHub e por diversas outras plataformas. Aprenda Markdown e use-o para documentar o projeto.
 
 > **Links úteis**:
 > - [Sintaxe básica de gravação e formatação no GitHub - GitHub Docs](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
