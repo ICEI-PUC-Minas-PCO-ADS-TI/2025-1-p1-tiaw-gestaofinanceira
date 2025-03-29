@@ -33,6 +33,8 @@ negócios promissores
  que desejam melhorar sua organização financeira pessoal. A proposta é criar uma solução
  acessível e eficiente, que possa ser utilizada por qualquer pessoa, independentemente do nível de
  conhecimento financeiro que possua.
+ 
+ 
  [História de usuários.pdf](https://github.com/user-attachments/files/19522741/Historia.de.usuarios.pdf)
 
  
