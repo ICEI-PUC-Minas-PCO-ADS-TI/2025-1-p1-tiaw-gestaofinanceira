@@ -18,7 +18,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Professor
 
-* Nome completo do(a) professor(a)
+* Amália soares vieira de Vasconcelos 
 
 ## Instruções de utilização
 
