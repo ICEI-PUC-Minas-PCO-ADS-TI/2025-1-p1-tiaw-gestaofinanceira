@@ -38,3 +38,6 @@ negócios promissores
  [História de usuários.pdf](https://github.com/user-attachments/files/19522741/Historia.de.usuarios.pdf)
 
  
+[Requisitos_Software.pdf](https://github.com/user-attachments/files/19522779/Requisitos_Software.pdf)
+
+ 
