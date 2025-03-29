@@ -13,7 +13,7 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 * Eduardo chaves santos 
 * Gustavo de Faria Melo
 * Samuel Aguiar Carvalho gusmão
-* Nome completo do aluno 5
+* Thiago Fernandes Lemos
 * Nome completo do aluno 6
 
 ## Professor
