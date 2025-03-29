@@ -1,6 +1,10 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A gestão financeira é um pilar essencial para qualquer pessoa ou empresa que deseja manter a
+saúde econômica e alcançar estabilidade a longo prazo. No entanto, muitas pessoas enfrentam
+dificuldades nesse processo, seja por falta de conhecimento, planejamento ou ferramentas
+adequadas. Este projeto busca entender essas dores e propor soluções acessíveis e eficientes
+para tornar a gestão financeira mais prática e eficaz.
 
 ## Problema
 Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
