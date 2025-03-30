@@ -33,19 +33,4 @@ negócios promissores
  que desejam melhorar sua organização financeira pessoal. A proposta é criar uma solução
  acessível e eficiente, que possa ser utilizada por qualquer pessoa, independentemente do nível de
  conhecimento financeiro que possua.
- 
- 
- [História de usuários.pdf](https://github.com/user-attachments/files/19522741/Historia.de.usuarios.pdf)
 
- 
-[Requisitos_Software.pdf](https://github.com/user-attachments/files/19522779/Requisitos_Software.pdf)
-
-
-https://www.figma.com/design/i5GPYOFFEdrGdNAQuQYqHm/TIAW---Gest%C3%A3o-Financeira?node-id=0-1&t=DCeIVrpMwRCEt4TJ-1
-
- [História de usuários.pdf](https://github.com/user-attachments/files/19522741/Historia.de.usuarios.pdf)[metodologia.pdf](https://github.com/user-attachments/files/19523743/metodologia.pdf)
-
-
-
-
- 
