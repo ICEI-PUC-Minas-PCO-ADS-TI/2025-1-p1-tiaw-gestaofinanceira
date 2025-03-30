@@ -43,4 +43,9 @@ negócios promissores
 
 https://www.figma.com/design/i5GPYOFFEdrGdNAQuQYqHm/TIAW---Gest%C3%A3o-Financeira?node-id=0-1&t=DCeIVrpMwRCEt4TJ-1
 
+ [História de usuários.pdf](https://github.com/user-attachments/files/19522741/Historia.de.usuarios.pdf)[metodologia.pdf](https://github.com/user-attachments/files/19523743/metodologia.pdf)
+
+
+
+
  
