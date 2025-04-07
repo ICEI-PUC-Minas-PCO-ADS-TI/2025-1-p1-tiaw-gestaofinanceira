@@ -3,20 +3,13 @@
 
 <span style="color:red">Pré-requisitos: <a href="03-Product-design.md"> product design</a></span>
 
- Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados na parte de <a href="03-Product-design.md"> product design</a></span>.
 
  ## User flow
 
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
 Fluxo de usuário (user flow) é uma técnica que permite ao desenvolvedor mapear todo o fluxo de navegação do usuário na aplicação. Essa técnica serve para alinhar os caminhos e as possíveis ações que o usuário pode realizar junto com os membros da equipe.
 
-**✳️✳️✳️ COLOQUE AQUI O USER FLOW ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
+![User flow](images/projeto-interface/user-flow.jpg)
 
 > **Links úteis**:
 > - [User flow: o quê é e como fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
@@ -26,17 +19,91 @@ Fluxo de usuário (user flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
 São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+##### TELA CRIAR CONTA
 
 Descrição para a tela XPTO
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![Tela para criar a sua conta](images/projeto-interface/wireframe/criar-conta.jpg)
+
+##### TELA FAZER LOGIN
+
+Descrição para a tela XPTO
+
+![Tela para realizar login](images/projeto-interface/wireframe/fazer-login.jpg)
+
+##### TELA ESQUECEU A SENHA
+
+Descrição para a tela XPTO
+
+![Tela para quem esqueceu a senha](images/projeto-interface/wireframe/esqueceu-a-%20senha-enviar%20código.jpg)
+
+
+##### TELA SOLICITAÇÃO REALIZADA
+
+Descrição para a tela XPTO
+
+![Tela de feedback que a solicitação foi realizada](images/projeto-interface/wireframe/esqueceu-a-senha-solicitação-realizada.jpg)
+
+
+##### TELA CADASTRAR A NOVA SENHA
+
+Descrição para a tela XPTO
+
+![Tela para cadastrar a nova senha](images/projeto-interface/wireframe/esqueceu-a-senha-nova-senha.jpg)
+
+
+##### TELA ACESSAR A CONTA APÓS A TROCA DE SENHA
+
+Descrição para a tela XPTO
+
+![Tela para acessar a conta após trocar a senha](images/projeto-interface/wireframe/esqueceu-a-senha-acessar-conta.jpg)
+
+
+##### TELA DE INÍCIO E VISÃO GERAL
+
+Descrição para a tela XPTO
+
+![Tela inicial e de visão geral](images/projeto-interface/wireframe/visão-geral.jpg)
+
+
+##### TELA DE TRANSAÇÕES POR DATA
+
+Descrição para a tela XPTO
+
+![Tela para visualizar suas transações filtradas por data](images/projeto-interface/wireframe/transações-data.jpg)
+
+
+##### TELA DE TRANSAÇÕES POR CATEGORIA
+
+Descrição para a tela XPTO
+
+![Tela para visualizar suas transações por categoria](images/projeto-interface/wireframe/transações-categoria.jpg)
+
+##### TELA DE TRANSAÇÕES POR CONTA
+
+Descrição para a tela XPTO
+
+![Tela para visualizar suas transações por contas](images/projeto-interface/wireframe/transações-contas.jpg)
+
+##### TELA DE RELATÓRIOS
+
+Descrição para a tela XPTO
+
+![Tela para visualizar relatórios das finanças](images/projeto-interface/wireframe/relatórios.jpg)
+
+
+
+##### TELA CONGIGURAÇÕES DA CONTA
+
+Descrição para a tela XPTO
+
+![Tela para configurações básica da conta](images/projeto-interface/wireframe/configurações-conta.jpg)
+
+
 
  
 > **Links úteis**:
@@ -50,10 +117,4 @@ Descrição para a tela XPTO
 
 ### Protótipo Interativo
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto das interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse utilizando o software finalizado. Utilize as mesmas ferramentas de criação de wireframes para a montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
-
-**✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
-
-✅ [Protótipo interativo](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
+✅ [Protótipo interativo](https://www.figma.com/proto/i5GPYOFFEdrGdNAQuQYqHm/TIAW---Gest%C3%A3o-Financeira?node-id=62-2412&starting-point-node-id=62%3A2412)

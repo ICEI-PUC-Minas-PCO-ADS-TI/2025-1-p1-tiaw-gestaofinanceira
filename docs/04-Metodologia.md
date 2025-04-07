@@ -3,15 +3,17 @@
 
 <span style="color:red">Pré-requisitos: <a href="03-Product-design.md"> Product design</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para abordar o problema. Inclua definições sobre os ambientes de trabalho utilizados pela equipe para desenvolver o projeto. Isso abrange a relação dos ambientes utilizados, a estrutura para a gestão do código-fonte, além da definição do processo e das ferramentas por meio dos quais a equipe se organiza (gestão de equipes).
+A metodologia do grupo foi pensada a partir de uma realidade que a gente vê muito no Brasil: a desigualdade social. Enquanto alguns têm acesso a tudo com facilidade, outros mal conseguem guardar dinheiro no fim do mês. Vendo isso, decidimos trabalhar em um projeto que ajude pessoas a se organizarem financeiramente, principalmente aquelas que têm mais dificuldade com isso. O objetivo final é criar um aplicativo de gestão financeira simples e acessível.
+
+Durante o desenvolvimento, usamos algumas ferramentas pra facilitar a comunicação e o trabalho em grupo. O WhatsApp foi o principal meio pra conversar no dia a dia e alinhar ideias rápidas. Também usamos o Canvas (app da faculdade) pra acompanhar prazos e atividades. O código do projeto foi organizado no GitHub, onde conseguimos controlar melhor as versões e dividir tarefas. Pra programar, usamos o Visual Studio Code, que é uma ferramenta prática e todo mundo do grupo já tinha familiaridade. Já o design do app foi feito no Figma, e pra criar apresentações e materiais visuais, usamos o Canva.
+
+A divisão do trabalho foi feita de forma bem simples, cada um ficou com uma parte, mas sempre trocando ideia pra garantir que tudo estivesse alinhado. Tentamos seguir um processo em que todo mundo pudesse dar opinião e participar ativamente, sem muita burocracia.
 
 ## Relação de ambientes de trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
 ## Controle de versão
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
 A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo que o [GitHub](https://github.com) foi utilizado para hospedagem do repositório.
 
@@ -42,14 +44,11 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ###  Divisão de papéis
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
-> A equipe utiliza o Scrum como base para definição do processo de desenvolvimento. [Adicione informações abaixo sobre a divisão de papéis entre os membros da equipe.]
-
-- Scrum Master: nome de um membro da equipe, principal responsável pela gestão do projeto.
-- Product Owner: nome de um membro da equipe, representante dos interesses de todos os envolvidos (stakeholders), define as funcionalidades do produto e prioriza os itens de Product Backlog.
-- Equipe de Desenvolvimento: nomes de todos os membros da equipe, pois todos os membros deverão implementar no mínimo duas telas/funcionalidades.
-- Equipe de Design: nomes dos membros da equipe que trabalharão com design.
+- Scrum Master: Samuel Aguiar
+- Product Owner: Gustavo Faria
+- Equipe de Desenvolvimento: Eduardo, Gustavo Faria, Gustavo Victor, Thiago e Samuel.
+- Equipe de Design: Gustavo Victor.
 
 > **Links úteis**:
 > - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
@@ -57,8 +56,6 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 > - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
 
 ### Processo
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
 Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, o GitHub Projects, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. 
 
@@ -74,18 +71,14 @@ Coloque uma imagem da estrutura da ferramenta de controle de tarefas (Kanban) e 
 
 ### Ferramentas
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) editor de código, (2) ferramentas de comunicação, (3) ferramentas de diagramação, (4) plataformas de hospedagem, entre outras.
-
-⚠️ EXEMPLO ⚠️ os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
 | Ambiente                            | Plataforma                         | Link de acesso                       |
 |-------------------------------------|------------------------------------|--------------------------------------|
-| Processo de Design Thinking         | Miro                               | https://....   ⚠️ EXEMPLO ⚠️        |
-| Repositório de código fonte         | GitHub                             | https://....   ⚠️ EXEMPLO ⚠️        |
-| Documentos do projeto               | GitHub                             | http://....    ⚠️ EXEMPLO ⚠️        |
-| Gerenciamento do projeto            | GitHub Projects                    | http://....    ⚠️ EXEMPLO ⚠️        |
-| Projeto de interface                | Figma                              | http://....    ⚠️ EXEMPLO ⚠️        |
-| Hospedagem                          | Vercel                             | http://....    ⚠️ EXEMPLO ⚠️        |
+| Processo de Design Thinking         | Miro                               | https://miro.com/app/board/uXjVINldcR4=/        |
+| Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p1-tiaw-gestaofinanceira/tree/main/src        |
+| Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p1-tiaw-gestaofinanceira/tree/main/docs   |
+| Gerenciamento do projeto            | GitHub Projects                    |         |
+| Projeto de interface                | Figma                              | https://www.figma.com/design/i5GPYOFFEdrGdNAQuQYqHm/TIAW---Gest%C3%A3o-Financeira?node-id=62-2412&t=zWfOoHFTqtLsA0C0-1    |
+| Hospedagem                          |  |    |
  
