@@ -1,14 +1,14 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
       "email": "admin@abc.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
@@ -19,7 +19,101 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
-      "id": 3
+      "id": "3"
+    }
+  ],
+  "receitas": [],
+  "despesas": [],
+  "categoriasReceitas": [
+    {
+      "id": "1",
+      "nome": "Salário"
+    },
+    {
+      "id": "2",
+      "nome": "Freelance"
+    },
+    {
+      "id": "3",
+      "nome": "Investimentos"
+    },
+    {
+      "id": "4",
+      "nome": "Outros"
+    }
+  ],
+  "categoriasDespesas": [
+    {
+      "id": "1",
+      "nome": "Alimentação"
+    },
+    {
+      "id": "2",
+      "nome": "Transporte"
+    },
+    {
+      "id": "3",
+      "nome": "Saúde"
+    },
+    {
+      "id": "4",
+      "nome": "Educação"
+    },
+    {
+      "id": "5",
+      "nome": "Lazer"
+    }
+  ],
+  "conta": [
+    {
+      "id": "1",
+      "nome": "Carteira"
+    },
+    {
+      "id": "2",
+      "nome": "Itaú"
+    },
+    {
+      "id": "3",
+      "nome": "Bradesco"
+    },
+    {
+      "id": "4",
+      "nome": "Santander"
+    },
+    {
+      "id": "5",
+      "nome": "Caixa Econômica"
+    },
+    {
+      "id": "6",
+      "nome": "Banco do Brasil"
+    }
+  ],
+  "cartao": [
+    {
+      "id": "1",
+      "nome": "Conta Corrente"
+    },
+    {
+      "id": "2",
+      "nome": "Cartão de Crédito"
+    },
+    {
+      "id": "3",
+      "nome": "Poupança"
+    },
+    {
+      "id": "4",
+      "nome": "Carteira"
+    },
+    {
+      "id": "5",
+      "nome": "Pix"
+    },
+    {
+      "id": "6",
+      "nome": "Outros"
     }
   ]
 }
