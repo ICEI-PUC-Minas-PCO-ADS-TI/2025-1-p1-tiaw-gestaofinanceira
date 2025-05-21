@@ -11,12 +11,14 @@ Objetivo do Projeto
 O objetivo deste projeto é desenvolver uma plataforma que permita aos usuários monitorar seus gastos financeiros de forma fácil e organizada. A plataforma ajudará a registrar despesas, categorizar os gastos e fornecer relatórios que facilitem a visualização do orçamento pessoal. Com isso, buscamos auxiliar os usuários no controle financeiro, permitindo que tomem decisões mais conscientes sobre seu dinheiro. Além disso, o sistema poderá oferecer gráficos e alertas para ajudar na gestão financeira de forma eficiente.
 
 ## Integrantes
-
-* Eduardo chaves santos 
+ 
 * Gustavo de Faria Melo
-* Samuel Aguiar Carvalho gusmão
+* Samuel Aguiar Carvalho Gusmão
 * Thiago Fernandes Lemos
 * Gustavo victor de paula
+* Samuel Elias Alves Quirino
+* Guilherme Emanoel Guimarães
+* Gabriel Soares Cardoso Paiva
 
 ## Professor
 
