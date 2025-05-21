@@ -12,13 +12,13 @@ O objetivo deste projeto é desenvolver uma plataforma que permita aos usuários
 
 ## Integrantes
  
-* Gustavo de Faria Melo
-* Samuel Aguiar Carvalho Gusmão
-* Thiago Fernandes Lemos
-* Gustavo victor de paula
-* Samuel Elias Alves Quirino
-* Guilherme Emanoel Guimarães
 * Gabriel Soares Cardoso Paiva
+* Guilherme Emanoel Guimarães
+* Gustavo de Faria Melo
+* Gustavo victor de paula
+* Samuel Aguiar Carvalho Gusmão
+* Samuel Elias Alves Quirino
+* Thiago Fernandes Lemos
 
 ## Professor
 
