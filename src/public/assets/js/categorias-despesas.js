@@ -18,8 +18,8 @@ function carregarCategorias() {
             opcoesCategoriaDespesa.innerHTML = ''; // Limpa antes de preencher
             categoriasDespesa.forEach(catDespesa => {
                 let carregarCategoriaDespesa = `
-                    <input type="radio" id="categoria-${catDespesa.id}" name="categoriaDespesa" value="${catDespesa.nome}">
-                    <label for="categoria-${catDespesa.id}">${catDespesa.nome}</label>
+                    <input type="radio" id="categoria-despesa-${catDespesa.id}" name="categoriaDespesa" value="${catDespesa.nome}">
+                    <label for="categoria-despesa-${catDespesa.id}">${catDespesa.nome}</label>
                 `;
                 opcoesCategoriaDespesa.innerHTML += carregarCategoriaDespesa;
             });

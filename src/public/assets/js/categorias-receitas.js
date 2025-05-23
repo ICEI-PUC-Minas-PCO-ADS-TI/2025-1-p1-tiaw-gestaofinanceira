@@ -16,10 +16,10 @@ function carregarCategoriasReceita() {
         .then(res => res.json())
         .then(categoriasReceita => {
             opcoesCategoriaReceita.innerHTML = ''; // Limpa antes de preencher
-            categoriasReceita.forEach(cat => {
+            categoriasReceita.forEach(catReceita => {
                 let carregarCategoriaReceita = `
-                    <input type="radio" id="categoria-${cat.id}" name="categoriaReceita" value="${cat.nome}">
-                    <label for="categoria-${cat.id}">${cat.nome}</label>
+                    <input type="radio" id="categoria-receita-${catReceita.id}" name="categoriaReceita" value="${catReceita.nome}">
+                    <label for="categoria-receita-${catReceita.id}">${catReceita.nome}</label>
                 `;
                 opcoesCategoriaReceita.innerHTML += carregarCategoriaReceita;
             });
