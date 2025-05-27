@@ -12,21 +12,20 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Gabriel Moreira  |Um aplicativo para administrar minhas finanças e gastos         |Praticidade com a sua gestão financeira               |
-|Uma pessoa com pouco conhecimento no assunto, quero organizar minhas finanças.       |Acompanhar meus gastos por aplicativos e planilhas, para evitar compras impulsivas e administrar melhor meu orçamento.       |Ajudar a visualizar seus gastos e receitas em um só lugar, facilitando a organização financeira e evitando compras impulsivas. |
-|Eduarda Vargas   |Ter um dashboard financeiro com gráficos interativos     |Visualizar rapidamente meus gastos, receitas e investimentos     |
-|Gerente comercial      |Receber notificações sobre prazos de pagamento e vencimento de contas      |Evitar atrasos e manter minha saúde financeira em dia      |
-|Carlos Garcia      |Uma plataforma que centralize todas as minhas contas bancárias, corretoras e ativos financeiros em um único lugar      |Ter uma visão unificada do meu patrimônio e facilitar a gestão financeira sem precisar acessar diferentes aplicativos e sites    |
-|Um investidor experiente       |Receber notificações inteligentes sobre movimentações relevantes do mercado e oportunidades alinhadas ao meu perfil de investimento      |Agir rapidamente e tomar decisões estratégicas sem precisar monitorar o mercado manualmente o tempo todo     |
+|Gabriel Moreira  |  Cadastrar minhas receitas e despesas | Manter o controle do que ganho e gasto |
+|Uma pessoa com pouco conhecimento no assunto, quero organizar minhas finanças. | Ver o saldo mensal de receitas e despesas  | Acompanhar meu desempenho financeiro no mês |
+|Eduarda Vargas  |Visualizar o saldo atual total | Saber quanto dinheiro tenho disponível no momento |
+|Gerente comercial |  Visualizar um gráfico do balanço do mês | Entender se fechei o mês no positivo ou negativo |
+|Carlos Garcia   | Classificar minhas receitas e despesas por categorias | Organizar melhor meus gastos e identificar onde estou investindo meu dinheiro |
+|Um investidor experiente | Visualizar gráficos com as formas de pagamento utilizadas | Entender quais meios de pagamento uso com mais frequência |
+|Gabriel Moreira | Visualizar minhas receitas e despesas mais recentes | Ter acesso rápido às últimas movimentações financeiras |
+|Eduarda Vargas  | Visualizar o saldo de cada conta cadastrada | Saber quanto tenho em cada banco ou carteira |
+|Gabriel Moreira | Visualizar gráficos de receitas e despesas por categoria |  Entender melhor meus hábitos de consumo e identificar excessos |
+|Carlos Garcia   | Alterar receitas e despesas já cadastradas | Corrigir possíveis erros ou atualizar informações |
+|Eduarda Vargas  | Excluir receitas e despesas |Remover lançamentos duplicados ou que não são mais válidos  |
+|Gabriel Moreira | Adicionar uma descrição às minhas despesas | Lembrar o motivo ou o contexto de cada gasto |
 
 
-
-> **Links úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (user stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 common user story mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 
 ## Proposta de valor
@@ -47,8 +46,6 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 ![Proposta de valor para Carlos Garcia](images/product-design/mapa3-CarlosGarcia.jpg)
 
 
-> **Links úteis**:
-> - [O que é o canvas da proposta de valor e como usar?](https://www.youtube.com/watch?v=Iqb-8Q_eiiA)
 
 ## Requisitos
 
@@ -58,8 +55,18 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | O sistema deve permitir que o usuário cadastre suas receitas e despesas. | ALTA       |
-| RF-002 | - O sistema deve exibir um painel interativo com gráficos e relatórios financeiros. | MÉDIA     |
+| RF-001 | O sistema deve permitir que o usuário cadastre suas receitas e despesas. | ALTA |
+| RF-002 | O sistema deve exibir um gráfico do balanço do mês | MÉDIA |
+| RF-003 | O sistema deve permitir a classificação de receitas e despesas por categorias. | MÉDIA |
+| RF-004 | O sistema deve exibir o saldo atual tota | ALTA |
+| RF-005 | O sistema deve exibir o saldo mensal de receitas e despesas. | MÉDIA |
+| RF-006 | O sistema deve exibir as receitas e despesas recentes | ALTA |
+| RF-007 | O sistema deve exibir o saldo das contas do usuário | MÉDIA |
+| RF-008 | O sistema deve exibir gráficos de receitas e despesas por categoria | MÉDIA |
+| RF-009 | O sistema deve permitir que o usuário altere suas receitas e despesas | ALTA |
+| RF-010 | O sistema deve permitir que o usuário exclua suas receitas e despesas | ALTA |
+| RF-011 | O sistema deve permitir que o usuário adicione uma descrição nas suas despesas | BAIXA |
+| RF-012 | O sistema deve exibir gráficos com as formas de pagamento utilizadas pelo o usuário | BAIXA |
 
 ### Requisitos não funcionais
 
@@ -68,15 +75,11 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 | RNF-001 | O sistema deverá estar disponível 24/7 para acesso contínuo. | ALTA     |
 | RNF-002 | A interface do sistema deve ser simples e intuitiva, evitando burocracia para o usuário.          | MÉDIA     |
 | RNF-003 |  A plataforma deve garantir a segurança dos dados, protegendo informações bancárias e pessoais | ALTA |
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Com base nas histórias de usuários, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+| RNF-004 |O sistema deverá ser responsivo e funcionar corretamente em dispositivos móveis | ALTA |
+| RNF-005 | O sistema deve ser otimizado, permitindo um rápido acesso | MÉDIA |
 
 
-> **Links úteis**:
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [Entenda o que são requisitos de software, a diferença entre requisito funcional e não funcional, e como identificar e documentar cada um deles](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+
 
 
 ## Restrições

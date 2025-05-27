@@ -11,10 +11,6 @@ Fluxo de usuário (user flow) é uma técnica que permite ao desenvolvedor mapea
 
 ![User flow](images/projeto-interface/user-flow.jpg)
 
-> **Links úteis**:
-> - [User flow: o quê é e como fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User flow vs site maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 user flow tools & templates for smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 
 ## Wireframes
@@ -25,73 +21,46 @@ São protótipos usados no design de interface para sugerir a estrutura de um si
 
 ##### TELA CRIAR CONTA
 
-Descrição para a tela XPTO
+Tela onde o usuário pode criar uma nova conta
 
 ![Tela para criar a sua conta](images/projeto-interface/wireframe/criar-conta.jpg)
 
 ##### TELA FAZER LOGIN
 
-Descrição para a tela XPTO
+Tela para o usuário realizar login na sua conta já existente
 
 ![Tela para realizar login](images/projeto-interface/wireframe/fazer-login.jpg)
-
-##### TELA ESQUECEU A SENHA
-
-Descrição para a tela XPTO
-
-![Tela para quem esqueceu a senha](images/projeto-interface/wireframe/esqueceu-a-%20senha-enviar%20código.jpg)
-
-
-##### TELA SOLICITAÇÃO REALIZADA
-
-Descrição para a tela XPTO
-
-![Tela de feedback que a solicitação foi realizada](images/projeto-interface/wireframe/esqueceu-a-senha-solicitação-realizada.jpg)
-
-
-##### TELA CADASTRAR A NOVA SENHA
-
-Descrição para a tela XPTO
-
-![Tela para cadastrar a nova senha](images/projeto-interface/wireframe/esqueceu-a-senha-nova-senha.jpg)
-
-
-##### TELA ACESSAR A CONTA APÓS A TROCA DE SENHA
-
-Descrição para a tela XPTO
-
-![Tela para acessar a conta após trocar a senha](images/projeto-interface/wireframe/esqueceu-a-senha-acessar-conta.jpg)
 
 
 ##### TELA DE INÍCIO E VISÃO GERAL
 
-Descrição para a tela XPTO
+Tela onde o usuário acessa as principais funções, visualiza o seu saldo atual, as receitas e despeas no mês, pode adicionar uma nova receita ou despesa e visualiza as transações mais recentes.
 
 ![Tela inicial e de visão geral](images/projeto-interface/wireframe/visão-geral.jpg)
 
 
 ##### TELA DE TRANSAÇÕES POR DATA
 
-Descrição para a tela XPTO
+Tela onde filtra as transações do mês atual e agrupa pela data
 
 ![Tela para visualizar suas transações filtradas por data](images/projeto-interface/wireframe/transações-data.jpg)
 
 
 ##### TELA DE TRANSAÇÕES POR CATEGORIA
 
-Descrição para a tela XPTO
+Tela onde filtra as transações do mês atual e agrupa por categorias
 
 ![Tela para visualizar suas transações por categoria](images/projeto-interface/wireframe/transações-categoria.jpg)
 
 ##### TELA DE TRANSAÇÕES POR CONTA
 
-Descrição para a tela XPTO
+Tela onde filtra as transações do mês atual e agrupa por contas
 
 ![Tela para visualizar suas transações por contas](images/projeto-interface/wireframe/transações-contas.jpg)
 
 ##### TELA DE RELATÓRIOS
 
-Descrição para a tela XPTO
+Tela onde o usuário visualiza os seus relatórios por mês
 
 ![Tela para visualizar relatórios das finanças](images/projeto-interface/wireframe/relatórios.jpg)
 
@@ -99,7 +68,7 @@ Descrição para a tela XPTO
 
 ##### TELA CONGIGURAÇÕES DA CONTA
 
-Descrição para a tela XPTO
+Tela onde o usuário pode realizar configuração básicas da sua conta
 
 ![Tela para configurações básica da conta](images/projeto-interface/wireframe/configurações-conta.jpg)
 

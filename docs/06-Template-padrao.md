@@ -4,9 +4,22 @@
 
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-> **Links úteis**:
->
-> - [CSS website layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website page layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect liquid layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and why icons improve your web design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+Utilizaremos como padronização das cores e fontes as seguintes, especificadas em CSS como variáveis:
+
+```
+:root {
+    --Verde: #00C500;
+    --Verde-escuro: #008000;
+    --Verde-claro: #EBFFEB;
+    --red-50: #FFEBEB;
+    --red-500: #F00;
+    --gray-50: #FAFFFA;
+    --gray-100: #F5F5F5;
+    --gray-600: #9EA19E;
+    --gray-700: #4B4D4B;
+    --gray-900: #141414;
+    --fontfamily: "Inter", sans-serif;
+}
+```
+
+Em relação a iconografia utilizaremos a biblioteca do Lucide (https://lucide.dev/icons/).

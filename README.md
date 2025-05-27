@@ -15,14 +15,14 @@ O objetivo deste projeto é desenvolver uma plataforma que permita aos usuários
 * Gabriel Soares Cardoso Paiva
 * Guilherme Emanoel Guimarães
 * Gustavo de Faria Melo
-* Gustavo victor de paula
+* Gustavo Victor de Paula
 * Samuel Aguiar Carvalho Gusmão
 * Samuel Elias Alves Quirino
 * Thiago Fernandes Lemos
 
 ## Professor
 
-* Amália soares vieira de Vasconcelos 
+* Amália Soares Vieira de Vasconcelos 
 
 ## Instruções de utilização
 

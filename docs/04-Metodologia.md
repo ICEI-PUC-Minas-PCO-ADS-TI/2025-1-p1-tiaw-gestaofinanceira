@@ -61,13 +61,6 @@ Coloque detalhes sobre o processo de Design Thinking e a implementação do Fram
 
 Coloque uma imagem da estrutura da ferramenta de controle de tarefas (Kanban) e o link do GitHub Projects.
  
-> **Links úteis**:
-> - [GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [Planejamento e gestão ágil de projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Como criar backlogs no GitHub](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial slack](https://slack.com/intl/en-br/)
 
 ### Ferramentas
 
@@ -78,7 +71,7 @@ Coloque uma imagem da estrutura da ferramenta de controle de tarefas (Kanban) e 
 | Processo de Design Thinking         | Miro                               | https://miro.com/app/board/uXjVINldcR4=/        |
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p1-tiaw-gestaofinanceira/tree/main/src        |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p1-tiaw-gestaofinanceira/tree/main/docs   |
-| Gerenciamento do projeto            | GitHub Projects                    |         |
+| Gerenciamento do projeto            | GitHub Projects                    |https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/44         |
 | Projeto de interface                | Figma                              | https://www.figma.com/design/i5GPYOFFEdrGdNAQuQYqHm/TIAW---Gest%C3%A3o-Financeira?node-id=62-2412&t=zWfOoHFTqtLsA0C0-1    |
 | Hospedagem                          |  |    |
  
