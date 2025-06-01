@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Financeira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.0.0/lucide.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="toggle-container">
+        <button id="toggleButton">
+            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                <circle cx="12" cy="12" r="3" />
+            </svg>
+        </button>
+    </div>
+
+
+    <div class="card saldo-atual">
+        <div class="card-header">
+            <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-dollar-sign" width="20" height="20" fill="none"
+                stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+            <h2>Saldo atual</h2>
+        </div>
+        <div class="card-value">
+            <div class="valor" id="saldo-atual"></div>
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card receitas">
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" class="trend-icon lucide lucide-trending-up" width="20"
+                    height="20" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                </svg>
+                <h2>Receitas no mês</h2>
+            </div>
+            <div class="card-value">
+                <div class="valor" id="receitas-mes"></div>
+            </div>
+        </div>
+
+        <div class="card despesas">
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" class="trend-icon lucide lucide-trending-down" width="20"
+                    height="20" fill="none" stroke="#c62828" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                </svg>
+                <h2>Despesas no mês</h2>
+            </div>
+            <div class="card-value">
+                <div class="valor" id="despesas-mes"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dados.js"></script>
+</body>
+
+</html>
