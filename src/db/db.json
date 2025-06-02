@@ -22,20 +22,156 @@
       "id": "3"
     }
   ],
-  "receitas": [],
-  "despesas": [],
-  "categoriasReceitas": [
+  "receitas": [
     {
       "id": "1",
-      "nome": "Salário"
+      "titulo": "Teste",
+      "valor": "30",
+      "data": "2025-04-21",
+      "categoria": "Freelance",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
     },
     {
       "id": "2",
-      "nome": "Freelance"
+      "titulo": "Teste",
+      "valor": "30",
+      "data": "2025-04-22",
+      "categoria": "Freelance",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
     },
     {
       "id": "3",
-      "nome": "Investimentos"
+      "titulo": "Teste",
+      "valor": "2",
+      "data": "2025-06-22",
+      "categoria": "Salário",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "4",
+      "titulo": "Salário",
+      "valor": "1500",
+      "data": "2025-06-22",
+      "categoria": "Salário",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "5",
+      "titulo": "Teste cat",
+      "valor": "22",
+      "data": "2025-05-22",
+      "categoria": "Freelance",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "6",
+      "titulo": "Teste receitas",
+      "valor": "20",
+      "data": "2025-06-22",
+      "categoria": "Outros",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "7",
+      "titulo": "Teste",
+      "valor": "33",
+      "data": "2025-05-22",
+      "categoria": "Freelance",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "8",
+      "titulo": "Teste",
+      "valor": "33",
+      "data": "2025-05-22",
+      "categoria": "Investimentos",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "9",
+      "titulo": "Investimentos CDB",
+      "valor": "200",
+      "data": "2025-05-22",
+      "categoria": "Investimentos",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "0d5e",
+      "titulo": "teste",
+      "valor": "100",
+      "data": "2025-05-27",
+      "categoria": "Freelance",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "be12",
+      "titulo": "Salário",
+      "valor": "1500",
+      "data": "2025-05-31",
+      "categoria": "Salário",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    },
+    {
+      "id": "0820",
+      "titulo": "Dívida do Paulinho",
+      "valor": "50",
+      "data": "2025-05-31",
+      "categoria": "Investimentos",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    }
+  ],
+  "despesas": [
+    {
+      "id": "1",
+      "titulo": "Teste",
+      "valor": "200",
+      "data": "2025-05-18",
+      "categoria": "Alimentação",
+      "tipo": "essencial",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": ""
+    }
+  ],
+  "categoriasReceitas": [
+    {
+      "id": "1",
+      "nome": "Salário",
+      "icon": "dollar-sign"
+    },
+    {
+      "id": "2",
+      "nome": "Freelance",
+      "icon": "pen-tool"
+    },
+    {
+      "id": "3",
+      "nome": "Investimentos",
+      "icon": "trending-up"
     },
     {
       "id": "4",
@@ -90,7 +226,7 @@
       "nome": "Banco do Brasil"
     }
   ],
-  "cartao": [
+  "pagamento": [
     {
       "id": "1",
       "nome": "Conta Corrente"
@@ -101,18 +237,22 @@
     },
     {
       "id": "3",
-      "nome": "Poupança"
+      "nome": "Cartão de Débito"
     },
     {
       "id": "4",
-      "nome": "Carteira"
+      "nome": "Poupança"
     },
     {
       "id": "5",
-      "nome": "Pix"
+      "nome": "Carteira"
     },
     {
       "id": "6",
+      "nome": "Pix"
+    },
+    {
+      "id": "7",
       "nome": "Outros"
     }
   ]

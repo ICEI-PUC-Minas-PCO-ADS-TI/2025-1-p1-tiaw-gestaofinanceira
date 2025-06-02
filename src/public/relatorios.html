@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Finance | Relatórios</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/relatorios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <h4>Smart Finance</h4>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Visão Geral</a></li>
+                    <li><a href="relatorios.html" class="active">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="user-info">
+            <span id="user-name">Usuário</span>
+    </header>
+    <div class="nav-meses">
+        <div class="meses">
+            <button id="btn-anterior" class="btnMes"><i data-lucide="chevron-left" class="icon-seta"></i></button>
+            <div id="meses" style="display: inline-flex; gap: 1rem;"></div>
+            <button id="btn-proximo" class="btnMes"><i data-lucide="chevron-right" class="icon-seta"></i></button>
+        </div>
+        <button id="btn-hoje" style="display: none;">Voltar para o mês atual</button>
+    </div>
+    <!-- Gráfico de balanço do mês-->
+    <div class="graficos">
+        <div id="titulo-grafico"></div>
+        <div class="grafico-container">
+            <canvas id="grafico-balanco"></canvas>
+        </div>
+        <div id="dados-grafico-balanco"></div>
+    </div>
+    <!-- Gráfico de receitas por categorias-->
+    <div class="graficos">
+        <h4 id="titulo-grafico">Receitas por categorias</h4>
+        <div class="grafico-container">
+            <canvas id="grafico-receitas"></canvas>
+        </div>
+        <div id="dados-grafico-receitas"></div>
+    </div>
+    <!-- Gráfico de despesas por categorias-->
+    <div class="graficos">
+        <h4 id="titulo-grafico">Despesas por categorias</h4>
+        <div class="grafico-container">
+            <canvas id="grafico-despesas"></canvas>
+        </div>
+        <div id="dados-grafico-despesas" class="dados-balanco"></div>
+    </div>
+
+
+    <script src="assets/js/relatorios.js"></script>
+    <script>lucide.createIcons();</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

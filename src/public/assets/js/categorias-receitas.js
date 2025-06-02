@@ -18,11 +18,19 @@ function carregarCategoriasReceita() {
             opcoesCategoriaReceita.innerHTML = ''; // Limpa antes de preencher
             categoriasReceita.forEach(catReceita => {
                 let carregarCategoriaReceita = `
-                    <input type="radio" id="categoria-receita-${catReceita.id}" name="categoriaReceita" value="${catReceita.nome}">
-                    <label for="categoria-receita-${catReceita.id}">${catReceita.nome}</label>
+                    <input type="radio" 
+                        id="categoria-receita-${catReceita.id}" 
+                        name="categoriaReceita" 
+                        value="${catReceita.id}"
+                        data-nome="${catReceita.nome}"
+                        data-icon="${catReceita.icon}">
+                    <label for="categoria-receita-${catReceita.id}" class="categoriasReceitas">
+                        <i data-lucide="${catReceita.icon}" class="icons"></i> ${catReceita.nome}
+                    </label>
                 `;
                 opcoesCategoriaReceita.innerHTML += carregarCategoriaReceita;
             });
+            lucide.createIcons();
         })
         .catch(err => {
             console.error("Erro ao carregar categorias:", err);
@@ -42,12 +50,18 @@ btnFecharModalCategoriaReceita.addEventListener('click', () => {
 
 // Função para selecionar a categoria
 btnSelecionarCategoriaReceita.addEventListener('click', () => {
-    const categoriaSelecionadaReceita = document.querySelector('input[name="categoriaReceita"]:checked')?.value;
+    const categoriaSelecionadaReceita = document.querySelector('input[name="categoriaReceita"]:checked');
 
     if (categoriaSelecionadaReceita) {
         // Preenche o campo de categoria com a categoria escolhida
-        inputCategoriaReceita.value = categoriaSelecionadaReceita;
+        //inputCategoriaReceita.value = categoriaSelecionadaReceita;
         modalCategoriaReceita.style.display = 'none'; // Fecha o modal após a seleção
+        inputCategoriaReceita.style.display = 'flex';
+        
+        const categoriaId = categoriaSelecionadaReceita.value; 
+        inputCategoriaReceita.value = categoriaSelecionadaReceita.getAttribute('data-nome');;
+        inputCategoriaReceita.setAttribute('catReceita-id', categoriaId);
+
     } else {
         alert("Selecione uma categoria."); // Exibe um alerta se nenhuma categoria for selecionada
     }

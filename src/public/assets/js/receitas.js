@@ -14,16 +14,10 @@ document.getElementById('btnAbrirModalReceita').addEventListener('click', abrirM
 // Botão para fechar o modal e descartar alterações
 const btnDescartarReceita = document.getElementById('btnDescartarReceita')
 btnDescartarReceita.addEventListener('click', function () {
-    modalReceita.style.display = 'none';
-     formReceita.reset();
-     
-     // Força o valor atual da data no campo
-     setTimeout(() => {
-         const campoDataReceita = document.getElementById('data');
-         if (campoDataReceita) {
-            campoDataReceita.value = new Date().toISOString().split('T')[0];
-         }
-     }, 10); // Pequeno atraso garante que o DOM atualize antes de aplicar a data
+    formReceita.reset();
+    // Força o valor atual da data no campo
+    document.getElementById('dataReceita').value = new Date().toISOString().split('T')[0];
+    inputCategoriaReceita.style.display = 'none';
  });
 
 // Fecha o modal ao clicar fora da caixa e mantém as alterações
@@ -32,6 +26,7 @@ modalReceita.addEventListener('click', function (event) {
         fecharModalReceita();
     }
 });
+
 
 // Função para adicionar receita no banco de dados	
 function addReceita(receitas) {
@@ -49,6 +44,7 @@ function addReceita(receitas) {
         .then(data => {
             alert("Receita adicionada: " + receitas.titulo); // Exibe uma mensagem de sucesso
             fecharModalReceita(); // Fecha o modal após adicionar a receita
+            exibeReceitas(); // Atualiza a lista de receitas
         })
         // Se houver erro, exibe uma mensagem de erro
         .catch(error => {
@@ -77,32 +73,31 @@ btnAddReceita.addEventListener('click', function () {
     let campoRecorrencia = document.querySelector('input[name="tipoRecorrenciaReceita"]:checked')?.value;
     let campoObservacaoReceita = document.getElementById('inputObservacaoReceita').value;
 
-    // Cria um objeto com os dados do formulário
-    let receitas = {
-        titulo: campoTituloReceita,
-        valor: campoValorReceita,
-        data: campoDataReceita,
-        categoria: campoCategoriaReceita,
-        frequencia: campoFrequencia,
-        parcelas: campoParcelas,
-        recorrencia: campoRecorrencia,
-        observacao: campoObservacaoReceita,
-    };
+    // Função que busca o número de receitas para não gerar um ID aleatório
+    fetch(apiReceitas)
+    .then(res => res.json())
+    .then(numReceitas => {
+        // Cria um objeto com os dados do formulário
+        let receitas = {
+            titulo: campoTituloReceita,
+            valor: campoValorReceita,
+            data: campoDataReceita,
+            categoria: campoCategoriaReceita,
+            frequencia: campoFrequencia,
+            parcelas: campoParcelas,
+            recorrencia: campoRecorrencia,
+            observacao: campoObservacaoReceita,
+        };
+        // Adiciona o objeto receitas no banco de dados
+        addReceita(receitas);
+    });
+    
 
-    // Adiciona o objeto receitas no banco de dados
-    addReceita(receitas);
 
     // Limpa o formulário
     formReceita.reset();
-    campoData.value = dataAtualReceita; // Mantém o campo de data com a data atual
+    campoDataReceita.value = dataAtualReceita; // Mantém o campo de data com a data atual
 
-    // Força o valor atual da data no campo
-    setTimeout(() => {
-        const campoData = document.getElementById('data');
-        if (campoData) {
-            campoData.value = new Date().toISOString().split('T')[0];
-        }
-    }, 10); // Pequeno atraso garante que o DOM atualize antes de aplicar a data
 });
 
 // Habilita ou desabilita o campo de recorrência, habilita com as opções recorrente e parcelada
@@ -130,6 +125,30 @@ document.querySelectorAll('input[name="frequenciaReceita"]').forEach((radio) => 
 });
 
 //Preenche o campo de data com a data atual
-const campoDataReceita = document.getElementById('dataReceita');
-const dataAtualReceita = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
-campoDataReceita.value = dataAtualReceita;
+addEventListener('DOMContentLoaded', function (){
+    const campoDataReceita = document.getElementById('dataReceita');
+    const dataAtualReceita = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
+    campoDataReceita.value = dataAtualReceita;
+})
+
+
+
+
+//Modal nova transação
+// Script para abrir e fechar o modal
+const caixaNovaTransacao = document.getElementById('container');
+const modalNovaTransacao = document.getElementById('modalNovaTransacao');
+function abrirModalTransacao() {
+    modalNovaTransacao.style.display = 'flex';
+}
+function fecharModalTransacao() {
+    modalNovaTransacao.style.display = 'none';
+}
+// Botão para abrir o modal
+document.getElementById('btnAbrirModalNovaTransacao').addEventListener('click', abrirModalTransacao);
+// Fecha o modal ao clicar fora da caixa e mantém as alterações
+modalNovaTransacao.addEventListener('click', function (event) {
+    if (!caixaNovaTransacao.contains(event.target)) {
+        fecharModalTransacao();
+    }
+});

@@ -38,6 +38,7 @@ btnAbrirModalCategoriaDespesa.addEventListener('click', () => {
 // Fechar o modal de categoria quando o botão de fechar for clicado
 btnFecharModalCategoriaDespesa.addEventListener('click', () => {
     modalCategoriaDespesa.style.display = 'none';
+    formDespesa.reset(); // Reseta o formulário ao fechar o modal
 });
 
 // Função para selecionar a categoria
@@ -48,6 +49,7 @@ btnSelecionarCategoriaDespesa.addEventListener('click', () => {
         // Preenche o campo de categoria com a categoria escolhida
         inputCategoriaDespesa.value = categoriaSelecionadaDespesa;
         modalCategoriaDespesa.style.display = 'none'; // Fecha o modal após a seleção
+        inputCategoriaDespesa.style.display = 'flex';
     } else {
         alert("Selecione uma categoria."); // Exibe um alerta se nenhuma categoria for selecionada
     }

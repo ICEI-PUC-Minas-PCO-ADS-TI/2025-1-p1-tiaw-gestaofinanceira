@@ -6,142 +6,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Finance</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <!-- Botão para adicionar nova receita -->
-    <button id="btnAbrirModalReceita">Adicionar nova receita</button>
-    <!-- Modal de nova receita -->
-    <div id="modalReceita">
-        <div id="caixaReceita">
-            <h4>Adicionar nova receita</h4>
-            <form id="formReceita">
-                <label>Título*</label>
-                <input type="text" id="inputTituloReceita" class="form-control" placeholder="Título" required> <br>
-                <label>Valor*</label>
-                <input type="number" id="inputValorReceita" class="form-control" placeholder="Valor" required> <br>
-                <label>Data*</label>
-                <input type="date" id="dataReceita" required /> <br>
-                <label>Categoria*</label>
-                <input type="text" id="inputCategoriaReceita" placeholder="Escolha uma categoria pelo botão abaixo" readonly required />
-                <button type="button" id="btnAbrirModalCategoriaReceita" class="btnSuccess">Escolher Categoria</button>
-                <div id="modalCategoriaReceita">
-                    <div id="caixaCategoriaReceita">
-                        <h4>Escolha uma Categoria</h4>
-                        <div id="opcoesCategoriaReceita" class="opcoes">
-                        </div><br><br>
-                        <button type="button" id="btnAdicionarCategoriaReceita" class="btnDisabled">Adicionar nova categoria</button>
-                        <button type="button" id="btnSelecionarCategoriaReceita" class="btnSuccess">Selecionar categoria</button>
-                        <button type="button" id="btnFecharModalCategoriaReceita" class="btnDanger">Fechar</button>
+    <header>
+        <h4>Smart Finance</h4>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Visão Geral</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="user-info">
+            <span id="user-name">Usuário</span>
+    </header>
+    <button id="btnAbrirModalNovaTransacao"> <i data-lucide="circle-plus" class="icons iconNovaTransacao"></i> </button> 
+    <div id="modalNovaTransacao">
+        <div id="container">
+            <h3>Nova transação:</h3>
+            <!-- Botão para adicionar nova receita -->
+            <button id="btnAbrirModalReceita"> <i data-lucide="arrow-down-to-line" class="icons iconBtnAbrirModalReceita"></i>
+                Adicionar nova receita</button>
+            <!-- Modal de nova receita -->
+            <div id="modalReceita">
+                <div id="caixaReceita">
+                    <div class="headerModalReceita">
+                        <h4>Adicionar nova receita</h4>
+                        <i data-lucide="circle-x" class="icons" onclick="fecharModalReceita()"></i>
                     </div>
-                </div><br>
-                <label>Frequência:</label>
-                <div class="opcoesFrequenciaReceita opcoes">
-                    <input type="radio" id="unicaReceita" name="frequenciaReceita" value="unica" checked>
-                    <label for="unicaReceita">Única</label>
-                    <input type="radio" id="parceladaReceita" name="frequenciaReceita" value="parcelada">
-                    <label for="parceladaReceita">Parcelada</label>
-                    <input type="radio" id="recorrenteReceita" name="frequenciaReceita" value="recorrente">
-                    <label for="recorrenteReceita">Recorrente</label>
+                    <form id="formReceita">
+                        <label>Título*</label>
+                        <input type="text" id="inputTituloReceita" class="form-control" placeholder="Título" required> <br>
+                        <label>Valor*</label>
+                        <input type="number" id="inputValorReceita" class="form-control" placeholder="R$0,00" required> <br>
+                        <label>Data*</label>
+                        <input type="date" id="dataReceita" required /> <br>
+    
+    
+                        <label>Categoria*</label>
+                        <input type="text" id="inputCategoriaReceita" placeholder="Escolha uma categoria pelo botão abaixo" readonly required />
+                        <button type="button" id="btnAbrirModalCategoriaReceita" class="btnSuccess">Escolher categoria</button>
+                        <div id="modalCategoriaReceita">
+                            <div id="caixaCategoriaReceita">
+                                <h4>Escolha uma Categoria</h4>
+                                <div id="opcoesCategoriaReceita" class="opcoes">
+                                </div><br><br>
+                                <button type="button" id="btnAdicionarCategoriaReceita" class="btnDisabled">Adicionar nova
+                                    categoria</button>
+                                <button type="button" id="btnSelecionarCategoriaReceita" class="btnSuccess">Selecionar
+                                    categoria</button>
+                                <button type="button" id="btnFecharModalCategoriaReceita" class="btnDanger">Fechar</button>
+                            </div>
+                        </div><br>
+    
+                        <label>Frequência:</label>
+                        <div class="opcoesFrequenciaReceita opcoes">
+                            <input type="radio" id="unicaReceita" name="frequenciaReceita" value="unica" checked>
+                            <label for="unicaReceita">Única</label>
+                            <input type="radio" id="parceladaReceita" name="frequenciaReceita" value="parcelada">
+                            <label for="parceladaReceita">Parcelada</label>
+                            <input type="radio" id="recorrenteReceita" name="frequenciaReceita" value="recorrente">
+                            <label for="recorrenteReceita">Recorrente</label>
+                        </div>
+                        <div id="opcaoParcelasReceita" style="display: none;">
+                            <label>Quantas parcelas?</label><br>
+                            <input type="number" id="parcelasReceita" placeholder="Número de parcelas"> <br>
+                        </div><br>
+                        <div id="opcoesRecorrenciaReceita" class="opcoes" style="display: none;">
+                            <input type="radio" id="diariaReceita" name="tipoRecorrenciaReceita" value="diaria">
+                            <label for="diariaReceita">Diária</label>
+                            <input type="radio" id="semanalReceita" name="tipoRecorrenciaReceita" value="semanal">
+                            <label for="semanalReceita">Semanal</label>
+                            <input type="radio" id="mensalReceita" name="tipoRecorrenciaReceita" value="mensal">
+                            <label for="mensalReceita">Mensal</label>
+                            <input type="radio" id="anualReceita" name="tipoRecorrenciaReceita" value="anual">
+                            <label for="anualReceita">Anual</label>
+                        </div><br>
+                        <label>Observação</label>
+                        <input type="text" id="inputObservacaoReceita" placeholder="Observação"> <br>
+                    </form>
+                    <p>(*) Campos obrigatórios</p>
+    
+                    <button id="btnAddReceita" class="btnSuccess">Salvar nova receita</button>
+                    <button id="btnDescartarReceita" class="btnDanger">Limpar</button>
                 </div>
-                <div id="opcaoParcelasReceita" style="display: none;">
-                    <label>Quantas parcelas?</label><br>
-                    <input type="number" id="parcelasReceita" placeholder="Número de parcelas"> <br>
-                </div><br>
-                <div id="opcoesRecorrenciaReceita" class="opcoes" style="display: none;">
-                    <input type="radio" id="diariaReceita" name="tipoRecorrenciaReceita" value="diaria">
-                    <label for="diariaReceita">Diária</label>
-                    <input type="radio" id="semanalReceita" name="tipoRecorrenciaReceita" value="semanal">
-                    <label for="semanalReceita">Semanal</label>
-                    <input type="radio" id="mensalReceita" name="tipoRecorrenciaReceita" value="mensal">
-                    <label for="mensalReceita">Mensal</label>
-                    <input type="radio" id="anualReceita" name="tipoRecorrenciaReceita" value="anual">
-                    <label for="anualReceita">Anual</label>
-                </div><br>
-                <label>Observação</label>
-                <input type="text" id="inputObservacaoReceita" placeholder="Observação"> <br>
-            </form>
-            <p>(*) Campos obrigatórios</p>
-
-            <button id="btnAddReceita" class="btnSuccess">Salvar nova receita</button>
-            <button id="btnDescartarReceita" class="btnDanger">Descartar</button>
+            </div>
+    
+            <!-- Botão para adicionar nova despesa -->
+            <button id="btnAbrirModalDespesa"> <i data-lucide="arrow-up-to-line"
+                    class="icons iconBtnAbrirModalDespesa"></i>Adicionar nova despesa</button>
+            <!-- Modal de nova despesa -->
+            <div id="modalDespesa">
+                <div id="caixaDespesa">
+                    <div class="headerModalDespesa">
+                        <h4>Adicionar nova despesa</h4>
+                        <i data-lucide="circle-x" onclick="fecharModalDespesa()" class="icons"></i>
+                    </div>
+                    <form id="formDespesa">
+                        <label>Título*</label>
+                        <input type="text" id="inputTituloDespesa" placeholder="Título" required> <br>
+                        <label>Valor*</label>
+                        <input type="number" id="inputValorDespesa" placeholder="Valor" required> <br>
+                        <label>Data*</label>
+                        <input type="date" id="dataDespesa" required /> <br>
+                        <label>Categoria*</label>
+                        <input type="text" id="inputCategoriaDespesa" placeholder="Escolha uma categoria pelo botão abaixo"
+                            readonly required />
+                        <button type="button" id="btnAbrirModalCategoriaDespesa" class="btnSuccess">Escolher Categoria</button>
+                        <div id="modalCategoriaDespesa">
+                            <div id="caixaCategoriaDespesa">
+                                <h4>Escolha uma Categoria de despesa</h4>
+                                <div id="opcoesCategoriaDespesa" class="opcoes">
+                                </div><br><br>
+                                <button type="button" id="btnAdicionarCategoriaDespesa" class="btnDisabled">Adicionar nova
+                                    categoria</button>
+                                <button type="button" id="btnSelecionarCategoriaDespesa" class="btnSuccess">Selecionar
+                                    categoria</button>
+                                <button type="button" id="btnFecharModalCategoriaDespesa" class="btnDanger">Fechar</button>
+                            </div>
+                        </div><br>
+                        <label>Como você considera essa despesa?*</label>
+                        <div class="opcoes">
+                            <input type="radio" id="essencial" name="tipoDespesa" value="essencial" checked>
+                            <label for="essencial">Essencial</label>
+                            <input type="radio" id="desnecessaria" name="tipoDespesa" value="desnecessaria">
+                            <label for="desnecessaria">Desnecessária</label>
+                            <input type="radio" id="investimento" name="tipoDespesa" value="investimento">
+                            <label for="investimento">Investimento</label>
+                            <input type="radio" id="emergencia" name="tipoDespesa" value="emergencia">
+                            <label for="emergencia">Emergencial</label>
+                        </div><br>
+                        <label>Frequência:</label>
+                        <div class="opcoesFrequenciaDespesa opcoes">
+                            <input type="radio" id="unicaDespesa" name="frequenciaDespesa" value="unica" checked>
+                            <label for="unicaDespesa">Única</label>
+                            <input type="radio" id="parceladaDespesa" name="frequenciaDespesa" value="parcelada">
+                            <label for="parceladaDespesa">Parcelada</label>
+                            <input type="radio" id="recorrenteDespesa" name="frequenciaDespesa" value="recorrente">
+                            <label for="recorrenteDespesa">Recorrente</label>
+                        </div>
+                        <div id="opcaoParcelasDespesa" style="display: none;">
+                            <label>Quantas parcelas?</label><br>
+                            <input type="number" id="parcelasDespesa" placeholder="Número de parcelas"> <br>
+                        </div><br>
+                        <div id="opcoesRecorrenciaDespesa" class="opcoes" style="display: none;">
+                            <input type="radio" id="diariaDespesa" name="tipoRecorrenciaDespesa" value="diaria">
+                            <label for="diariaDespesa">Diária</label>
+                            <input type="radio" id="semanalDespesa" name="tipoRecorrenciaDespesa" value="semanal">
+                            <label for="semanalDespesa">Semanal</label>
+                            <input type="radio" id="mensalDespesa" name="tipoRecorrenciaDespesa" value="mensal">
+                            <label for="mensalDespesa">Mensal</label>
+                            <input type="radio" id="anualDespesa" name="tipoRecorrenciaDespesa" value="anual">
+                            <label for="anualDespesa">Anual</label>
+                        </div><br>
+                        <label>Observação</label>
+                        <input type="text" id="inputObservacaoDespesa" placeholder="Observação"> <br>
+                    </form>
+                    <p>(*) Campos obrigatórios</p>
+    
+                    <button id="btnAddDespesa" class="btnSuccess">Salvar nova despesa</button>
+                    <button id="btnDescartarDespesa" class="btnDanger">Descartar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-receitas">
+        <h3>Receitas recentes</h3>
+        <div id="transacoes-receitas">
+        </div>
+        <div id="soma-receitas">
         </div>
     </div>
 
-    <!-- Botão para adicionar nova despesa -->
-    <button id="btnAbrirModalDespesa">Adicionar nova despesa</button>
-    <!-- Modal de nova despesa -->
-    <div id="modalDespesa">
-        <div id="caixaDespesa">
-            <h4>Adicionar nova despesa</h4>
-            <form id="formDespesa">
-                <label>Título*</label>
-                <input type="text" id="inputTituloDespesa" placeholder="Título" required> <br>
-                <label>Valor*</label>
-                <input type="number" id="inputValorDespesa" placeholder="Valor" required> <br>
-                <label>Data*</label>
-                <input type="date" id="dataDespesa" required /> <br>
-                <label>Categoria*</label>
-                <input type="text" id="inputCategoriaDespesa" placeholder="Escolha uma categoria pelo botão abaixo" readonly required />
-                <button type="button" id="btnAbrirModalCategoriaDespesa" class="btnSuccess">Escolher Categoria</button>
-                <div id="modalCategoriaDespesa">
-                    <div id="caixaCategoriaDespesa">
-                        <h4>Escolha uma Categoria de despesa</h4>
-                        <div id="opcoesCategoriaDespesa" class="opcoes">
-                        </div><br><br>
-                        <button type="button" id="btnAdicionarCategoriaDespesa" class="btnDisabled">Adicionar nova categoria</button>
-                        <button type="button" id="btnSelecionarCategoriaDespesa" class="btnSuccess">Selecionar categoria</button>
-                        <button type="button" id="btnFecharModalCategoriaDespesa" class="btnDanger">Fechar</button>
-                    </div>
-                </div><br>
-                <label>Como você considera essa despesa?*</label>
-                <div class="opcoes" >
-                    <input type="radio" id="essencial" name="tipoDespesa" value="essencial" checked>
-                    <label for="essencial">Essencial</label>
-                    <input type="radio" id="desnecessaria" name="tipoDespesa" value="desnecessaria">
-                    <label for="desnecessaria">Desnecessária</label>
-                    <input type="radio" id="investimento" name="tipoDespesa" value="investimento">
-                    <label for="investimento">Investimento</label>
-                    <input type="radio" id="emergencia" name="tipoDespesa" value="emergencia">
-                    <label for="emergencia">Emergencial</label>
-                </div><br>
-                <label>Frequência:</label>
-                <div class="opcoesFrequenciaDespesa opcoes">
-                    <input type="radio" id="unicaDespesa" name="frequenciaDespesa" value="unica" checked>
-                    <label for="unicaDespesa">Única</label>
-                    <input type="radio" id="parceladaDespesa" name="frequenciaDespesa" value="parcelada">
-                    <label for="parceladaDespesa">Parcelada</label>
-                    <input type="radio" id="recorrenteDespesa" name="frequenciaDespesa" value="recorrente">
-                    <label for="recorrenteDespesa">Recorrente</label>
-                </div>
-                <div id="opcaoParcelasDespesa" style="display: none;">
-                    <label>Quantas parcelas?</label><br>
-                    <input type="number" id="parcelasDespesa" placeholder="Número de parcelas"> <br>
-                </div><br>
-                <div id="opcoesRecorrenciaDespesa" class="opcoes" style="display: none;">
-                    <input type="radio" id="diariaDespesa" name="tipoRecorrenciaDespesa" value="diaria">
-                    <label for="diariaDespesa">Diária</label>
-                    <input type="radio" id="semanalDespesa" name="tipoRecorrenciaDespesa" value="semanal">
-                    <label for="semanalDespesa">Semanal</label>
-                    <input type="radio" id="mensalDespesa" name="tipoRecorrenciaDespesa" value="mensal">
-                    <label for="mensalDespesa">Mensal</label>
-                    <input type="radio" id="anualDespesa" name="tipoRecorrenciaDespesa" value="anual">
-                    <label for="anualDespesa">Anual</label>
-                </div><br>
-                <label>Observação</label>
-                <input type="text" id="inputObservacaoDespesa" placeholder="Observação"> <br>
-            </form>
-            <p>(*) Campos obrigatórios</p>
-
-            <button id="btnAddDespesa" class="btnSuccess">Salvar nova despesa</button>
-            <button id="btnDescartarDespesa" class="btnDanger">Descartar</button>
-        </div>
-    </div>
-
+    <script>lucide.createIcons();</script>
     <script src="./assets/js/receitas.js" defer></script>
     <script src="./assets/js/despesas.js" defer></script>
     <script src="./assets/js/categorias-receitas.js" defer></script>
     <script src="./assets/js/categorias-despesas.js" defer></script>
+    <script src="./assets/js/receitas-recentes.js" defer></script>
 </body>
 
 </html>

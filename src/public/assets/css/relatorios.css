@@ -1,0 +1,102 @@
+#meses span {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  cursor: default;
+  transition: color 0.3s;
+}
+#meses span:hover {
+    color: var(--gray-900);
+}
+#meses span:nth-child(2) {
+  color: var(--gray-900)
+}
+
+
+
+.btnMes{
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.meses {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20vw;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+.nav-meses{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20vw;
+    margin: 2em auto 2em auto;
+}
+
+.graficos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw; 
+    margin: 2em auto;
+    padding: 1.5em 2em;
+    border-radius: 1em;
+    background-color: var(--gray-50);
+    gap: 2em;
+}
+#titulo-grafico{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    margin-top: 0;
+    width: 100%;
+}
+.grafico-container {
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+}
+.dados-balanco{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#btn-hoje{
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--gray-600);
+    display: inline-block;
+    transition: all 0.2s;
+    border-radius: 20px;
+    border: 1px solid var(--gray-600);
+}
+#btn-hoje:hover {
+    border: 1px solid var(--gray-900, #141414);
+    color: var(--gray-900, #141414);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-meses {
+        width: 80vw;
+    }
+    .meses{
+        width: 80vw;
+    }
+    .grafico-container {
+        width: 100%;
+    }
+    .graficos {
+        width: 70vw;
+    }
+}
+body{
+    background-color: var(--gray-100);
+}

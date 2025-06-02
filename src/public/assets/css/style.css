@@ -9,44 +9,75 @@
     --gray-600: #9EA19E;
     --gray-700: #4B4D4B;
     --gray-900: #141414;
+    --fontfamily: "Inter", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--fontfamily);
     margin: 0;
     padding: 0;
     background-color: var(--gray-100);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Verde-claro);
+  padding: 0.5em 10%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+nav ul li a:hover {
+    color: var(--gray-900);
+    text-decoration: underline;
+}
+nav ul li a.active {
+    font-weight: bold;
+    color: var(--gray-900);
+    text-decoration: underline;
+}
+
+button{
+    font-family: var(--fontfamily);
+    cursor: pointer;
 }
 
 #btnAbrirModalReceita {
     display: flex;
     width: 240px;
     padding: 8px 32px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
     border-radius: 100px;
     border: 1px solid var(--Verde, #00C500);
     background-color: var(--gray-100);
-    margin: auto;
-    margin-top: 10%;
 }
+
 #btnAbrirModalReceita:hover {
     background-color: var(--Verde-claro, #EBFFEB);
 }
-#btnAbrirModalDespesa{
+
+#btnAbrirModalDespesa {
     display: flex;
-    width: 240px;
+    width: 260px;
     padding: 8px 32px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
     border-radius: 100px;
     border: 1px solid var(--red-500, #F00);
     background-color: var(--gray-100);
-    margin: auto;
-    margin-top: 10%;
 }
+
 #btnAbrirModalDespesa:hover {
     background-color: var(--red-50);
 }
@@ -55,7 +86,8 @@ body {
 #modalReceita,
 #modalDespesa,
 #modalCategoriaReceita,
-#modalCategoriaDespesa {
+#modalCategoriaDespesa,
+#modalNovaTransacao {
     display: none;
     position: fixed;
     top: 0;
@@ -69,6 +101,22 @@ body {
     align-items: center;
     z-index: 1000;
 }
+
+#container {
+    display: flex;
+    position: fixed;
+    bottom: 20%;
+    right: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    padding: 20px;
+    border-radius: 2em;
+    background-color: var(--gray-50);
+    gap: 1em;
+}
+
 /* Customização da caixa do modal */
 #caixaReceita,
 #caixaDespesa,
@@ -76,16 +124,19 @@ body {
 #caixaCategoriaDespesa {
     background: white;
     padding: 20px;
-    width: 35vw;
+    width: 30vw;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 2em 3em;
     max-height: 80vh;
-    overflow-y: auto; /* Adiciona barra de rolagem */
+    overflow-y: auto;
+    /* Adiciona barra de rolagem */
 }
+
 @media screen and (max-width: 768px) {
+
     #caixaReceita,
     #caixaDespesa,
     #caixaCategoriaReceita,
@@ -94,7 +145,11 @@ body {
         min-width: 70vw;
         padding: 5% 10%;
     }
-    
+    #container {
+        width: 70vw;
+        padding: 5%;
+    }
+
 }
 
 /* Customização da barra de rolagem, no caso ocultando ela */
@@ -114,6 +169,7 @@ body {
     align-items: flex-start;
     width: 100%;
 }
+
 #formReceita input[type="text"],
 #formReceita input[type="number"],
 #formReceita input[type="date"],
@@ -125,7 +181,8 @@ body {
     border-radius: 8px;
     border: 1px solid var(--gray-600, #9EA19E);
 }
-label{
+
+label {
     color: var(--gray-900, #141414);
     font-family: Inter;
     font-size: 14px;
@@ -133,6 +190,7 @@ label{
     font-weight: 600;
     line-height: normal;
 }
+
 #opcaoParcelasReceita,
 #opcaoParcelasDespesa {
     width: 100%;
@@ -152,12 +210,14 @@ label{
     border-radius: 20px;
     border: 1px solid var(--gray-600, #9EA19E);
 }
+
 /* Exclui o "to-do" do botão */
 .opcoes input[type="radio"] {
     display: none;
 }
+
 /* Altera a cor do botão selecionado */
-.opcoes input[type="radio"]:checked + label{
+.opcoes input[type="radio"]:checked+label {
     border-radius: 20px;
     border: 1px solid var(--gray-900, #141414);
     color: var(--gray-900, #141414);
@@ -166,13 +226,13 @@ label{
 /* Personalização básica de alguns botões */
 .btnSuccess {
     background-color: var(--Verde-claro);
-    margin-top: 0.5em;
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 1em;
     padding: 0.5em;
     border: 1px solid var(--Verde, #00C500);
 }
-.btnDanger{
+
+.btnDanger {
     background-color: var(--gray-50);
     margin-top: 0.5em;
     width: 100%;
@@ -180,7 +240,8 @@ label{
     padding: 0.5em;
     border: 1px solid var(--red-500);
 }
-.btnDisabled{
+
+.btnDisabled {
     background-color: var(--gray-100);
     color: var(--gray-700);
     border: none;
@@ -189,4 +250,110 @@ label{
     border-radius: 0.5rem;
     padding: 0.5em;
     margin-bottom: 1em;
+}
+
+.iconBtnAbrirModalReceita {
+    color: var(--Verde, #00C500);
+}
+
+.iconBtnAbrirModalDespesa {
+    color: var(--red-500, #F00);
+}
+
+.icons {
+    stroke-width: 1.5;
+}
+
+.headerModalReceita,
+.headerModalDespesa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#inputCategoriaReceita:empty {
+    display: none;
+}
+
+#inputCategoriaDespesa:empty {
+    display: none;
+}
+
+.categoriasReceitas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.icon-bg {
+    background-color: var(--gray-700);
+    /* Cor do fundo */
+    border-radius: 50%;
+    /* Deixa o fundo circular */
+    padding: 10px;
+    /* Espaçamento interno */
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-recentes{
+    color: var(--gray-50);
+}
+
+#btnAbrirModalNovaTransacao {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+}
+.iconNovaTransacao{
+    width: 60px;
+    height: 60px;
+    color: var(--Verde);
+    stroke-width: 1.2;
+}
+.iconNovaTransacao:hover{
+    background: var(--Verde-claro);
+    border-radius: 100%;
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.categoria h4,
+.categoria p{
+    margin: 0;
+    padding: 0;
+}
+
+.transacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.transacao-info{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.container-receitas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    background-color: var(--gray-50);
+    padding: 3em;
+    border-radius: 2em;
 }
