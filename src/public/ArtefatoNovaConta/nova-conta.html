@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="modal active">
+    <h2>Adicione uma nova conta</h2>
+    <label for="nova-conta">Título:</label>
+    <input id="nova-conta" type="text" placeholder="Ex: Nubank" />
+    <button class="btn" onclick="salvar()">Adicionar conta</button>
+    <button class="btn" onclick="window.location.href='adicionar-conta.html'">Voltar</button>
+  </div>
+
+  <script>
+    function salvar() {
+      const input = document.getElementById("nova-conta");
+      const novaConta = input.value.trim();
+      if (novaConta === "") return alert("Digite um nome válido");
+
+      let contas = JSON.parse(localStorage.getItem("contas")) || ["Itaú", "Santander", "Caixa"];
+      contas.push(novaConta);
+      localStorage.setItem("contas", JSON.stringify(contas));
+      localStorage.setItem("contaSelecionada", novaConta);
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

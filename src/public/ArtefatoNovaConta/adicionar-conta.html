@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escolher Conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="modal active">
+    <h2>Escolha a conta</h2>
+    <div id="lista-contas" class="conta-lista"></div>
+    <button class="btn" onclick="window.location.href='nova-conta.html'">Adicionar nova conta</button>
+    <button class="btn" onclick="window.location.href='index.html'">Fechar</button>
+  </div>
+
+  <script>
+    const contas = JSON.parse(localStorage.getItem("contas")) || ["Itaú", "Santander", "Caixa"];
+    const lista = document.getElementById("lista-contas");
+    lista.innerHTML = "";
+    contas.forEach(conta => {
+      const div = document.createElement("div");
+      div.className = "conta-item";
+      div.innerText = conta;
+      div.onclick = () => {
+        localStorage.setItem("contaSelecionada", conta);
+        window.location.href = "index.html";
+      };
+      lista.appendChild(div);
+    });
+  </script>
+</body>
+</html>

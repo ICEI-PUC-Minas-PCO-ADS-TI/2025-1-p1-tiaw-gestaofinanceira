@@ -1,0 +1,52 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+.modal.active {
+  display: block;
+}
+.btn {
+  background-color: #c7f9cc;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem 0.25rem 0 0;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  background-color: #b2f2b8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+input, select {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.conta-item {
+  background-color: #ddd;
+  padding: 0.6rem;
+  margin: 0.4rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.conta-item:hover {
+  background-color: #e6e6e6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

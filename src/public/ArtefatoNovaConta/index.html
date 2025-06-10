@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Despesa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="modal active">
+    <h2>Adicionar nova despesa</h2>
+    <label>Título</label>
+    <input type="text" placeholder="Título" />
+
+    <label>Data</label>
+    <input type="date" />
+
+    <label>Conta ou cartão</label>
+    <input id="contaSelecionada" type="text" placeholder="Conta" readonly onclick="window.location.href='adicionar-conta.html'" />
+
+    <label>Categoria</label>
+    <select disabled>
+      <option value="">Categoria</option>
+    </select>
+
+    <label>Foi pago?</label>
+    <input type="checkbox" />
+
+    <label>Frequência</label>
+    <div>
+      <button class="btn">Única</button>
+      <button class="btn">Parcelada</button>
+      <button class="btn">Recorrente</button>
+    </div>
+
+    <label>Como você julga essa despesa?</label>
+    <div>
+      <button class="btn">Essencial</button>
+      <button class="btn">Desnecessária</button>
+      <button class="btn">Investimento</button>
+      <button class="btn">Emergencial</button>
+    </div>
+
+    <label>Observação</label>
+    <input type="text" placeholder="Observação" />
+  </div>
+
+  <script>
+    window.onload = () => {
+      const conta = localStorage.getItem("contaSelecionada");
+      if (conta) {
+        document.getElementById("contaSelecionada").value = conta;
+      }
+    };
+  </script>
+</body>
+</html>
