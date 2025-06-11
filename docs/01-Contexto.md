@@ -15,7 +15,7 @@ Por outro lado, dos 53% que afirmam controlar receitas e despesas, apesar de bas
 
 ## Objetivos
 
-O objetivo com o Smart Finance é desenvolver uma aplicação web para possibilitar o controle financeiro pessoal e de pequenos empreendedores de uma forma simples, rápida e intuitiva, permitindo o registro e análise de receitas e despesas.
+O objetivo com o Smart Finance é desenvolver uma aplicação web para possibilitar o controle financeiro pessoal de uma forma simples, rápida e intuitiva, permitindo o registro e análise de receitas e despesas.
 Os objetivos específicos do projeto são: 
 - Criar um sistema responsivo e de fácil usabilidade para o registro diário de entradas e saídas financeiras;
 - Fornecer visualizações gráficas para representar a proporção de gastos e receitas ao longo do tempo;
@@ -31,10 +31,10 @@ A proposta é facilitar esse processo por meio de uma solução leve, funcional 
 
 ## Público-alvo
 
-Nosso projeto é voltado principalmente para pessoas físicas que desejam controlar suas finanças de forma mais inteligente e organizada. A faixa etária é ampla abrangendo indivíduos entre 18 e 60 anos, com diferentes níveis de familiaridade com gestão financeira, desde iniciantes até aqueles que já realizam algum tipo de controle básico.
+Nosso projeto é voltado para pessoas físicas que desejam controlar suas finanças de forma mais inteligente e organizada. A faixa etária é ampla abrangendo indivíduos entre 18 e 60 anos, com diferentes níveis de familiaridade com gestão financeira, desde iniciantes até aqueles que já realizam algum tipo de controle básico.
 Além disso, são pessoas que necessariamente não tem um conhecimento tecnológico avançado, o que exige que a aplicação seja intuitiva, de fácil entendimento e otimizada para diferentes dispositivos.
 
-# Referências
+### Referências
 - CONFEDERAÇÃO NACIONAL DE DIRIGENTES LOJISTAS (CNDL). **47% dos jovens da Geração Z não realizam o controle das finanças, aponta pesquisa CNDL/SPC Brasil**. Brasília: CNDL, 6 maio 2019. Disponível em: https://cndl.org.br/politicaspublicas/47-dos-jovens-da-geracao-z-nao-realizam-o-controle-das-financas-aponta-pesquisa-cndl-spc-brasil/. Acesso em: 23 maio 2025.
 
 - BANCO CENTRAL DO BRASIL. **Letramento financeiro**. Brasília: Banco Central do Brasil, [2023]. Disponível em: https://www.bcb.gov.br/cidadaniafinanceira/letramento_financeiro. Acesso em: 23 maio 2025.

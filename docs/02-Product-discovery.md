@@ -32,8 +32,8 @@
 
 Deve-se relacionar as personas identificadas no projeto, juntamente com os respectivos mapas de empatia. É importante enumerar e descrever de maneira precisa e personalizada todos os principais envolvidos na solução pretendida.
 
-![Persona 1](images/product-discovery/persona1-GabrielMoreira.jpg)
-![Persona 2](images/product-discovery/persona2-EduardaVargas.jpg)
-![Persona 3](images/product-discovery/persona3-CarlosGarcia.jpg)
+![Persona 1](images/product-discovery/personas/persona1-GabrielMoreira.jpg)
+![Persona 2](images/product-discovery/personas/persona2-EduardaVargas.jpg)
+![Persona 3](images/product-discovery/personas/persona3-CarlosGarcia.jpg)
 
 
