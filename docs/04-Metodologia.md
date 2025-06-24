@@ -1,13 +1,8 @@
 # Metodologia
-
-A metodologia do grupo foi estruturada a partir da necessidade de encontrar uma solução prática para um problema comum: a dificuldade que muitas pessoas têm em organizar suas finanças pessoais. Pensando nisso, decidimos desenvolver uma aplicação web de gestão financeira simples, acessível e fácil de usar, que ajude no controle de receitas e despesas do dia a dia.
-
 Para garantir o bom andamento do projeto, utilizamos ferramentas que facilitaram a comunicação e o acompanhamento das atividades. O WhatsApp foi o principal meio para conversas rápidas e alinhamento de ideias. Todo o código do aplicativo foi organizado no GitHub, o que permitiu melhor controle das versões e divisão das tarefas. Na parte de realizar o cpodigo em si, optamos pelo Visual Studio Code, ferramenta já conhecida pelo grupo. O design do app foi elaborado no Figma, e para a criação de apresentações e materiais de apoio, usamos o Canva.
 A divisão de tarefas aconteceu de forma simples e organizada, onde cada integrante ficou responsável por uma parte do projeto, mas sempre mantendo o diálogo aberto e o acompanhamento coletivo, para garantir que todos estivessem alinhados em cada etapa do desenvolvimento.
 
 ## Relação de ambientes de trabalho
-
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
 ## Controle de versão
 
@@ -30,9 +25,9 @@ Para organizar o desenvolvimento da aplicação, o grupo definiu a divisão de p
 
 ###  Divisão de papéis
 - Scrum Master: Samuel Aguiar
-- Product Owner: Gustavo Faria
-- Equipe de Desenvolvimento: Eduardo, Gustavo Faria, Gustavo Victor, Thiago e Samuel.
-- Equipe de Design: Gustavo Victor.
+- Product Owner: Gabriel Soares, Samuel Elias
+- Equipe de Desenvolvimento: Samuel Aguiar, Gabriel Soares, Samuel Elias, Guilherme Emanoel, Gustavo Faria e Thiago
+- Equipe de Design: Guilherme Emanoel, Thiago
 
 ### Processo
 Antes de começar o desenvolvimento do aplicativo, o grupo aplicou o Design Thinking, uma abordagem que nos permitiu compreender melhor o problema da falta de organização financeira e pensar em soluções realmente úteis. Conversamos sobre as principais dificuldades que as pessoas enfrentam para controlar o próprio dinheiro e, a partir disso, buscamos ideias que tornassem o aplicativo simples e acessível, mesmo para quem não tem muito contato com tecnologia.
