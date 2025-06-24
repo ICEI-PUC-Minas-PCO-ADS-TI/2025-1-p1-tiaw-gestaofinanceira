@@ -194,25 +194,7 @@ Contatos da aplicação
   
 ```
 
-##### Estrutura de dados - Usuários  ⚠️ EXEMPLO ⚠️
-
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema.
-
-```json
-  {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
-```
-
-Ótimo! Agora vamos detalhar as estruturas de dados do seu projeto Smart Finance com exemplos em formato JSON, baseando-nos no db.json que você forneceu e adaptando para o estilo de documentação.
-
-Estruturas de Dados
-Esta seção descreve as principais estruturas de dados utilizadas na solução Smart Finance, com exemplos no formato JSON.
+##### Estrutura de dados 
 
 Estrutura de dados - Usuários
 
