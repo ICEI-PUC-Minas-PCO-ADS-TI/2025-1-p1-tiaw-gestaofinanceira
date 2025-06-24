@@ -24,16 +24,6 @@
   ],
   "receitas": [
     {
-      "id": "1",
-      "titulo": "Teste",
-      "valor": "30",
-      "data": "2025-04-21",
-      "categoria": "Freelance",
-      "frequencia": "unica",
-      "parcelas": "",
-      "observacao": ""
-    },
-    {
       "id": "2",
       "titulo": "Teste",
       "valor": "30",
@@ -41,7 +31,8 @@
       "categoria": "Freelance",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "3",
@@ -51,7 +42,8 @@
       "categoria": "Salário",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "4",
@@ -61,7 +53,8 @@
       "categoria": "Salário",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "5",
@@ -71,7 +64,8 @@
       "categoria": "Freelance",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "6",
@@ -81,7 +75,8 @@
       "categoria": "Outros",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "7",
@@ -91,7 +86,8 @@
       "categoria": "Freelance",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "8",
@@ -101,7 +97,8 @@
       "categoria": "Investimentos",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "9",
@@ -111,7 +108,8 @@
       "categoria": "Investimentos",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "0d5e",
@@ -121,7 +119,8 @@
       "categoria": "Freelance",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Itaú"
     },
     {
       "id": "be12",
@@ -131,7 +130,8 @@
       "categoria": "Salário",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
     },
     {
       "id": "0820",
@@ -141,7 +141,55 @@
       "categoria": "Investimentos",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
+    },
+    {
+      "id": "ac92",
+      "titulo": "Testando reload",
+      "valor": "100",
+      "data": "2025-06-10",
+      "categoria": "Investimentos",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": "",
+      "conta": "Carteira"
+    },
+    {
+      "id": "8ed7",
+      "titulo": "Teste reload",
+      "valor": "20",
+      "data": "2025-06-10",
+      "categoria": "Outros",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": "",
+      "conta": "Itaú"
+    },
+    {
+      "id": "8c07",
+      "titulo": "Teste relo",
+      "valor": "2",
+      "data": "2025-06-10",
+      "categoria": "Freelance",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": "",
+      "conta": "Itaú"
+    },
+    {
+      "titulo": "Teste atualiza saldo",
+      "valor": 200,
+      "data": "2025-06-11",
+      "categoria": "Salário",
+      "id": "43c4"
+    },
+    {
+      "titulo": "Teste novo objeto",
+      "valor": 2,
+      "data": "2025-06-24",
+      "categoria": "Freelance",
+      "id": "98dd"
     }
   ],
   "despesas": [
@@ -154,7 +202,27 @@
       "tipo": "essencial",
       "frequencia": "unica",
       "parcelas": "",
-      "observacao": ""
+      "observacao": "",
+      "conta": "Carteira"
+    },
+    {
+      "id": "669e",
+      "titulo": "Teste",
+      "valor": "200",
+      "data": "2025-06-10",
+      "categoria": "Transporte",
+      "tipo": "essencial",
+      "frequencia": "unica",
+      "parcelas": "",
+      "observacao": "",
+      "conta": "Carteira"
+    },
+    {
+      "titulo": "Barzinho novo",
+      "valor": 152,
+      "data": "2025-06-10",
+      "categoria": "Lazer",
+      "id": "f639"
     }
   ],
   "categoriasReceitas": [
@@ -175,55 +243,47 @@
     },
     {
       "id": "4",
-      "nome": "Outros"
+      "nome": "Outros",
+      "icon": "circle-question-mark"
     }
   ],
   "categoriasDespesas": [
     {
       "id": "1",
-      "nome": "Alimentação"
+      "nome": "Alimentação",
+      "icon": "utensils"
     },
     {
       "id": "2",
-      "nome": "Transporte"
+      "nome": "Transporte",
+      "icon": "car"
     },
     {
       "id": "3",
-      "nome": "Saúde"
+      "nome": "Saúde",
+      "icon": "heart"
     },
     {
       "id": "4",
-      "nome": "Educação"
+      "nome": "Educação",
+      "icon": "graduation-cap"
     },
     {
       "id": "5",
-      "nome": "Lazer"
+      "nome": "Lazer",
+      "icon": "gamepad"
     }
   ],
-  "conta": [
+  "contas": [
     {
       "id": "1",
-      "nome": "Carteira"
+      "nome": "Carteira",
+      "cor": "var(--gray-100)"
     },
     {
       "id": "2",
-      "nome": "Itaú"
-    },
-    {
-      "id": "3",
-      "nome": "Bradesco"
-    },
-    {
-      "id": "4",
-      "nome": "Santander"
-    },
-    {
-      "id": "5",
-      "nome": "Caixa Econômica"
-    },
-    {
-      "id": "6",
-      "nome": "Banco do Brasil"
+      "nome": "Itaú",
+      "cor": "#f28500"
     }
   ],
   "pagamento": [

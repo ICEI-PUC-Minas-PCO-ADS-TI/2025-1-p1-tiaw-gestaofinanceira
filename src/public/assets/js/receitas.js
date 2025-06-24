@@ -8,6 +8,7 @@ function abrirModalReceita() {
 }
 function fecharModalReceita() {
     modalReceita.style.display = 'none';
+    formReceita.reset();
 }
 // Botão para abrir o modal
 document.getElementById('btnAbrirModalReceita').addEventListener('click', abrirModalReceita);
@@ -44,7 +45,7 @@ function addReceita(receitas) {
         .then(data => {
             alert("Receita adicionada: " + receitas.titulo); // Exibe uma mensagem de sucesso
             fecharModalReceita(); // Fecha o modal após adicionar a receita
-            exibeReceitas(); // Atualiza a lista de receitas
+            location.reload();
         })
         // Se houver erro, exibe uma mensagem de erro
         .catch(error => {
@@ -67,11 +68,9 @@ btnAddReceita.addEventListener('click', function () {
     let campoTituloReceita = document.getElementById('inputTituloReceita').value;
     let campoValorReceita = document.getElementById('inputValorReceita').value;
     let campoDataReceita = document.getElementById('dataReceita').value;
+    let campoContaReceita = document.getElementById('inputConta').value;
     let campoCategoriaReceita = document.getElementById('inputCategoriaReceita').value;
-    let campoFrequencia = document.querySelector('input[name="frequenciaReceita"]:checked')?.value;
-    let campoParcelas = document.getElementById('parcelasReceita').value;
-    let campoRecorrencia = document.querySelector('input[name="tipoRecorrenciaReceita"]:checked')?.value;
-    let campoObservacaoReceita = document.getElementById('inputObservacaoReceita').value;
+    let campoObservacaoReceita = document.getElementById('inputDescricaoReceita').value;
 
     // Função que busca o número de receitas para não gerar um ID aleatório
     fetch(apiReceitas)
@@ -82,18 +81,14 @@ btnAddReceita.addEventListener('click', function () {
             titulo: campoTituloReceita,
             valor: campoValorReceita,
             data: campoDataReceita,
+            conta: campoContaReceita,
             categoria: campoCategoriaReceita,
-            frequencia: campoFrequencia,
-            parcelas: campoParcelas,
-            recorrencia: campoRecorrencia,
-            observacao: campoObservacaoReceita,
+            descricao: campoObservacaoReceita
         };
         // Adiciona o objeto receitas no banco de dados
         addReceita(receitas);
     });
     
-
-
     // Limpa o formulário
     formReceita.reset();
     campoDataReceita.value = dataAtualReceita; // Mantém o campo de data com a data atual

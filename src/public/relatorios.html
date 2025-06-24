@@ -18,17 +18,39 @@
 
 <body>
     <header>
-        <h4>Smart Finance</h4>
+        <h2>Smart Finance</h2>
         <div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Visão Geral</a></li>
-                    <li><a href="relatorios.html" class="active">Relatórios</a></li>
+            <nav class="nav-principal">
+                <ul class="ul-nav-principal">
+                    <li>
+                        <a href="index.html">
+                            <i data-lucide="house" class="icon-menu"></i>
+                            Visão Geral
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html">
+                            <i data-lucide="arrow-down-up" class="icon-menu"></i>
+                            Transações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html" class="active">
+                            <i data-lucide="chart-pie" class="icon-menu"></i>
+                            Relatórios
+                        </a>
+                    </li>
                 </ul>
+                <button class="btnLogoutNav">
+                    <i data-lucide="log-out" class="icon-menu"></i>
+                    Logout
+                </button>
             </nav>
         </div>
         <div class="user-info">
             <span id="user-name">Usuário</span>
+            <button class="btnLogoutMenu">Logout</button>
+        </div>
     </header>
     <div class="nav-meses">
         <div class="meses">
@@ -60,7 +82,7 @@
         <div class="grafico-container">
             <canvas id="grafico-despesas"></canvas>
         </div>
-        <div id="dados-grafico-despesas" class="dados-balanco"></div>
+        <div id="dados-grafico-despesas"></div>
     </div>
 
 

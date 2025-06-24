@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Finance</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/saldo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,24 +18,142 @@
 
 <body>
     <header>
-        <h4>Smart Finance</h4>
+        <h2>Smart Finance</h2>
         <div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Visão Geral</a></li>
-                    <li><a href="relatorios.html">Relatórios</a></li>
+            <nav class="nav-principal">
+                <ul class="ul-nav-principal">
+                    <li>
+                        <a href="index.html" class="active" style="text-align: center;">
+                            <i data-lucide="house" class="icon-menu"></i>
+                            Visão Geral
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html">
+                            <i data-lucide="arrow-down-up" class="icon-menu"></i>
+                            Transações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html">
+                            <i data-lucide="chart-pie" class="icon-menu"></i>
+                            Relatórios
+                        </a>
+                    </li>
                 </ul>
+                <button class="btnLogoutNav">
+                    <i data-lucide="log-out" class="icon-menu"></i>
+                    Logout
+                </button>
             </nav>
         </div>
         <div class="user-info">
             <span id="user-name">Usuário</span>
+            <button class="btnLogoutMenu">
+                Logout
+                <i data-lucide="log-out"></i>
+            </button>
+        </div>
     </header>
-    <button id="btnAbrirModalNovaTransacao"> <i data-lucide="circle-plus" class="icons iconNovaTransacao"></i> </button> 
+
+    <div class="container-principal">
+        <div class="container-saldo">
+            <div class="toggle-container">
+                <button id="toggleButton">
+                    <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="card saldo-atual">
+                <div class="card-header">
+                    <div class="icon-back">
+                        <i data-lucide="dollar-sign" style="stroke-width: 2;"></i>
+                    </div>
+                    <h3>Saldo atual</h3>
+                </div>
+                <div class="card-value">
+                    <div class="valor" id="saldo-atual"></div>
+                </div>
+            </div>
+            <div class="cards-container">
+                <div class="card receitas">
+                    <div class="card-header">
+                        <div class="icon-rec-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="trend-icon lucide lucide-trending-up" width="20"
+                                height="20" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            </svg>
+                        </div>
+                        <h4>Receitas no mês</h4>
+                    </div>
+                    <div class="card-value">
+                        <div class="valor" id="receitas-mes"></div>
+                    </div>
+                </div>
+                <div class="card despesas">
+                    <div class="card-header">
+                        <div class="icon-des-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="trend-icon lucide lucide-trending-down"
+                                width="20" height="20" fill="none" stroke="#c62828" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                            </svg>
+                        </div>
+                        <h4>Despesas no mês</h4>
+                    </div>
+                    <div class="card-value">
+                        <div class="valor" id="despesas-mes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-contas">
+            <h3>Minhas contas</h3>
+            <div class="saldo-conta" id="saldo-contas">
+                <!--
+                <div class="carteira">
+                    <div class="bg-carteira">
+                        <i data-lucide="wallet" class="icons icon-recentes" style="color: black;"></i>
+                    </div>
+                    <h3>Carteira</h3>
+                </div>
+                <p>R$0,00</p>
+                -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-recentes">
+        <div class="container-receitas">
+            <h3>Receitas recentes</h3>
+            <div id="transacoes-receitas">
+            </div>
+            <div class="soma" id="soma-receitas">
+            </div>
+        </div>
+        <div class="container-despesas">
+            <h3>Despesas recentes</h3>
+            <div id="transacoes-despesas">
+            </div>
+            <div class="soma" id="soma-despesas">
+            </div>
+        </div>
+    </div>
+
+    <button id="btnAbrirModalNovaTransacao"> <i data-lucide="circle-plus" class="icons iconNovaTransacao"></i> </button>
     <div id="modalNovaTransacao">
         <div id="container">
             <h3>Nova transação:</h3>
             <!-- Botão para adicionar nova receita -->
-            <button id="btnAbrirModalReceita"> <i data-lucide="arrow-down-to-line" class="icons iconBtnAbrirModalReceita"></i>
+            <button id="btnAbrirModalReceita"> <i data-lucide="arrow-down-to-line"
+                    class="icons iconBtnAbrirModalReceita"></i>
                 Adicionar nova receita</button>
             <!-- Modal de nova receita -->
             <div id="modalReceita">
@@ -44,63 +163,56 @@
                         <i data-lucide="circle-x" class="icons" onclick="fecharModalReceita()"></i>
                     </div>
                     <form id="formReceita">
-                        <label>Título*</label>
-                        <input type="text" id="inputTituloReceita" class="form-control" placeholder="Título" required> <br>
-                        <label>Valor*</label>
-                        <input type="number" id="inputValorReceita" class="form-control" placeholder="R$0,00" required> <br>
-                        <label>Data*</label>
+                        <label>Título</label>
+                        <input type="text" id="inputTituloReceita" class="form-control" placeholder="Título" required>
+                        <br>
+                        <label>Descrição</label>
+                        <input type="text" id="inputDescricaoReceita" placeholder="Descrição"> <br>
+                        <label>Valor</label>
+                        <input type="number" id="inputValorReceita" class="form-control" placeholder="R$0,00" required>
+                        <br>
+                        <label>Data</label>
                         <input type="date" id="dataReceita" required /> <br>
-    
-    
-                        <label>Categoria*</label>
-                        <input type="text" id="inputCategoriaReceita" placeholder="Escolha uma categoria pelo botão abaixo" readonly required />
-                        <button type="button" id="btnAbrirModalCategoriaReceita" class="btnSuccess">Escolher categoria</button>
+                        <label>Categoria</label>
+                        <input type="text" id="inputCategoriaReceita" placeholder="Escolha uma categoria pelo botão abaixo" readonly required/>
+                        <button type="button" id="btnAbrirModalCategoriaReceita" class="btnCategoria">
+                            Escolher categoria 
+                            <i data-lucide="chevron-right" style="stroke-width: 1;"></i>
+                        </button>
                         <div id="modalCategoriaReceita">
                             <div id="caixaCategoriaReceita">
                                 <h4>Escolha uma Categoria</h4>
                                 <div id="opcoesCategoriaReceita" class="opcoes">
                                 </div><br><br>
-                                <button type="button" id="btnAdicionarCategoriaReceita" class="btnDisabled">Adicionar nova
-                                    categoria</button>
                                 <button type="button" id="btnSelecionarCategoriaReceita" class="btnSuccess">Selecionar
                                     categoria</button>
-                                <button type="button" id="btnFecharModalCategoriaReceita" class="btnDanger">Fechar</button>
+                                <button type="button" id="btnFecharModalCategoriaReceita"
+                                    class="btnDanger">Fechar</button>
                             </div>
                         </div><br>
-    
-                        <label>Frequência:</label>
-                        <div class="opcoesFrequenciaReceita opcoes">
-                            <input type="radio" id="unicaReceita" name="frequenciaReceita" value="unica" checked>
-                            <label for="unicaReceita">Única</label>
-                            <input type="radio" id="parceladaReceita" name="frequenciaReceita" value="parcelada">
-                            <label for="parceladaReceita">Parcelada</label>
-                            <input type="radio" id="recorrenteReceita" name="frequenciaReceita" value="recorrente">
-                            <label for="recorrenteReceita">Recorrente</label>
-                        </div>
-                        <div id="opcaoParcelasReceita" style="display: none;">
-                            <label>Quantas parcelas?</label><br>
-                            <input type="number" id="parcelasReceita" placeholder="Número de parcelas"> <br>
+                        <label>Conta</label>
+                        <input type="text" id="inputConta" placeholder="Escolha uma conta" readonly required>
+                        <button type="button" id="btnAbrirModalConta" class="btnCategoria">
+                            Escolher conta
+                            <i data-lucide="chevron-right" style="stroke-width: 1;"></i>
+                        </button>
+                        <div id="modalConta">
+                            <div id="caixaConta">
+                                <h4>Escolha uma conta</h4>
+                                <div id="opcoesConta" class="opcoes">
+                                </div><br><br>
+                                <button type="button" id="btnSelecionarConta" class="btnSuccess">Selecionar conta</button>
+                                <button type="button" id="btnFecharModalConta"class="btnDanger">Fechar</button>
+                            </div>
                         </div><br>
-                        <div id="opcoesRecorrenciaReceita" class="opcoes" style="display: none;">
-                            <input type="radio" id="diariaReceita" name="tipoRecorrenciaReceita" value="diaria">
-                            <label for="diariaReceita">Diária</label>
-                            <input type="radio" id="semanalReceita" name="tipoRecorrenciaReceita" value="semanal">
-                            <label for="semanalReceita">Semanal</label>
-                            <input type="radio" id="mensalReceita" name="tipoRecorrenciaReceita" value="mensal">
-                            <label for="mensalReceita">Mensal</label>
-                            <input type="radio" id="anualReceita" name="tipoRecorrenciaReceita" value="anual">
-                            <label for="anualReceita">Anual</label>
-                        </div><br>
-                        <label>Observação</label>
-                        <input type="text" id="inputObservacaoReceita" placeholder="Observação"> <br>
-                    </form>
-                    <p>(*) Campos obrigatórios</p>
-    
+                    </form><br>
+                    <button id="btnAlterarReceita" class="btnSuccess" style="display: none;">Alterar receita</button>
                     <button id="btnAddReceita" class="btnSuccess">Salvar nova receita</button>
+                    <button id="btnExcluirReceita" class="btnDanger" style="display: none;">Excluir receita</button>
                     <button id="btnDescartarReceita" class="btnDanger">Limpar</button>
                 </div>
             </div>
-    
+
             <!-- Botão para adicionar nova despesa -->
             <button id="btnAbrirModalDespesa"> <i data-lucide="arrow-up-to-line"
                     class="icons iconBtnAbrirModalDespesa"></i>Adicionar nova despesa</button>
@@ -112,80 +224,59 @@
                         <i data-lucide="circle-x" onclick="fecharModalDespesa()" class="icons"></i>
                     </div>
                     <form id="formDespesa">
-                        <label>Título*</label>
+                        <label>Título</label>
                         <input type="text" id="inputTituloDespesa" placeholder="Título" required> <br>
-                        <label>Valor*</label>
+                        <label>Descrição</label>
+                        <input type="text" id="inputDescricao" placeholder="Descrição"> <br>
+                        <label>Valor</label>
                         <input type="number" id="inputValorDespesa" placeholder="Valor" required> <br>
-                        <label>Data*</label>
+                        <label>Data</label>
                         <input type="date" id="dataDespesa" required /> <br>
-                        <label>Categoria*</label>
-                        <input type="text" id="inputCategoriaDespesa" placeholder="Escolha uma categoria pelo botão abaixo"
-                            readonly required />
-                        <button type="button" id="btnAbrirModalCategoriaDespesa" class="btnSuccess">Escolher Categoria</button>
+                        <label>Categoria</label>
+                        <input type="text" id="inputCategoriaDespesa"
+                            placeholder="Escolha uma categoria pelo botão abaixo" readonly required />
+                        <button type="button" id="btnAbrirModalCategoriaDespesa" class="btnCategoria">Escolher
+                            Categoria <i data-lucide="chevron-right" style="stroke-width: 1;"></i></button>
                         <div id="modalCategoriaDespesa">
                             <div id="caixaCategoriaDespesa">
                                 <h4>Escolha uma Categoria de despesa</h4>
                                 <div id="opcoesCategoriaDespesa" class="opcoes">
                                 </div><br><br>
-                                <button type="button" id="btnAdicionarCategoriaDespesa" class="btnDisabled">Adicionar nova
+                                <button type="button" id="btnAdicionarCategoriaDespesa" class="btnDisabled">Adicionar
+                                    nova
                                     categoria</button>
                                 <button type="button" id="btnSelecionarCategoriaDespesa" class="btnSuccess">Selecionar
                                     categoria</button>
-                                <button type="button" id="btnFecharModalCategoriaDespesa" class="btnDanger">Fechar</button>
+                                <button type="button" id="btnFecharModalCategoriaDespesa"
+                                    class="btnDanger">Fechar</button>
                             </div>
                         </div><br>
-                        <label>Como você considera essa despesa?*</label>
-                        <div class="opcoes">
-                            <input type="radio" id="essencial" name="tipoDespesa" value="essencial" checked>
-                            <label for="essencial">Essencial</label>
-                            <input type="radio" id="desnecessaria" name="tipoDespesa" value="desnecessaria">
-                            <label for="desnecessaria">Desnecessária</label>
-                            <input type="radio" id="investimento" name="tipoDespesa" value="investimento">
-                            <label for="investimento">Investimento</label>
-                            <input type="radio" id="emergencia" name="tipoDespesa" value="emergencia">
-                            <label for="emergencia">Emergencial</label>
+                        <label>Conta</label>
+                        <input type="text" id="inputContaDespesa" placeholder="Escolha uma conta" readonly required>
+                        <button type="button" id="btnAbrirModalContaDespesa" class="btnCategoria">
+                            Escolher conta
+                            <i data-lucide="chevron-right" style="stroke-width: 1;"></i>
+                        </button>
+                        <div id="modalContaDespesa">
+                            <div id="caixaContaDespesa">
+                                <h4>Escolha uma conta</h4>
+                                <div id="opcoesContaDespesa" class="opcoes">
+                                </div><br><br>
+                                <button type="button" id="btnSelecionarContaDespesa" class="btnSuccess">Selecionar conta</button>
+                                <button type="button" id="btnFecharModalContaDespesa"class="btnDanger">Fechar</button>
+                            </div>
                         </div><br>
-                        <label>Frequência:</label>
-                        <div class="opcoesFrequenciaDespesa opcoes">
-                            <input type="radio" id="unicaDespesa" name="frequenciaDespesa" value="unica" checked>
-                            <label for="unicaDespesa">Única</label>
-                            <input type="radio" id="parceladaDespesa" name="frequenciaDespesa" value="parcelada">
-                            <label for="parceladaDespesa">Parcelada</label>
-                            <input type="radio" id="recorrenteDespesa" name="frequenciaDespesa" value="recorrente">
-                            <label for="recorrenteDespesa">Recorrente</label>
-                        </div>
-                        <div id="opcaoParcelasDespesa" style="display: none;">
-                            <label>Quantas parcelas?</label><br>
-                            <input type="number" id="parcelasDespesa" placeholder="Número de parcelas"> <br>
-                        </div><br>
-                        <div id="opcoesRecorrenciaDespesa" class="opcoes" style="display: none;">
-                            <input type="radio" id="diariaDespesa" name="tipoRecorrenciaDespesa" value="diaria">
-                            <label for="diariaDespesa">Diária</label>
-                            <input type="radio" id="semanalDespesa" name="tipoRecorrenciaDespesa" value="semanal">
-                            <label for="semanalDespesa">Semanal</label>
-                            <input type="radio" id="mensalDespesa" name="tipoRecorrenciaDespesa" value="mensal">
-                            <label for="mensalDespesa">Mensal</label>
-                            <input type="radio" id="anualDespesa" name="tipoRecorrenciaDespesa" value="anual">
-                            <label for="anualDespesa">Anual</label>
-                        </div><br>
-                        <label>Observação</label>
-                        <input type="text" id="inputObservacaoDespesa" placeholder="Observação"> <br>
                     </form>
-                    <p>(*) Campos obrigatórios</p>
-    
+
+                    <button id="btnAlterarDespesa" class="btnSuccess" style="display: none;">Alterar despesa</button>
                     <button id="btnAddDespesa" class="btnSuccess">Salvar nova despesa</button>
-                    <button id="btnDescartarDespesa" class="btnDanger">Descartar</button>
+                    <button id="btnDescartarDespesa" class="btnDanger">Limpar</button>
+                    <button id="btnExcluirDespesa" class="btnDanger" style="display: none;">Excluir despesa</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-receitas">
-        <h3>Receitas recentes</h3>
-        <div id="transacoes-receitas">
-        </div>
-        <div id="soma-receitas">
-        </div>
-    </div>
+
 
     <script>lucide.createIcons();</script>
     <script src="./assets/js/receitas.js" defer></script>
@@ -193,6 +284,11 @@
     <script src="./assets/js/categorias-receitas.js" defer></script>
     <script src="./assets/js/categorias-despesas.js" defer></script>
     <script src="./assets/js/receitas-recentes.js" defer></script>
+    <script src="./assets/js/despesas-recentes.js"></script>
+    <script src="./assets/js/saldo.js" defer></script>
+    <script src="./assets/js/saldo-contas.js" defer></script>
+    <script src="./assets/js/contas-despesas.js" defer></script>
+    <script src="./assets/js/contas-receitas.js" defer></script>
 </body>
 
 </html>

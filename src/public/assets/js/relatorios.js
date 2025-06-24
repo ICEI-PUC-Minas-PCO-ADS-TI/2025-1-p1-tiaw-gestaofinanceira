@@ -183,7 +183,7 @@ function carregarGraficoReceitas(receitas) {
     const dadosGraficoReceitas = document.getElementById('dados-grafico-receitas');
     dadosGraficoReceitas.innerHTML = categorias.map((categoria, i) => `
         <div class="dados-balanco"> 
-            <p>${categoria}:</p>
+            <p><strong>${categoria}:</strong></p>
             <span>R$ ${valores[i].toFixed(2)}</span>
         </div>
         `).join('');
@@ -247,7 +247,7 @@ function carregarGraficoDespesas(despesas) {
     const dadosGraficoDespesas = document.getElementById('dados-grafico-despesas');
     dadosGraficoDespesas.innerHTML = categorias.map((categoria, i) => `
         <div class="dados-balanco"> 
-            <p>${categoria}:</p>
+            <p><strong>${categoria}:</strong></p>
             <span>R$ ${valores[i].toFixed(2)}</span>
         </div>
         `).join('');

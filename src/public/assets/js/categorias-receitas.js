@@ -1,4 +1,4 @@
-const apiCategoriasReceitas = '/categoriasReceitas'; // URL da API JSONServer
+const apiContas = '/categoriasReceitas'; // URL da API JSONServer
 
 // Referências dos elementos do modal de categoria
 const opcoesCategoriaReceita = document.getElementById('opcoesCategoriaReceita');
@@ -8,11 +8,10 @@ const btnAbrirModalCategoriaReceita = document.getElementById('btnAbrirModalCate
 const btnFecharModalCategoriaReceita = document.getElementById('btnFecharModalCategoriaReceita');
 const btnSelecionarCategoriaReceita = document.getElementById('btnSelecionarCategoriaReceita');
 const inputCategoriaReceita = document.getElementById('inputCategoriaReceita');
-const btnAdicionarCategoriaReceita = document.getElementById('btnAdicionarCategoriaReceita');
 
 // Função para buscar e exibir categorias no modal
 function carregarCategoriasReceita() {
-    fetch(apiCategoriasReceitas)
+    fetch(apiContas)
         .then(res => res.json())
         .then(categoriasReceita => {
             opcoesCategoriaReceita.innerHTML = ''; // Limpa antes de preencher
@@ -25,7 +24,13 @@ function carregarCategoriasReceita() {
                         data-nome="${catReceita.nome}"
                         data-icon="${catReceita.icon}">
                     <label for="categoria-receita-${catReceita.id}" class="categoriasReceitas">
-                        <i data-lucide="${catReceita.icon}" class="icons"></i> ${catReceita.nome}
+                        <div class="cat-icon">
+                            <div class="icon-bg">
+                                <i data-lucide="${catReceita.icon}" style="color: var(--gray-50);"></i>
+                            </div>
+                            <span> ${catReceita.nome}</span>
+                        </div>
+                        <i data-lucide="chevron-right" style="color: var(--gray-600);"></i>
                     </label>
                 `;
                 opcoesCategoriaReceita.innerHTML += carregarCategoriaReceita;
@@ -59,7 +64,7 @@ btnSelecionarCategoriaReceita.addEventListener('click', () => {
         inputCategoriaReceita.style.display = 'flex';
         
         const categoriaId = categoriaSelecionadaReceita.value; 
-        inputCategoriaReceita.value = categoriaSelecionadaReceita.getAttribute('data-nome');;
+        inputCategoriaReceita.value = categoriaSelecionadaReceita.getAttribute('data-nome');
         inputCategoriaReceita.setAttribute('catReceita-id', categoriaId);
 
     } else {
@@ -71,9 +76,4 @@ modalCategoriaReceita.addEventListener('click', function (event) {
     if (!caixaCategoriaReceita.contains(event.target)) {
         modalCategoriaReceita.style.display = 'none';
     }
-});
-
-//Alerta que a função de adicionar categoria não está implementada
-btnAdicionarCategoriaReceita.addEventListener('click', () => {
-    alert("Função de adicionar categoria não implementada.");
 });

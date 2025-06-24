@@ -1,0 +1,97 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Verde-claro);
+  padding: 1em 10%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+nav ul li a:hover {
+    color: var(--gray-900);
+    text-decoration: underline;
+}
+nav ul li a.active {
+    font-weight: bold;
+    color: var(--gray-900);
+    text-decoration: underline;
+}
+
+.btnLogoutNav{
+        display: none;
+}
+.icon-menu{
+    display: none;
+}
+.btnLogoutMenu{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid var(--gray-600);
+    padding-left: 1em;
+    margin-left: 1em;
+    gap: 8px;
+
+}
+.user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0 10%;
+        margin: 0 auto;
+    }
+    .nav-principal{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2em 0;
+        background-color: var(--Verde-claro);
+    }
+    .nav-principal ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .ul-nav-principal li a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ul-nav-principal li a.active{
+        color: var(--Verde);
+        text-decoration: none;
+    }
+    .btnLogoutNav{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+    }
+    .btnLogoutMenu{
+        display: none;
+    }
+    .icon-menu{
+    display: flex;
+    }
+}

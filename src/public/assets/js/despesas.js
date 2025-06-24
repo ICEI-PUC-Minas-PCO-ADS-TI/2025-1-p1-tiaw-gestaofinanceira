@@ -8,6 +8,7 @@ function abrirModalDespesa() {
 }
 function fecharModalDespesa() {
     modalDespesa.style.display = 'none';
+    formDespesa.reset();
 }
 // Botão para abrir o modal
 document.getElementById('btnAbrirModalDespesa').addEventListener('click', abrirModalDespesa);
@@ -64,11 +65,7 @@ btnAddDespesa.addEventListener('click', function () {
     let campoValorDespesa = document.getElementById('inputValorDespesa').value;
     let campoDataDespesa = document.getElementById('dataDespesa').value;
     let campoCategoriaDespesa = document.getElementById('inputCategoriaDespesa').value;
-    let campoTipoDespesa = document.querySelector('input[name="tipoDespesa"]:checked')?.value;
-    let campoFrequencia = document.querySelector('input[name="frequenciaDespesa"]:checked')?.value;
-    let campoParcelas = document.getElementById('parcelasDespesa').value;
-    let campoRecorrencia = document.querySelector('input[name="tipoRecorrenciaDespesa"]:checked')?.value;
-    let campoObservacaoDespesa = document.getElementById('inputObservacaoDespesa').value;
+    let campoDescricao = document.getElementById('inputDescricao').value;
 
     // Cria um objeto com os dados do formulário
     let despesas = {
@@ -76,11 +73,7 @@ btnAddDespesa.addEventListener('click', function () {
         valor: campoValorDespesa,
         data: campoDataDespesa,
         categoria: campoCategoriaDespesa,
-        tipo: campoTipoDespesa,
-        frequencia: campoFrequencia,
-        parcelas: campoParcelas,
-        recorrencia: campoRecorrencia,
-        observacao: campoObservacaoDespesa,
+        descricao: campoDescricao,
     };
 
     // Adiciona o objeto Despesas no banco de dados

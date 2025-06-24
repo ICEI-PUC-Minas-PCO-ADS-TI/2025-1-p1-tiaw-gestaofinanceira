@@ -14,21 +14,25 @@ function exibeReceitas() {
         categoriasReceita.forEach(catReceita => {
             mapaCategoriasReceita[catReceita.nome] = catReceita;
         });
-        for (let i = receitas.length-1; i > receitas.length-4; i--) {
+        if (receitas.length === 0) {
+            divReceitas.innerHTML = `<p>Nenhuma receita encontrada.</p>`;
+            return;
+        }
+        for (let i = receitas.length - 1; i >= 0 && i >= receitas.length - 4; i--) {
             let receita = receitas[i];
             let categoria = mapaCategoriasReceita[receita.categoria];
             divReceitas.innerHTML += `
-            <div class="transacao">
+            <div class="transacao" data-receita-id="${receita.id}">
                 <div class="transacao-info">
-                    <div class="icon-bg">
-                        <i data-lucide="${categoria.icon}" class="icons icon-recentes"></i>
+                    <div class="icon-bg bg-recentes-receita">
+                        <i data-lucide="${categoria.icon}" class="icons icon-recentes icon-recentes-receita"></i>
                     </div>
                     <div class="categoria">
                         <h4>${receita.titulo}</h4>
-                        <p>${receita.data}</p>      
+                        <p>${new Date(receita.data).toLocaleDateString('pt-BR')}</p>  
                     </div>
                 </div>
-                <p>R$ ${receita.valor}</p>
+                <p style="color:var(--Verde);">R$ ${receita.valor}</p>
             </div> 
             `;
             somaReceitas += parseFloat(receita.valor);
@@ -38,44 +42,81 @@ function exibeReceitas() {
         divSomaReceitas.innerHTML = `
             <h4>Total Receitas</h4>
             <p>R$ ${somaReceitas.toFixed(2)}</p>`;
+
+        divReceitas.querySelectorAll('.transacao').forEach(div => {
+        div.addEventListener('click', async () => {
+            console.log("Receita clicada:", div.dataset.receitaId);
+            const id = div.dataset.receitaId;    
+            const res = await fetch(`/receitas/${id}`);
+            const receita = await res.json();
+            abrirModalEdicao(receita);
+        });
     })
+});
 
 }
 addEventListener('DOMContentLoaded',exibeReceitas);
 
-/*
-function somarReceitas() {
-    fetch('/receitas') // substitua por sua URL real se for diferente
-        .then(res => res.json())
-        .then(receitas => {
+const modal = document.getElementById('modalReceita');
+const caixa = document.getElementById('modalNovaTransacao');
+const input = document.getElementById('inputCategoriaReceita');
+const btnAlterar = document.getElementById('btnAlterarReceita');
+const btnSalvar = document.getElementById('btnAddReceita');
+const btnExcluir = document.getElementById('btnExcluirReceita');
+const btnLimpar = document.getElementById('btnDescartarReceita');
 
-            // Soma os valores das receitas
-            const totalReceitas = receitas.reduce((soma, receita) => {
-                return soma + parseFloat(receita.valor);
-            }, 0);
+function abrirModalEdicao(receita) {
+    console.log("abrirModalEdicaoReceita ativado.");
+    console.log('Categoria recebida:', receita.categoria);
 
-            console.log("Total de Receitas: R$ " + totalReceitas.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-
-            const hoje = new Date();
-            const mesAtual = hoje.getMonth();   
-            const anoAtual = hoje.getFullYear();
-
-            const receitasMesAtual = receitas.filter(receita => {
-                const dataReceita = new Date(receita.data); // formatando como "YYYY-MM-DD"
-                return dataReceita.getMonth() === mesAtual && dataReceita.getFullYear() === anoAtual;
-            });
-
-            const totalReceitasMes = receitasMesAtual.reduce((soma, receita) => {
-                return soma + parseFloat(receita.valor);
-            }, 0);
-
-            console.log("Total de Receitas no mês atual: R$ " + totalReceitasMes.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
-
-        })
-        .catch(error => {
-            console.error("Erro ao buscar receitas:", error);
-        });
+    modal.style.display = 'flex';
+    caixa.style.display = 'flex';
+    input.style.display = 'flex';
+    btnAlterar.style.display = 'flex';
+    btnExcluir.style.display = 'flex';
+    btnSalvar.style.display = 'none';
+    btnLimpar.style.display = 'none';    
+    btnAlterar.onclick = () => atualizarReceita(receita.id);
+    btnExcluir.onclick = () => excluirReceita(receita.id);
+    // Preenche os campos
+    document.getElementById('inputTituloReceita').value = receita.titulo;
+    document.getElementById('inputDescricaoReceita').value = receita.descricao;
+    document.getElementById('inputValorReceita').value = receita.valor;
+    document.getElementById('dataReceita').value = receita.data;
+    document.getElementById('inputConta').value = receita.conta;
+    document.getElementById('inputCategoriaReceita').value = receita.categoria;
 }
 
-document.addEventListener('DOMContentLoaded', somarReceitas);
-*/
+function atualizarReceita(id) {
+    const receitaAtualizada = {
+        titulo: document.getElementById('inputTituloReceita').value,
+        valor: parseFloat(document.getElementById('inputValorReceita').value),
+        data: document.getElementById('dataReceita').value,
+        categoria: document.getElementById('inputCategoriaReceita').value
+    };
+    alert("Receita atualizada com sucesso!");
+    fetch(`/receitas/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(receitaAtualizada)
+    }).then(() => {
+        fecharModal();
+        exibeReceitas();
+    });
+}
+
+function excluirReceita(id) {
+    alert("Receita excluída com sucesso!");
+    fetch(`/receitas/${id}`, {
+        method: 'DELETE'
+    }).then(() => {
+        fecharModal();
+        exibeReceitas();
+    });
+}
+
+function fecharModal() {
+    atualizarSaldo();
+    modal.style.display = 'none';
+    caixa.style.display = 'none';
+}
