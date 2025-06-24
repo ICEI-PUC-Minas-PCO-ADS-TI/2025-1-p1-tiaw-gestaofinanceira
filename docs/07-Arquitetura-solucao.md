@@ -296,24 +296,26 @@ Tipos de método de pagamento (embora no db.json pareça mais relacionado a cont
 
 ### Módulos e APIs
 
-Esta seção apresenta os módulos e APIs utilizados na solução.
+Módulos e APIs
+Esta seção apresenta os módulos e APIs utilizados na solução Smart Finance, detalhando as bibliotecas, frameworks e serviços externos que compõem a aplicação.
 
-**Images**:
+1. Imagens:
 
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
+Ícones SVG (Embutidos no HTML / Lucide Icons): Os ícones da interface (como o cifrão de saldo, setas de tendência, e o ícone de olho para visibilidade do saldo) são diretamente inseridos como SVG no HTML ou provêm da biblioteca Lucide Icons.
+2. Fontes:
 
-**Fonts:**
+Lucide Icons - https://lucide.dev/
+Uso: Para a maioria dos ícones vetoriais utilizados na interface do usuário (ex: ícones de saldo, receitas, despesas, ícone de olho).
+Fontes do Sistema: A tipografia da aplicação utiliza fontes padrão do sistema ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif).
+3. Scripts e Frameworks Frontend:
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+JavaScript (Nativo): Toda a lógica de interatividade da interface, cálculos financeiros (saldo, receitas/despesas do mês), formatação de moeda e manipulação do DOM é realizada usando JavaScript puro.
+Fetch API: Utilizada para fazer requisições assíncronas ao db.json para carregar os dados da aplicação.
+CSS (Customizado): A estilização e o layout responsivo da aplicação são definidos em um arquivo CSS personalizado (style.css).
+4. APIs Backend / Serviços:
 
-**Scripts:**
-
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
-
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
+JSON Server (ou Arquivo JSON Estático): A aplicação consome dados de um arquivo db.json, que atua como uma fonte de dados para usuários, receitas, despesas, categorias e contas. Isso geralmente é configurado com uma ferramenta como JSON Server para simular uma API RESTful em ambiente de desenvolvimento.
+Uso: Persistência e acesso aos dados da aplicação (usuários, transações, categorias, contas).
 
 
 ## Hospedagem
