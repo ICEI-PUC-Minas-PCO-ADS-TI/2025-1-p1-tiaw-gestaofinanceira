@@ -209,16 +209,108 @@ Registro dos usuários do sistema utilizados para login e para o perfil do siste
   }
 ```
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação, quanto outras estruturas que foram criadas para algum tipo de configuração.
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+Ótimo! Agora vamos detalhar as estruturas de dados do seu projeto Smart Finance com exemplos em formato JSON, baseando-nos no db.json que você forneceu e adaptando para o estilo de documentação.
+
+Estruturas de Dados
+Esta seção descreve as principais estruturas de dados utilizadas na solução Smart Finance, com exemplos no formato JSON.
+
+Estrutura de dados - Usuários
+
+Registro dos usuários do sistema, utilizados para login e para o perfil do sistema.
+
+```json
+  {
+    "id": "1",
+    "login": "admin",
+    "senha": "123",
+    "nome": "Administrador do Sistema",
+    "email": "admin@abc.com"
+  }
+```
+
+Estrutura de dados - Receitas
+
+Detalhes das entradas de dinheiro registradas pelo usuário.
+
+```json
+  {
+    "id": "2",
+    "titulo": "Salário Mensal",
+    "valor": "1500",
+    "data": "2025-06-22",
+    "categoria": "Salário",
+    "frequencia": "unica",
+    "parcelas": "",
+    "observacao": "Salário referente ao mês de junho",
+    "conta": "Carteira"
+  }
+```
+
+Estrutura de dados - Despesas
+
+Detalhes das saídas de dinheiro registradas pelo usuário.
+
+```json
+  {
+    "id": "1",
+    "titulo": "Transporte Urbano",
+    "valor": "200",
+    "data": "2025-06-18",
+    "categoria": "Transporte",
+    "tipo": "essencial",
+    "frequencia": "unica",
+    "parcelas": "",
+    "observacao": "Gastos com transporte público no mês",
+    "conta": "Carteira"
+  }
+```
+
+Estrutura de dados - Categorias de Receitas
+
+Lista de categorias predefinidas para classificar as receitas.
+
+```json
+  {
+    "id": "1",
+    "nome": "Salário",
+    "icon": "dollar-sign"
+  }
+```
+
+Estrutura de dados - Categorias de Despesas
+
+Lista de categorias predefinidas para classificar as despesas.
+
+```json
+  {
+    "id": "2",
+    "nome": "Transporte",
+    "icon": "car"
+  }
+```
+
+Estrutura de dados - Contas
+
+Contas financeiras (Ex: Carteira, Contas Bancárias) que o usuário possui.
+
+```json
+  {
+    "id": "1",
+    "nome": "Carteira",
+    "cor": "var(--gray-100)"
+  }
+```
+
+Estrutura de dados - Pagamento
+
+Tipos de método de pagamento (embora no db.json pareça mais relacionado a contas ou tipos de origem/destino de dinheiro, vou manter o nome "Pagamento" como você indicou, ou podemos ajustar para "Meios de Pagamento" ou "Tipos de Conta/Origem").
+
+```json
+  {
+    "id": "1",
+    "nome": "Conta Corrente"
+  }
+```
 
 ### Módulos e APIs
 
