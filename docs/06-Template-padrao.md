@@ -32,7 +32,7 @@ As cores escolhemos cada uma pensando na psicologia das cores e na usabilidade:
 
 | DESCRIÇÃO | COR |VARIÁVEL|
 |--------------------|------------------------------------|----------------------------------------|
-|A nossa principal cor foi escolhida pensando que é uma cor tradicionalmente associado a dinheiro, crescimento e estabilidade, o que o torna ideal para uma aplicação financeira. Ela será utilizada para dar destaques. |<div style="background-color:#00C500; color:#00C500; width: 100%;"> Verde CALARO </div> | var(--Verde) |
+|A nossa principal cor foi escolhida pensando que é uma cor tradicionalmente associado a dinheiro, crescimento e estabilidade, o que o torna ideal para uma aplicação financeira. Ela será utilizada para dar destaques. |![Verde](./images/cores/verde.jpg) | var(--Verde) |
 |Verde escuro traz seriedade, confiança e solidez, reforçando a credibilidade da marca.|<div style="background-color:#008000; color:#008000; width: 100%;"> Verde escuro </div> | var(--Verde-escuro) |
 |Verde claro transmite leveza, frescor e acolhimento — útil para fundos ou elementos de alívio visual. Utilizamos para detalhes em itens de receitas. |<div style="background-color:#EBFFEB; color:#EBFFEB; width: 100%;"> Verde escuro </div> | var(--Verde-claro) |
 |Vermelho claro  reduz a agressividade visual, mantendo o alerta sem causar desconforto. Utilizado em detalhes de itens de despesas|<div style="background-color:#FFEBEB; color:#FFEBEB; width: 100%;"> Verde escuro </div> | var(--red-50) |
