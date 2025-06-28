@@ -1,0 +1,212 @@
+@import './modal.css';
+@import './nav.css';
+:root {
+    --Verde: #00C500;
+    --Verde-escuro: #008000;
+    --Verde-claro: #EBFFEB;
+    --red-50: #FFEBEB;
+    --red-500: #F00;
+    --gray-50: #FAFFFA;
+    --gray-100: #F5F5F5;
+    --gray-600: #9EA19E;
+    --gray-700: #4B4D4B;
+    --gray-900: #141414;
+    --fontfamily: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--fontfamily);
+    margin: 0;
+    padding: 0;
+    background-color: var(--gray-100);
+}
+button{
+    font-family: var(--fontfamily);
+    cursor: pointer;
+}
+
+.icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 16px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--gray-700);
+    margin-right: 0.5em;
+}
+.icon-recentes{
+    color: var(--gray-50);
+    width: 20px;
+}
+.bg-recentes-receita{
+    background-color: var(--Verde-claro);
+}
+.icon-recentes-receita{
+    color: var(--Verde);
+}
+.bg-recentes-despesa{
+    background-color: var(--red-50);
+}
+.icon-recentes-despesa{
+    color: var(--red-500);
+}
+
+.categoria{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.categoria h4,
+.categoria p{
+    margin: 0;
+    padding: 0;
+}
+
+.transacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.transacao-info{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.container-principal{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+    margin: 2em auto;
+    width: 70vw;
+    padding: 2em;
+    background-color: var(--gray-50);
+    border-radius: 2em;
+}
+.container-recentes{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70vw;
+    border-radius: 2em;
+    margin-bottom: 8em;
+}
+
+.container-receitas,
+.container-despesas{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 33vw;
+    background-color: var(--gray-50);
+    padding: 2em;
+    border-radius: 2em;
+}
+.container-receitas h3,
+.container-despesas h3{
+    margin-bottom: 2em;
+}
+.container-saldo{
+    width: 30vw;
+}
+.container-contas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3em;
+    border-left: 2px solid var(--gray-100);
+    width: 30vw;
+}
+.saldo-conta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    width: 100%;
+}
+.conta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1em;
+}
+.conta-info{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+    .container-principal{
+        flex-direction: column;
+        width: 90vw;
+    }
+    .container-recentes{
+        flex-direction: column;
+        width: 90vw;
+    }
+    .container-receitas,
+    .container-despesas{
+        width: 90vw;
+        margin-bottom: 2em;
+    }
+    .container-contas{
+        padding-left: 0;
+        padding-top: 2em;
+        border-left: none;
+        border-top: 2px solid var(--gray-100);
+        width: 100%;
+    }
+}
+
+.soma{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-carteira{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 16px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--gray-100);
+    margin-right: 0.5em;
+}
+.btnNovaConta{
+    padding: 8px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: all 0.2s;
+    border-radius: 20px;
+    border: 1px solid var(--gray-600);
+}
+.btnNovaConta:hover{
+    border: 1px solid var(--gray-900, #141414);
+    color: var(--gray-900, #141414);
+}
+
+.cat-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.icons {
+    stroke-width: 1.5;
+}

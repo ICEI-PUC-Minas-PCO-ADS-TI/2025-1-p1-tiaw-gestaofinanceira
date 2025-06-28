@@ -1,14 +1,14 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
       "email": "admin@abc.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
@@ -19,7 +19,313 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com",
+      "id": "3"
+    },
+    {
+      "id": "cc88e9d7-b1e2-4d05-82ad-15b011036ee3",
+      "login": "samuel",
+      "senha": "1234",
+      "nome": "Samuel Aguiar",
+      "email": "acg@gmail.com"
+    }
+  ],
+  "receitas": [
+    {
+      "titulo": "Testando usuário",
+      "descricao": "apenas teste",
+      "valor": "125",
+      "data": "2025-06-25",
+      "conta": "Carteira",
+      "categoria": "Outros",
+      "id": "91e8"
+    },
+    {
+      "titulo": "Salário ",
+      "descricao": "Salário do mês ",
+      "valor": "1500",
+      "data": "2025-06-26",
+      "categoria": "Salário",
+      "conta": "Itaú",
+      "user": "2",
+      "id": "_lzTk5i"
+    },
+    {
+      "titulo": "Freela",
+      "descricao": "Teste ",
+      "valor": "200",
+      "data": "2025-06-26",
+      "categoria": "Freelance",
+      "conta": "Carteira",
+      "user": "2",
+      "id": "-9TIMRx"
+    },
+    {
+      "titulo": "Salário",
+      "descricao": "",
+      "valor": "1500",
+      "data": "2025-06-26",
+      "categoria": "Salário",
+      "conta": "Itaú",
+      "user": "1",
+      "id": "q6S31ML"
+    },
+    {
+      "titulo": "Investimentos",
+      "descricao": "",
+      "valor": "400",
+      "data": "2025-06-26",
+      "categoria": "Investimentos",
+      "conta": "Itaú",
+      "user": "1",
+      "id": "LpHt5Zz"
+    },
+    {
+      "titulo": "Freela",
+      "descricao": "",
+      "valor": "150",
+      "data": "2025-06-26",
+      "categoria": "Freelance",
+      "conta": "Carteira",
+      "user": "1",
+      "id": "8xSPgXp"
+    },
+    {
+      "titulo": "Outros",
+      "descricao": "",
+      "valor": "200",
+      "data": "2025-06-26",
+      "categoria": "Outros",
+      "conta": "Carteira",
+      "user": "1",
+      "id": "UaTUceX"
+    }
+  ],
+  "despesas": [
+    {
+      "titulo": "Compras do mês ",
+      "descricao": "Compra mensal",
+      "valor": "800",
+      "data": "2025-06-26",
+      "categoria": "Alimentação",
+      "conta": "Itaú",
+      "user": "2",
+      "id": 1
+    },
+    {
+      "titulo": "Alimentação",
+      "descricao": "",
+      "valor": "22",
+      "data": "2025-06-26",
+      "categoria": "Alimentação",
+      "conta": "Carteira",
+      "user": "1",
+      "id": 2
+    },
+    {
+      "titulo": "Transporte",
+      "descricao": "",
+      "valor": "120",
+      "data": "2025-06-26",
+      "categoria": "Transporte",
+      "conta": "Itaú",
+      "user": "1",
       "id": 3
+    },
+    {
+      "titulo": "Saúde",
+      "descricao": "",
+      "valor": "150",
+      "data": "2025-06-26",
+      "categoria": "Saúde",
+      "conta": "Itaú",
+      "user": "1",
+      "id": 4
+    },
+    {
+      "titulo": "Livro",
+      "descricao": "",
+      "valor": "50",
+      "data": "2025-06-26",
+      "categoria": "Educação",
+      "conta": "Itaú",
+      "user": "1",
+      "id": 5
+    },
+    {
+      "titulo": "Lazer",
+      "descricao": "",
+      "valor": "40",
+      "data": "2025-06-26",
+      "categoria": "Lazer",
+      "conta": "Itaú",
+      "user": "1",
+      "id": 6
+    },
+    {
+      "titulo": "Aluguel",
+      "descricao": "",
+      "valor": "1000",
+      "data": "2025-06-26",
+      "categoria": "Moradia",
+      "conta": "Itaú",
+      "user": "1",
+      "id": 7
+    },
+    {
+      "titulo": "Netflix",
+      "descricao": "",
+      "valor": "40",
+      "data": "2025-06-26",
+      "categoria": "Assinaturas",
+      "conta": "Nubank",
+      "user": "1",
+      "id": 8
+    }
+  ],
+  "categoriasReceitas": [
+    {
+      "id": "1",
+      "nome": "Salário",
+      "icon": "dollar-sign"
+    },
+    {
+      "id": "2",
+      "nome": "Freelance",
+      "icon": "pen-tool"
+    },
+    {
+      "id": "3",
+      "nome": "Investimentos",
+      "icon": "trending-up"
+    },
+    {
+      "id": "4",
+      "nome": "Outros",
+      "icon": "circle-question-mark"
+    }
+  ],
+  "categoriasDespesas": [
+    {
+      "id": "1",
+      "nome": "Alimentação",
+      "icon": "utensils"
+    },
+    {
+      "id": "2",
+      "nome": "Transporte",
+      "icon": "car"
+    },
+    {
+      "id": "3",
+      "nome": "Saúde",
+      "icon": "heart"
+    },
+    {
+      "id": "4",
+      "nome": "Educação",
+      "icon": "graduation-cap"
+    },
+    {
+      "id": "5",
+      "nome": "Lazer",
+      "icon": "gamepad"
+    },
+    {
+      "id": "6",
+      "nome": "Moradia",
+      "icon": "house"
+    },
+    {
+      "id": "7",
+      "nome": "Assinaturas",
+      "icon": "circle-play"
+    },
+    {
+      "id": "8",
+      "nome": "Pessoal",
+      "icon": "user"
+    },
+    {
+      "id": "9",
+      "nome": "Dívidas",
+      "icon": "credit-card"
+    },
+    {
+      "id": "10",
+      "nome": "Outros",
+      "icon": "circle-question-mark"
+    }
+  ],
+  "contas": [
+    {
+      "id": "1",
+      "nome": "Carteira",
+      "cor": "var(--gray-100)"
+    },
+    {
+      "id": "2",
+      "nome": "Itaú",
+      "cor": "#FBDAB3"
+    },
+    {
+      "id": "3",
+      "nome": "Caixa",
+      "cor": "#B6CCE3"
+    },
+    {
+      "id": "4",
+      "nome": "Bradesco",
+      "cor": "#EEB6C0"
+    },
+    {
+      "id": "5",
+      "nome": "Santander",
+      "cor": "#F7B3B3"
+    },
+    {
+      "id": "6",
+      "nome": "Banco do Brasil",
+      "cor": "#FCF5B3"
+    },
+    {
+      "id": "7",
+      "nome": "Nubank",
+      "cor": "#DCB3F2"
+    },
+    {
+      "id": "8",
+      "nome": "Inter",
+      "cor": "#FCD6B3"
+    }
+  ],
+  "pagamento": [
+    {
+      "id": "1",
+      "nome": "Conta Corrente"
+    },
+    {
+      "id": "2",
+      "nome": "Cartão de Crédito"
+    },
+    {
+      "id": "3",
+      "nome": "Cartão de Débito"
+    },
+    {
+      "id": "4",
+      "nome": "Poupança"
+    },
+    {
+      "id": "5",
+      "nome": "Carteira"
+    },
+    {
+      "id": "6",
+      "nome": "Pix"
+    },
+    {
+      "id": "7",
+      "nome": "Outros"
     }
   ]
 }
