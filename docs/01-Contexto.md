@@ -1,5 +1,4 @@
 # Introdução
-
 A gestão financeira pessoal ainda é um desafio para grande parte dos brasileiros, mesmo com o avanço da tecnologia e da informação. A falta de conhecimento, planejamento e ferramentas acessíveis dificulta o controle das finanças e compromete o bem-estar econômico. Diante disso, este projeto propõe o Smart Finance, uma aplicação web simples, intuitiva e leve, que auxilia no registro e análise de receitas e despesas. A proposta surge da necessidade de promover maior organização financeira, especialmente entre pessoas com pouca familiaridade tecnológica, contribuindo assim para o fortalecimento da educação financeira e do bem-estar econômico individual.
 
 ## Problema
