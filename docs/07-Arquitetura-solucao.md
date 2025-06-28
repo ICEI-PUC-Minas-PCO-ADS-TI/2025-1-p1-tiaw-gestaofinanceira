@@ -70,148 +70,133 @@ Prototipação (Figma ou similar): Opcional, mas recomendada para validar a expe
 Funcionalidades
 Esta seção apresenta as funcionalidades da solução Smart Finance.
 
-Funcionalidade 1 - Visualização do Saldo e Transações Recentes
+Funcionalidade 1 – Visualização do saldo 
+Permite ao usuário visualizar de forma rápida seu saldo atual, as receitas e despesas do mês, um resumo das suas contas bancárias e as Receitas e Despesas Recentes.
 
-Permite ao usuário visualizar de forma rápida seu saldo atual, as receitas e despesas do mês, e um resumo das suas contas bancárias, além de apresentar as últimas transações de receita e despesa.
-
-Estrutura de dados: Saldo, Receitas, Despesas, Contas, Histórico de Transações.
-
-Instruções de acesso:
-
-Abra o site e efetue o login.
-A tela inicial ("Visão Geral") exibirá o saldo atual, as receitas e despesas do mês, o resumo das contas e as transações recentes.
-Tela da funcionalidade: ⚠️ COMPLETAR
-
-
-
-
-Funcionalidade 2 - Adicionar Nova Receita
-
-Permite ao usuário registrar uma nova entrada de dinheiro no sistema, detalhando o título, descrição, valor, data, categoria e a conta em que o valor foi depositado.
-
-Estrutura de dados: Receita (Título, Descrição, Valor, Data, Categoria, Conta).
+Estrutura de dados: [Saldo](#estrutura-de-dados---receitas),[Receitas](#estrutura-de-dados---receitas),[Despesas](#estrutura-de-dados---despesas).
 
 Instruções de acesso:
 
-Abra o site e efetue o login.
-Na tela inicial ("Visão Geral"), clique no botão "+" no canto inferior direito.
-No pop-up "Nova transação", clique em "Adicionar nova receita".
-Preencha os campos: Título, Descrição, Valor, Data (preenchida automaticamente, mas editável), Categoria e Conta.
-Clique em "Salvar nova receita" para registrar a entrada ou em "Limpar" para cancelar.
-Tela da funcionalidade: ⚠️ COMPLETAR
+Abra o site e efetue o login;
 
+A tela inicial "Visão Geral" exibirá as informações consolidadas de saldo, minhas contas e Receitas e Despesas recentes.
 
+Tela da funcionalidade: (images/func1.jpg)
 
+Funcionalidade 2 – Adicionar nova receita
+Permite ao usuário registrar uma nova entrada de dinheiro no sistema, preenchendo informações como título, valor, data, categoria e conta de destino.
 
-Funcionalidade 3 - Adicionar Nova Despesa
-
-Permite ao usuário registrar uma nova saída de dinheiro do sistema, detalhando o título, descrição, valor, data, categoria e a conta de onde o valor foi debitado.
-
-Estrutura de dados: Despesa (Título, Descrição, Valor, Data, Categoria, Conta).
+Estrutura de dados: [Receitas](#estrutura-de-dados---receitas) (Título, Descrição, Valor, Data, Categoria, Conta)
 
 Instruções de acesso:
 
-Abra o site e efetue o login.
-Na tela inicial ("Visão Geral"), clique no botão "+" no canto inferior direito.
-No pop-up "Nova transação", clique em "Adicionar nova despesa".
-Preencha os campos: Título, Descrição, Valor, Data (preenchida automaticamente, mas editável), Categoria e Conta.
-Clique em "Salvar nova despesa" para registrar a saída ou em "Limpar" para cancelar.
-Tela da funcionalidade: ⚠️ COMPLETAR
+Abra o site e efetue o login;
 
+Na tela "Visão Geral", clique no botão "+" no canto inferior direito;
 
+No pop-up "Nova transação", clique em "Adicionar nova receita";
 
+Preencha os campos obrigatórios;
 
-Funcionalidade 4 - Seleção de Conta
+Clique em "Salvar nova receita" para confirmar ou em "Limpar" para cancelar.
 
-Apresenta uma lista das contas cadastradas para o usuário selecionar ao adicionar uma nova receita ou despesa.
+Tela da funcionalidade: (images/func2.jpg)
 
-Estrutura de dados: Conta (Nome da Conta).
+Funcionalidade 3 – Adicionar nova despesa
+Permite ao usuário registrar uma nova saída de dinheiro do sistema, informando detalhes da transação como valor, categoria e conta de origem.
 
-Instruções de acesso:
-
-Ao adicionar uma nova receita ou despesa, clique no campo "Conta".
-Uma janela pop-up ("Escolha uma conta") será exibida, listando as contas disponíveis (Ex: Carteira, Itaú).
-Clique na conta desejada para selecioná-la.
-Clique em "Selecionar conta" para confirmar ou em "Fechar" para cancelar.
-Tela da funcionalidade: ⚠️ COMPLETAR
-
-
-
-
-Funcionalidade 5 - Visualização de Relatório de Balanço Mensal
-
-Apresenta um relatório visual do balanço financeiro do mês, mostrando as receitas e despesas em um gráfico, além dos valores totais de receitas, despesas e o saldo final do período.
-
-Estrutura de dados: Receitas do Mês (Total), Despesas do Mês (Total), Balanço do Mês, representação visual das proporções.
+Estrutura de dados: [Despesas](#estrutura-de-dados---despesas) (Título, Descrição, Valor, Data, Categoria, Conta)
 
 Instruções de acesso:
 
-Abra o site e efetue o login.
-Acesse o menu principal e escolha a opção "Relatórios".
-A tela exibirá o balanço do mês atual (Junho, 2025 no exemplo) com um gráfico de rosca, o total de receitas, o total de despesas e o balanço.
-Utilize as setas "<" e ">" para navegar entre os meses.
-Tela da funcionalidade: ⚠️ COMPLETAR
+Abra o site e efetue o login;
 
+Na tela "Visão Geral", clique no botão "+" no canto inferior direito;
 
+No pop-up "Nova transação", clique em "Adicionar nova despesa";
 
+Preencha os campos obrigatórios;
 
-Funcionalidade 6 - Visualização de Relatório de Receitas por Categorias
+Clique em "Salvar nova despesa" para confirmar ou em "Limpar" para cancelar.
 
-Apresenta um gráfico de pizza detalhando a distribuição das receitas do mês por diferentes categorias, juntamente com o valor total de cada categoria.
+Tela da funcionalidade: (images/func3.jpg)
 
-Estrutura de dados: Receitas por Categoria (Nome da Categoria, Valor Total), representação visual das proporções.
+Funcionalidade 4 – Seleção de conta
+Apresenta a lista de contas cadastradas para seleção ao registrar receitas ou despesas.
+
+Estrutura de dados: [Contas](#estrutura-de-dados---contas)
 
 Instruções de acesso:
 
-Abra o site e efetue o login.
-Acesse o menu principal e escolha a opção "Relatórios".
-Role a página para baixo ou navegue até a seção "Receitas por categorias".
-Um gráfico de pizza exibirá as categorias de receita (Ex: Salário, Outros, Investimentos, Freelance) com suas respectivas participações, e abaixo estará a lista com o valor total por categoria.
-Tela da funcionalidade: ⚠️ COMPLETAR
+Ao adicionar uma nova receita ou despesa, clique no campo "Conta";
+
+Uma janela pop-up será exibida com a lista de contas disponíveis;
+
+Clique na conta desejada e confirme a seleção.
+
+Tela da funcionalidade: (images/func4.png)
+
+Funcionalidade 5 – Visualização de relatório de balanço mensal
+Exibe um gráfico com o balanço financeiro do mês, indicando total de receitas, despesas e saldo.
+
+Estrutura de dados: [Saldo](#estrutura-de-dados---receitas),[Receitas](#estrutura-de-dados---receitas),[Despesas](#estrutura-de-dados---despesas).
+
+Instruções de acesso:
+
+Abra o site e efetue o login;
+
+Acesse o menu principal e clique na opção "Relatórios";
+
+A tela apresentará o relatório do mês atual com gráfico e totais financeiros;
+
+Utilize os botões "<" e ">" para navegar entre os meses.
+
+Tela da funcionalidade: (images/func5.jpg)
+
+Funcionalidade 6 – Relatório de receitas por categorias
+Exibe um gráfico de pizza com a distribuição das receitas do mês por categoria.
+
+Estrutura de dados: ["Categorias de Receitas"](#estrutura-de-dados---Categorias-de-Receitas).
+
+Instruções de acesso:
+
+Abra o site e efetue o login;
+
+Acesse o menu principal e clique na opção "Relatórios";
+
+Role a tela até a seção "Receitas por categorias";
+
+Um gráfico de pizza mostrará as proporções por categoria e a lista com os valores.
+
+Tela da funcionalidade: (images/func6.jpg)
+
+Funcionalidade 7 – Relatório de despesas por categorias
+Exibe um gráfico de pizza com a distribuição das despesas do mês por categoria.
+
+Estrutura de dados: ["Categorias de Despesas"](#estrutura-de-dados---Categorias-de-Despesas).
+
+Instruções de acesso:
+
+Abra o site e efetue o login;
+
+Acesse o menu principal e clique na opção "Relatórios";
+
+Role a tela até a seção "Despesas por categorias";
+
+Um gráfico de pizza mostrará as proporções por categoria e a lista com os valores.
+
+Tela da funcionalidade: (images/func7.jpg)
 
 
 
-
-Funcionalidade 7 - Visualização de Relatório de Despesas por Categorias
-
-Apresenta um gráfico de pizza detalhando a distribuição das despesas do mês por diferentes categorias, juntamente com o valor total de cada categoria.
-
-Estrutura de dados: Despesas por Categoria (Nome da Categoria, Valor Total), representação visual das proporções.
-
-Instruções de acesso: ⚠️ COMPLETAR
-
-Abra o site e efetue o login.
-Acesse o menu principal e escolha a opção "Relatórios".
-Role a página para baixo ou navegue até a seção "Despesas por categorias".
-Um gráfico de pizza exibirá as categorias de despesa (Ex: Transporte, Lazer) com suas respectivas participações, e abaixo estará a lista com o valor total por categoria.
-
-![Tela de funcionalidade](images/exemplo-funcionalidade.png)
-
- ⚠️ COMPLETAR
 
 
 ### Estruturas de dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info.
 
-##### Estrutura de dados - Contatos
 
-Contatos da aplicação
-
-```json
-  {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
-  
-```
-
-##### Estrutura de dados 
+##### Estrutura de dados - Usuários
 
 Estrutura de dados - Usuários
 
@@ -227,7 +212,7 @@ Registro dos usuários do sistema, utilizados para login e para o perfil do sist
   }
 ```
 
-Estrutura de dados - Receitas
+##### Estrutura de dados - Receitas
 
 Detalhes das entradas de dinheiro registradas pelo usuário.
 
@@ -245,7 +230,7 @@ Detalhes das entradas de dinheiro registradas pelo usuário.
   }
 ```
 
-Estrutura de dados - Despesas
+##### Estrutura de dados - Despesas
 
 Detalhes das saídas de dinheiro registradas pelo usuário.
 
@@ -264,7 +249,7 @@ Detalhes das saídas de dinheiro registradas pelo usuário.
   }
 ```
 
-Estrutura de dados - Categorias de Receitas
+##### Estrutura de dados - Categorias-de-Receitas
 
 Lista de categorias predefinidas para classificar as receitas.
 
@@ -276,7 +261,7 @@ Lista de categorias predefinidas para classificar as receitas.
   }
 ```
 
-Estrutura de dados - Categorias de Despesas
+##### Estrutura de dados - Categorias-de-Despesas
 
 Lista de categorias predefinidas para classificar as despesas.
 
@@ -288,7 +273,7 @@ Lista de categorias predefinidas para classificar as despesas.
   }
 ```
 
-Estrutura de dados - Contas
+##### Estrutura de dados - Contas
 
 Contas financeiras (Ex: Carteira, Contas Bancárias) que o usuário possui.
 
@@ -300,7 +285,7 @@ Contas financeiras (Ex: Carteira, Contas Bancárias) que o usuário possui.
   }
 ```
 
-Estrutura de dados - Pagamento
+##### Estrutura de dados - Pagamento
 
 Tipos de método de pagamento (embora no db.json pareça mais relacionado a contas ou tipos de origem/destino de dinheiro, vou manter o nome "Pagamento" como você indicou, ou podemos ajustar para "Meios de Pagamento" ou "Tipos de Conta/Origem").
 
