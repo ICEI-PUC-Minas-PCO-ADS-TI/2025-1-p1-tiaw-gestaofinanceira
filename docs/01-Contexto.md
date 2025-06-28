@@ -1,10 +1,6 @@
 # Introdução
 
-A gestão financeira é um pilar essencial para qualquer pessoa ou empresa que deseja manter a
-saúde econômica e alcançar estabilidade a longo prazo. No entanto, muitas pessoas enfrentam
-dificuldades nesse processo, seja por falta de conhecimento, planejamento ou ferramentas
-adequadas. Este projeto busca entender essas dores e propor soluções acessíveis e eficientes
-para tornar a gestão financeira mais prática e eficaz.
+A gestão financeira pessoal ainda é um desafio para grande parte dos brasileiros, mesmo com o avanço da tecnologia e da informação. A falta de conhecimento, planejamento e ferramentas acessíveis dificulta o controle das finanças e compromete o bem-estar econômico. Diante disso, este projeto propõe o Smart Finance, uma aplicação web simples, intuitiva e leve, que auxilia no registro e análise de receitas e despesas. A proposta surge da necessidade de promover maior organização financeira, especialmente entre pessoas com pouca familiaridade tecnológica, contribuindo assim para o fortalecimento da educação financeira e do bem-estar econômico individual.
 
 ## Problema
 A educação financeira no Brasil ainda é um grande desafio a ser superado. Apesar dos avanços do acesso à tecnologia e à informação, grande parte da população brasileira continua enfrentando dificuldades para lidar com o próprio dinheiro.
