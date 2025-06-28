@@ -1,17 +1,8 @@
-
 # Metodologia
-
-<span style="color:red">Pré-requisitos: <a href="03-Product-design.md"> Product design</a></span>
-
-A metodologia do grupo foi pensada a partir de uma realidade que a gente vê muito no Brasil: a desigualdade social. Enquanto alguns têm acesso a tudo com facilidade, outros mal conseguem guardar dinheiro no fim do mês. Vendo isso, decidimos trabalhar em um projeto que ajude pessoas a se organizarem financeiramente, principalmente aquelas que têm mais dificuldade com isso. O objetivo final é criar um aplicativo de gestão financeira simples e acessível.
-
-Durante o desenvolvimento, usamos algumas ferramentas pra facilitar a comunicação e o trabalho em grupo. O WhatsApp foi o principal meio pra conversar no dia a dia e alinhar ideias rápidas. Também usamos o Canvas (app da faculdade) pra acompanhar prazos e atividades. O código do projeto foi organizado no GitHub, onde conseguimos controlar melhor as versões e dividir tarefas. Pra programar, usamos o Visual Studio Code, que é uma ferramenta prática e todo mundo do grupo já tinha familiaridade. Já o design do app foi feito no Figma, e pra criar apresentações e materiais visuais, usamos o Canva.
-
-A divisão do trabalho foi feita de forma bem simples, cada um ficou com uma parte, mas sempre trocando ideia pra garantir que tudo estivesse alinhado. Tentamos seguir um processo em que todo mundo pudesse dar opinião e participar ativamente, sem muita burocracia.
+Para garantir o bom andamento do projeto, utilizamos ferramentas que facilitaram a comunicação e o acompanhamento das atividades. O WhatsApp foi o principal meio para conversas rápidas e alinhamento de ideias. Todo o código do aplicativo foi organizado no GitHub, o que permitiu melhor controle das versões e divisão das tarefas. Na parte de realizar o código em si, optamos pelo Visual Studio Code, ferramenta já conhecida pelo grupo. O design do app foi elaborado no Figma.
+A divisão de tarefas aconteceu de forma simples e organizada, onde cada integrante ficou responsável por uma parte do projeto, mas sempre mantendo o diálogo aberto e o acompanhamento coletivo, para garantir que todos estivessem alinhados em cada etapa do desenvolvimento.
 
 ## Relação de ambientes de trabalho
-
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
 ## Controle de versão
 
@@ -20,9 +11,7 @@ A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-s
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+- `nomeIntegrante`: artefato que ficou sob responsabilidade de cada um
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
 
@@ -31,36 +20,26 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para etiqu
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gestão de tags, merges, commits e branches é realizada. Discuta também como a gestão de issues foi feita.
-
-> **Links úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e GitHub](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-
 ## Planejamento do projeto
+Para organizar o desenvolvimento da aplicação, o grupo definiu a divisão de papéis, que posteriormente precisou ser alterada com a chegada de novos membros no grupo, Isso foi importante para garantir que cada etapa fosse feita de forma organizada, sem atropelos, e que todos soubessem exatamente suas responsabilidades.
 
 ###  Divisão de papéis
-
-
 - Scrum Master: Samuel Aguiar
-- Product Owner: Gustavo Faria
-- Equipe de Desenvolvimento: Eduardo, Gustavo Faria, Gustavo Victor, Thiago e Samuel.
-- Equipe de Design: Gustavo Victor.
-
-> **Links úteis**:
-> - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+- Product Owner: Gabriel Soares, Samuel Elias
+- Equipe de Desenvolvimento: Samuel Aguiar, Gabriel Soares, Samuel Elias, Guilherme Emanoel e Gustavo Faria
+- Equipe de Design: Guilherme Emanoel
 
 ### Processo
+Antes de começar o desenvolvimento do aplicativo, o grupo aplicou o Design Thinking, uma abordagem que nos permitiu compreender melhor o problema da falta de organização financeira e pensar em soluções realmente úteis. Conversamos sobre as principais dificuldades que as pessoas enfrentam para controlar o próprio dinheiro e, a partir disso, buscamos ideias que tornassem o aplicativo simples e acessível, mesmo para quem não tem muito contato com tecnologia.
 
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, o GitHub Projects, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. 
+Após essa etapa, passamos a seguir o Scrum, que nos ajuda a organizar o trabalho em partes menores, chamadas de sprints. Cada sprint tem um prazo definido e objetivos específicos, o que facilita o acompanhamento do progresso. Também realizamos reuniões rápidas e frequentes (as dailies) para atualizar o time, compartilhar o que já foi feito e identificar possíveis dificuldades.
 
-Coloque uma imagem da estrutura da ferramenta de controle de tarefas (Kanban) e o link do GitHub Projects.
- 
+Além disso, estamos utilizando o GitHub Projects, uma ferramenta que permite organizar as tarefas, acompanhar o andamento do projeto e visualizar o status de cada etapa de desenvolvimento. Essa organização tem sido fundamental para manter o grupo alinhado e garantir que o projeto avance conforme o planejado.
+
+Em relação a hospedagem, tentamos utilizar o Vercel como orientado de início pela professora, mas ocorreu um erro que o Vercel não permitia a escritura em arquivos JSON, onde os dados eram enviados mas não ficavam permanentes. Dessa forma, com os nossos testes e aval da professora, hospedamos nossa aplicação no Replit.
+
+![image](https://github.com/user-attachments/assets/ab34429e-d512-436a-bd8c-db571c0d01f8)
+
 
 ### Ferramentas
 
@@ -73,5 +52,5 @@ Coloque uma imagem da estrutura da ferramenta de controle de tarefas (Kanban) e 
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p1-tiaw-gestaofinanceira/tree/main/docs   |
 | Gerenciamento do projeto            | GitHub Projects                    |https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/44         |
 | Projeto de interface                | Figma                              | https://www.figma.com/design/i5GPYOFFEdrGdNAQuQYqHm/TIAW---Gest%C3%A3o-Financeira?node-id=62-2412&t=zWfOoHFTqtLsA0C0-1    |
-| Hospedagem                          |  |    |
+| Hospedagem                          | Replit |  https://replit.com/@acgsamuel92/SmartFinance?v=1  |
  
