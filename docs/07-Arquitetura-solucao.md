@@ -81,7 +81,7 @@ Abra o site e efetue o login;
 
 A tela inicial "Visão Geral" exibirá as informações consolidadas de saldo, minhas contas e Receitas e Despesas recentes.
 
-Tela da funcionalidade: (images/func1.jpg)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func1.jpg)
 
 Funcionalidade 2 – Adicionar nova receita
 Permite ao usuário registrar uma nova entrada de dinheiro no sistema, preenchendo informações como título, valor, data, categoria e conta de destino.
@@ -100,7 +100,7 @@ Preencha os campos obrigatórios;
 
 Clique em "Salvar nova receita" para confirmar ou em "Limpar" para cancelar.
 
-Tela da funcionalidade: (images/func2.jpg)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func2.jpg)
 
 Funcionalidade 3 – Adicionar nova despesa
 Permite ao usuário registrar uma nova saída de dinheiro do sistema, informando detalhes da transação como valor, categoria e conta de origem.
@@ -119,7 +119,7 @@ Preencha os campos obrigatórios;
 
 Clique em "Salvar nova despesa" para confirmar ou em "Limpar" para cancelar.
 
-Tela da funcionalidade: (images/func3.jpg)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func3.jpg)
 
 Funcionalidade 4 – Seleção de conta
 Apresenta a lista de contas cadastradas para seleção ao registrar receitas ou despesas.
@@ -134,7 +134,7 @@ Uma janela pop-up será exibida com a lista de contas disponíveis;
 
 Clique na conta desejada e confirme a seleção.
 
-Tela da funcionalidade: (images/func4.png)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func4.png)
 
 Funcionalidade 5 – Visualização de relatório de balanço mensal
 Exibe um gráfico com o balanço financeiro do mês, indicando total de receitas, despesas e saldo.
@@ -151,7 +151,7 @@ A tela apresentará o relatório do mês atual com gráfico e totais financeiros
 
 Utilize os botões "<" e ">" para navegar entre os meses.
 
-Tela da funcionalidade: (images/func5.jpg)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func5.jpg)
 
 Funcionalidade 6 – Relatório de receitas por categorias
 Exibe um gráfico de pizza com a distribuição das receitas do mês por categoria.
@@ -168,7 +168,7 @@ Role a tela até a seção "Receitas por categorias";
 
 Um gráfico de pizza mostrará as proporções por categoria e a lista com os valores.
 
-Tela da funcionalidade: (images/func6.jpg)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func6.jpg)
 
 Funcionalidade 7 – Relatório de despesas por categorias
 Exibe um gráfico de pizza com a distribuição das despesas do mês por categoria.
@@ -185,10 +185,12 @@ Role a tela até a seção "Despesas por categorias";
 
 Um gráfico de pizza mostrará as proporções por categoria e a lista com os valores.
 
-Tela da funcionalidade: (images/func7.jpg)
+Tela da funcionalidade: ![Tela de funcionalidade](images/func7.jpg)
 
 
+![Tela de funcionalidade](images/exemplo-funcionalidade.png)
 
+ ⚠️ COMPLETAR
 
 
 ### Estruturas de dados
