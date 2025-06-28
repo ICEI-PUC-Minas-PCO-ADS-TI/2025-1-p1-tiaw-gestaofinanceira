@@ -1,0 +1,138 @@
+const apiReceitas = '/receitas'; // URL da API JSONServer
+
+// Script para abrir e fechar o modal
+const caixaReceita = document.getElementById('caixaReceita');
+const modalReceita = document.getElementById('modalReceita');
+function abrirModalReceita() {
+    modalReceita.style.display = 'flex';
+    //Preenche o campo de data com a data atual
+    const dataAtualReceita = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
+    const campoDataReceita = document.getElementById('dataReceita');
+    campoDataReceita.value = dataAtualReceita;
+}
+
+function fecharModalReceita() {
+    modalReceita.style.display = 'none';
+    formReceita.reset();
+}
+// Botão para abrir o modal
+document.getElementById('btnAbrirModalReceita').addEventListener('click', abrirModalReceita);
+// Botão para fechar o modal e descartar alterações
+const btnDescartarReceita = document.getElementById('btnDescartarReceita')
+btnDescartarReceita.addEventListener('click', function () {
+    formReceita.reset();
+    // Força o valor atual da data no campo
+    document.getElementById('dataReceita').value = new Date().toISOString().split('T')[0];
+    inputCategoriaReceita.style.display = 'none';
+ });
+
+// Fecha o modal ao clicar fora da caixa e mantém as alterações
+modalReceita.addEventListener('click', function (event) {
+    if (!caixaReceita.contains(event.target)) {
+        fecharModalReceita();
+    }
+});
+
+// Função para adicionar receita no banco de dados	
+function addReceita(receitas) {
+    fetch(apiReceitas, {
+        // Faz uma requisição para o servidor
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(receitas),
+    })
+        // Envia a requisição para o servidor
+        .then(response => response.json())
+        // Se a requisição for bem sucedida, exibe uma mensagem de sucesso
+        .then(data => {
+            alert("Receita adicionada: " + receitas.titulo); // Exibe uma mensagem de sucesso
+            fecharModalReceita(); // Fecha o modal após adicionar a receita
+            window.location.reload();
+        })
+        // Se houver erro, exibe uma mensagem de erro
+        .catch(error => {
+            alert("Erro ao adicionar receita:");
+        });
+}
+
+// Função para adicionar evento de clique no botão "Adicionar Receita" e processar os dados do formulário
+const btnAddReceita = document.getElementById("btnAddReceita");
+const formReceita = document.getElementById('formReceita');
+btnAddReceita.addEventListener('click', function () {
+
+    // Verifica se o formulário está preenchido corretamente
+    if (!formReceita.checkValidity()) {
+        alert("Preencha o formulário corretamente.");
+        return;
+    }
+
+    // Obtem os valores dos campos do formulário
+    let campoTituloReceita = document.getElementById('inputTituloReceita').value;
+    let campoValorReceita = document.getElementById('inputValorReceita').value;
+    let campoContaReceita = document.getElementById('inputConta').value;
+    let campoDataReceita = document.getElementById('dataReceita').value;
+    let campoCategoriaReceita = document.getElementById('inputCategoriaReceita').value;
+    let campoObservacaoReceita = document.getElementById('inputDescricaoReceita').value;
+
+    // Função que busca o número de receitas para não gerar um ID aleatório
+    fetch(apiReceitas)
+    .then(res => res.json())
+    .then(numReceitas => {
+        // Cria um objeto com os dados do formulário
+        let receitas = {
+            titulo: campoTituloReceita,
+            descricao: campoObservacaoReceita,
+            valor: campoValorReceita,
+            data: campoDataReceita,
+            categoria: campoCategoriaReceita,
+            conta: campoContaReceita,
+            user: usuarioCorrente.id
+        };
+        // Adiciona o objeto receitas no banco de dados
+        addReceita(receitas);
+    });
+    
+    // Limpa o formulário
+    formReceita.reset();
+
+});
+
+
+//Modal nova transação
+// Script para abrir e fechar o modal
+const caixaNovaTransacao = document.getElementById('container');
+const modalNovaTransacao = document.getElementById('modalNovaTransacao');
+function abrirModalTransacao() {
+    modalNovaTransacao.style.display = 'flex';
+}
+function fecharModalTransacao() {
+    modalNovaTransacao.style.display = 'none';
+}
+// Botão para abrir o modal
+document.getElementById('btnAbrirModalNovaTransacao').addEventListener('click', abrirModalTransacao);
+// Fecha o modal ao clicar fora da caixa e mantém as alterações
+modalNovaTransacao.addEventListener('click', function (event) {
+    if (!caixaNovaTransacao.contains(event.target)) {
+        fecharModalTransacao();
+    }
+});
+
+// JOGAR PARA OUTRO ARQUIVO POIS O LOGIN.JS TEM QUE RODAR ANTES DO DOM SER CARREGADO
+// Carregar nome do usuário
+const divLogin = document.getElementById('login-ok');
+
+function estaLogado() {
+    const usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    if (!usuarioCorrenteJSON) return false;
+    
+    const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    return !!usuarioCorrente.login;
+}
+
+if (estaLogado()) {
+    console.log("está logado");
+    divLogin.innerHTML = `
+    <span style="font-size:14px;">${usuarioCorrente.nome}</span>`;
+}
