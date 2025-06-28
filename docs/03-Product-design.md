@@ -58,7 +58,7 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 | RF-001 | O sistema deve permitir que o usuário cadastre suas receitas e despesas. | ALTA |
 | RF-002 | O sistema deve exibir um gráfico do balanço do mês | MÉDIA |
 | RF-003 | O sistema deve permitir a classificação de receitas e despesas por categorias. | MÉDIA |
-| RF-004 | O sistema deve exibir o saldo atual tota | ALTA |
+| RF-004 | O sistema deve exibir o saldo atual total | ALTA |
 | RF-005 | O sistema deve exibir o saldo mensal de receitas e despesas. | MÉDIA |
 | RF-006 | O sistema deve exibir as receitas e despesas recentes | ALTA |
 | RF-007 | O sistema deve exibir o saldo das contas do usuário | MÉDIA |
