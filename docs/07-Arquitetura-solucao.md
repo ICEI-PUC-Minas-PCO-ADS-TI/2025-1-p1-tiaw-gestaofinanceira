@@ -4,49 +4,66 @@
 
 Documentação da Arquitetura da Solução
 1. Visão Geral da Arquitetura
+A arquitetura da solução proposta para o projeto Smart Finance segue o modelo cliente-servidor distribuído. Nesse modelo, o navegador (client-side) é responsável pela interface do usuário, enquanto o servidor (server-side) responde pelo fornecimento de arquivos estáticos e pela manipulação de dados simulada via JSON Server. O armazenamento de dados pode ocorrer localmente no navegador ou de forma persistente em um arquivo de banco de dados hospedado no servidor.
 
-A arquitetura da solução proposta para o projeto "Smart Finance" segue um modelo cliente-servidor distribuído, com o navegador (client-side) responsável pela interface do usuário e uma camada de serviços (server-side) para processamento de dados e acesso a APIs externas. O armazenamento de dados persistente pode ser tanto local no navegador quanto em um servidor de banco de dados associado à hospedagem.
+A imagem apresentada ilustra essa estrutura de maneira clara, destacando as requisições feitas pelo cliente para obter arquivos HTML, CSS, JS e imagens, além do consumo de dados via endpoints da API RESTful simulada (/usuários, /receitas, /contas, /despesas) utilizando o JSON Server conectado ao arquivo db.json.
 
 2. Componentes da Solução
+A solução é composta pelos seguintes elementos principais:
 
-A solução é composta pelos seguintes elementos principais, conforme ilustrado na arquitetura:
+2.1 Navegador (Client-side)
+Páginas Web (HTML + CSS + JS): Responsáveis por exibir a interface gráfica, capturar entradas do usuário, manipular o DOM e realizar requisições HTTP para o servidor.
 
-Navegador (Client-side):
+Local Storage: Usado para armazenar temporariamente dados no navegador do usuário, como preferências, cache de informações ou sessões.
 
-Páginas Web (HTML + CSS + JS): Constituem a interface do usuário (UI) da aplicação. São responsáveis por renderizar o conteúdo, coletar entradas do usuário e interagir com as camadas de dados.
-Local Storage: Utilizado para armazenar dados localmente no navegador do usuário. Isso pode incluir preferências do usuário, dados de sessão, ou informações que não necessitam de persistência no servidor, como "Canais", "Comentários" e "Preferidas" (adaptar estes exemplos para o seu contexto, como configurações de exibição ou cache de dados).
-Hospedagem (Hosting):
+2.2 Hospedagem (Servidor)
+Arquivos Estáticos: O servidor fornece os arquivos HTML, CSS, JS, imagens e módulos, que compõem a interface da aplicação.
 
-Servidor de Aplicação/Web Server: Onde as Páginas Web são servidas e, possivelmente, onde a lógica de backend (se houver um backend próprio) é executada. A imagem sugere um servidor genérico, que pode ser um ambiente de hospedagem tradicional ou uma plataforma de nuvem.
-Banco de Dados (Implícito): Embora não explicitamente desenhado como um componente separado na hospedagem, um sistema como o Smart Finance normalmente requer um banco de dados para persistir informações de usuários, transações, categorias, etc. Este banco de dados estaria associado ao ambiente de hospedagem.
-Internet:
+JSON Server: Simula um backend RESTful, oferecendo endpoints para consulta, inserção e atualização de dados.
 
-Representa a rede de comunicação que conecta o Navegador (client-side) à Hospedagem e às APIs externas.
-NewsAPI (Exemplo de API Externa):
+Banco de Dados (Simulado): Representado pelo arquivo db.json, serve como fonte de dados persistente utilizada pelo JSON Server.
 
-A imagem inclui um exemplo de uma API externa (NewsAPI) com endpoints como "TopHeadlines", "Sources", "Everything". No contexto do Smart Finance, esta seria uma API para Dados Financeiros (ou o tipo de dado que sua aplicação consome de fontes externas). Esta API forneceria informações relevantes para o aplicativo, como cotações de investimentos, notícias econômicas, ou qualquer outro dado externo que a aplicação precise consumir.
+2.3 API Externa (Opcional)
+NewsAPI (ou APIs financeiras): Embora não apareça na imagem, o projeto pode ser estendido para consumir APIs externas, como serviços de cotação de moedas, notícias econômicas ou gráficos de investimento.
+
 3. Fluxo de Dados e Interações
+O funcionamento da aplicação segue o seguinte fluxo:
 
-O Navegador requisita as Páginas Web da Hospedagem através da Internet.
-As Páginas Web interagem com o Local Storage para leitura e escrita de dados locais.
-A Hospedagem serve as Páginas Web para o Navegador.
-A Hospedagem (ou diretamente o Navegador, dependendo da implementação do frontend) pode se comunicar com a API Externa (NewsAPI / API Financeira) via Internet para buscar dados específicos.
+O navegador requisita os arquivos estáticos (index.html, style.css, app.js) ao servidor via HTTP.
+
+O servidor entrega os arquivos, que são renderizados pelo navegador.
+
+O arquivo JavaScript (app.js) realiza chamadas do tipo fetch para consumir dados dos endpoints do JSON Server.
+
+Os dados retornados do backend (arquivo db.json) são utilizados para atualizar dinamicamente a interface.
+
+Quando necessário, o navegador também pode gravar ou ler informações do localStorage.
+
+Opcionalmente, o frontend pode acessar APIs externas para complementar os dados exibidos na interface.
+
 4. Ambiente de Hospedagem da Aplicação
+A aplicação pode ser hospedada em diversos ambientes, de acordo com os componentes utilizados:
 
-A aplicação (principalmente as Páginas Web) será hospedada em um ambiente de servidor web. As opções de hospedagem podem variar desde um servidor virtual privado (VPS), serviços de hospedagem compartilhada, até plataformas de nuvem (como Vercel, Netlify, AWS S3 para hosting estático, ou plataformas PaaS como Heroku, Google App Engine para aplicações com backend).
+Frontend (HTML, CSS, JS): Pode ser hospedado em plataformas de hospedagem estática como Vercel, Netlify ou GitHub Pages, que oferecem CDN, deploy automático e HTTPS gratuito.
 
-Para o Frontend (Páginas Web): O projeto de interface, sendo composto por HTML, CSS e JavaScript, pode ser hospedado como um site estático. Plataformas como Vercel (conforme o link anterior que você me forneceu smart-finance-navy.vercel.app) ou Netlify são excelentes escolhas para essa finalidade, pois oferecem integração contínua, CDN e fácil implantação.
-Para o Backend (se aplicável) e Banco de Dados: Se houver uma lógica de negócio no servidor ou um banco de dados próprio (além da NewsAPI), eles seriam hospedados em um ambiente de servidor mais robusto, que pode estar no mesmo provedor de nuvem ou ser um serviço de banco de dados gerenciado (como AWS RDS, Google Cloud SQL, MongoDB Atlas).
+Backend Simulado (JSON Server): Pode ser executado em ambientes como o Replit, ideal para protótipos e testes de APIs simuladas com base no db.json.
+
+Backend Real (opcional): Em uma versão mais robusta da aplicação, um backend próprio (Node.js, .NET, etc.) e um banco de dados real (MongoDB, PostgreSQL, etc.) poderiam substituir o JSON Server.
+
+APIs externas: Devem ser acessadas por meio de requisições HTTP (GET/POST) via JavaScript no navegador.
+
 5. Pré-requisitos: Projeto de Interface
+Para a implementação do projeto Smart Finance, os seguintes pré-requisitos devem ser atendidos:
 
-Para a implementação da solução, os pré-requisitos em relação ao projeto de interface são:
+HTML: Estruturação semântica e hierárquica das páginas.
 
-HTML: Estrutura semântica das páginas da aplicação.
-CSS: Estilização e design visual da interface, garantindo uma experiência de usuário consistente e responsiva.
-JavaScript: Lógica de interatividade do lado do cliente, manipulação do DOM, chamadas a APIs (internas e externas) e gerenciamento do Local Storage.
-Figma/Prototipagem (Opcional, mas recomendado): Desenho e prototipagem da interface para validação da experiência do usuário antes da implementação.
+CSS: Estilização responsiva, adaptada a diferentes tamanhos de tela.
 
-![Arquitetura da solução](images/exemplo-arquitetura.png)
+JavaScript: Manipulação da interface, consumo de APIs e controle de armazenamento local.
+
+Prototipação (Figma ou similar): Opcional, mas recomendada para validar a experiência do usuário (UX) antes da implementação definitiva.
+
+![Arquitetura da solução](images/arquitetura.png)
 
 ## Funcionalidades
 
