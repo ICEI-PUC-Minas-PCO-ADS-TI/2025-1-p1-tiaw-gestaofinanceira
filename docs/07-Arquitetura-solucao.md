@@ -188,10 +188,6 @@ Um gráfico de pizza mostrará as proporções por categoria e a lista com os va
 Tela da funcionalidade: ![Tela de funcionalidade](images/func7.jpg)
 
 
-![Tela de funcionalidade](images/exemplo-funcionalidade.png)
-
- ⚠️ COMPLETAR
-
 
 ### Estruturas de dados
 
@@ -324,10 +320,18 @@ Uso: Persistência e acesso aos dados da aplicação (usuários, transações, c
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foram realizados.
+Hospedagem e Lançamento da Plataforma
+A hospedagem e o lançamento da plataforma "Smart Finance" foram realizados utilizando o Repl.it, uma plataforma de desenvolvimento online que oferece um ambiente de codificação, colaboração e hospedagem integrados.
 
-> **Links úteis**:
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando seu site no Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+1. Desenvolvimento e Colaboração com Repl.it:
+O Repl.it foi a ferramenta central para o desenvolvimento do projeto. Ele permitiu a programação colaborativa, onde a equipe pôde escrever, testar e depurar o código diretamente no navegador. A estrutura do projeto, incluindo os arquivos de banco de dados (db.json), é gerenciada dentro do ambiente do Repl.it.
+
+Link do Projeto no Repl.it:> - [Programação colaborativa com Repl.it](https://replit.com/@acgsamuel92/SmartFinance)
+
+smart-finance no Repl.it - Este link direciona para o ambiente de desenvolvimento do projeto, onde o código-fonte, o banco de dados e outros arquivos são armazenados e editados.
+
+2. Lançamento e Acesso à Plataforma:
+Uma das principais vantagens do Repl.it é sua capacidade de hospedar e lançar aplicativos web diretamente do ambiente de desenvolvimento. Uma vez que o código é executado no Repl.it, ele automaticamente gera uma URL pública para a aplicação, tornando-a acessível na web.
+
+Em resumo:
+O Repl.it simplificou o processo de desenvolvimento e implantação ao integrar o IDE, o controle de versão (implícito) e a hospedagem. Isso permitiu que a equipe se concentrasse no código e nas funcionalidades, enquanto a plataforma se encarregava da disponibilização do "Smart Finance" na internet.
