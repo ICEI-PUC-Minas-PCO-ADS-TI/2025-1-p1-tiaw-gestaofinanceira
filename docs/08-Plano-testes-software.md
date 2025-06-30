@@ -37,3 +37,88 @@ Não deixe de enumerar os casos de teste de forma sequencial e garantir que o(s)
 | Critério de êxito | - O gráfico reflete as categorias de receitas e despesas do mês selecionado. |
 | Responsável pela elaboração do caso de teste | Gabriel Soares |
 
+<br>
+
+| **Caso de teste**  | **CT-004 – Exibir saldo atual total**  |
+|:---: |:---: |
+| Requisito associado | RF-004 - O sistema deve exibir o saldo atual total |
+| Objetivo do teste | Verificar se a aplicação exibe o saldo atual total do usuário corretamente. |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Visualizar o saldo atual total <br> - Adicionar uma receita ou despesa para verificar se o mesmo atualiza |
+| Critério de êxito | - O saldo está sendo exibido corretamente. |
+| Responsável pela elaboração do caso de teste | Samuel Aguiar |
+
+<br>
+
+
+| **Caso de teste**  | **CT-005 – Exibir saldo mensal de receitas e despesas**  |
+|:---: |:---: |
+| Requisito associado | RF-005 - O sistema deve exibir o saldo mensal de receitas e despesas. |
+| Objetivo do teste | Verificar se a aplicação exibe o saldo mensal das receitas e despesas do usuário corretamente. |
+| Passos |  - Acessar o navegador <br> - Efetuar login <br> - Visualizar o saldo atual total <br> - Adicionar uma receita ou despesa para verificar se o mesmo atualiza |
+| Critério de êxito | - O saldo está sendo exibido corretamente. |
+| Responsável pela elaboração do caso de teste | Samuel Aguiar |
+
+<br>
+
+
+| **Caso de teste**  | **CT-006 – Exibir receitas e despesas recentes**  |
+|:---: |:---: |
+| Requisito associado | RF-006 - O sistema deve exibir as receitas e despesas recentes	 |
+| Objetivo do teste | Verificar se a aplicação exibe as receitas e despesas recentes do usuário corretamente. |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Adicionar uma nova despesa <br> - Verificar se a mesma apareceu corretamente |
+| Critério de êxito | - As receitas e despesas estão sendo exibidas corretamente. |
+| Responsável pela elaboração do caso de teste | Samuel Aguiar |
+
+<br>
+
+| **Caso de teste**  | **CT-007 – Exibir saldo das contas**  |
+|:---: |:---: |
+| Requisito associado | RF-007 - O sistema deve exibir o saldo das contas do usuário	 |
+| Objetivo do teste | Verificar se a aplicação exibe o saldo das contas do usuário corretamente. |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Adicionar uma nova despesa <br> - Verificar o saldo da conta |
+| Critério de êxito | - O saldo das contas do usuário estão sendo exibidas corretamente. |
+| Responsável pela elaboração do caso de teste | Samuel Aguiar |
+
+<br>
+
+| **Caso de teste**  | **CT-008 – Exibir gráfico de receitas e despesas por categoria**  |
+|:---: |:---: |
+| Requisito associado | RF-008 - O sistema deve exibir gráficos de receitas e despesas por categoria.|
+| Objetivo do teste | Verificar se a aplicação exibe os gráficos de receitas e despesas por categoria corretamente. |
+| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Critério de êxito | - O gráfico está exibindo receitas e despesas por categoria corretamente. |
+| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+
+<br>
+
+| **Caso de teste**  | **CT-009 – Alteração de receitas e despesas**  |
+|:---: |:---: |
+| Requisito associado | RF-009 - O sistema deve permitir que o usuário altere suas receitas e despesas	 |
+| Objetivo do teste | Verificar se a aplicação permite ao usuário alterar suas receitas e despesas corretamente. |
+| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Critério de êxito | - A aplicação permite ao usuário alterar suas receitas e despesas corretamente. |
+| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+
+<br>
+
+| **Caso de teste**  | **CT-010 – Exclusão de receitas e despesas**  |
+|:---: |:---: |
+| Requisito associado | RF-010 - O sistema deve permitir que o usuário exclua suas receitas e despesas	 |
+| Objetivo do teste | Verificar se a aplicação permite que o usuário exclua suas receitas e despesas corretamente. |
+| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Critério de êxito | - A aplicação permite que o usuário exclua suas receitas e despesas corretamente. |
+| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+
+<br>
+
+| **Caso de teste**  | **CT-011 – Adicionar descrição nas receitas e despesas**  |
+|:---: |:---: |
+| Requisito associado | RF-011 - O sistema deve permitir que o usuário adicione uma descrição nas suas receitas e despesas	 |
+| Objetivo do teste | Verificar se a aplicação o usuário adicionar descrição nas suas receitas e despesas corretamente. |
+| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Critério de êxito | - A aplicação permite ao usuário adicionar descrição nas suas receitas e despesas corretamente. |
+| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+
+<br>
+
+
