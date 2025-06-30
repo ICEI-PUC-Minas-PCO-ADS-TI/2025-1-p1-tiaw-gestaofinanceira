@@ -17,7 +17,6 @@ Com base na análise das personas, foram identificadas as seguintes histórias d
 |Eduarda Vargas  |Visualizar o saldo atual total | Saber quanto dinheiro tenho disponível no momento |
 |Gerente comercial |  Visualizar um gráfico do balanço do mês | Entender se fechei o mês no positivo ou negativo |
 |Carlos Garcia   | Classificar minhas receitas e despesas por categorias | Organizar melhor meus gastos e identificar onde estou investindo meu dinheiro |
-|Um investidor experiente | Visualizar gráficos com as formas de pagamento utilizadas | Entender quais meios de pagamento uso com mais frequência |
 |Gabriel Moreira | Visualizar minhas receitas e despesas mais recentes | Ter acesso rápido às últimas movimentações financeiras |
 |Eduarda Vargas  | Visualizar o saldo de cada conta cadastrada | Saber quanto tenho em cada banco ou carteira |
 |Gabriel Moreira | Visualizar gráficos de receitas e despesas por categoria |  Entender melhor meus hábitos de consumo e identificar excessos |
