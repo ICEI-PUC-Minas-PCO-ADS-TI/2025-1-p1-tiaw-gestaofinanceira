@@ -1,30 +1,28 @@
 cff-version: 1.2.0
 message: Please cite this software using these metadata.
-title: Coloque aqui o título do seu trabalho
+title: Smart Finance
 authors:
-  - family-names: Sobrenome do aluno 1
-    given-names: Nome do aluno 1 
-  - family-names: Sobrenome do aluno 2
-    given-names: Nome do aluno 2 
-  - family-names: Sobrenome do aluno 3
-    given-names: Nome do aluno 3 
-  - family-names: Sobrenome do aluno 4
-    given-names: Nome do aluno 4 
-  - family-names: Sobrenome do aluno 5
-    given-names: Nome do aluno 5 
-  - family-names: Sobrenome do aluno 6
-    given-names: Nome do aluno 6 
+  - family-names: Paiva
+    given-names: Gabriel Soares Cardoso
+  - family-names: Guimarães
+    given-names: Guilherme Emanoel 
+  - family-names: Melo
+    given-names: Gustavo de Faria
+  - family-names: Gusmão
+    given-names: Samuel Aguiar Carvalho 
+  - family-names: Quirino
+    given-names: Samuel Elias Alves
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Sobrenome do(a) professor(a)
-    given-names: Nome do(a) professor(a)
+    family-names: Vasconcelos
+    given-names: Amália Soares Vieira de
   - name-suffix: Professora
     affiliation: PUC Minas    
 keywords:
-    - coloque aqui a palavra-chave 1
-    - coloque aqui a palavra-chave 2
-    - coloque aqui a palavra-chave 3
-repository-code: coloque o link do seu repositório
+    - Finanças
+    - Controle financeiro
+    - Educação financeira
+repository-code: https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p1-tiaw-gestaofinanceira
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2024-09-01
+date-released: 2025-06-29
