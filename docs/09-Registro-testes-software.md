@@ -43,4 +43,23 @@ Para cada caso de teste definido no <a href="08-Plano-testes-software.md"> Plano
 
 ## Avaliação
 
-Discorra sobre os resultados do teste, ressaltando os pontos fortes e fracos identificados na solução. Comente como o grupo pretende abordar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Todos os testes realizados foram concluídos com sucesso, atendendo aos critérios de êxito definidos em cada caso de teste. Isso indica que a aplicação está funcionando conforme os requisitos especificados, proporcionando uma boa experiência ao usuário e cumprindo seus objetivos principais de controle financeiro.
+
+Pontos fortes identificados:
+
+- A interface demonstrou ser intuitiva, permitindo o cadastro, alteração e exclusão de receitas e despesas sem dificuldades.
+- Os saldos totais, mensais e por conta foram atualizados corretamente após cada operação.
+- Os gráficos apresentaram os dados de maneira clara e bem segmentada por categoria, ajudando na visualização do balanço mensal.
+
+Pontos a melhorar, apesar da boa performance geral, algumas pequenas oportunidades de melhoria foram observadas:
+- O tempo de resposta para atualização dos dados, em alguns momentos, poderia ser mais rápido.
+- A ausência de mensagens de confirmação após operações (como exclusão de uma transação) pode gerar insegurança para o usuário.
+
+O grupo pretende abordar essas melhorias nas próximas iterações por meio de:
+- Otimizações no tempo de renderização das informações, especialmente nas seções de relatórios.
+- Inserção de feedbacks visuais e mensagens de confirmação nas principais ações do sistema.
+- Revisão da interface para garantir acessibilidade e clareza em todos os dispositivos.
+
+<br>
+Conclusão:
+Os testes demonstraram que a aplicação está sólida, com suas funcionalidades principais plenamente operacionais. As melhorias apontadas não comprometem o uso, mas servirão para refinar ainda mais a experiência do usuário nas futuras versões.

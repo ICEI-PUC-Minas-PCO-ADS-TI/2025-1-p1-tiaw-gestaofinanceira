@@ -85,9 +85,9 @@ Não deixe de enumerar os casos de teste de forma sequencial e garantir que o(s)
 |:---: |:---: |
 | Requisito associado | RF-008 - O sistema deve exibir gráficos de receitas e despesas por categoria.|
 | Objetivo do teste | Verificar se a aplicação exibe os gráficos de receitas e despesas por categoria corretamente. |
-| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Acessar a aba de "Relatórios  |
 | Critério de êxito | - O gráfico está exibindo receitas e despesas por categoria corretamente. |
-| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+| Responsável pela elaboração do caso de teste | Guilherme Emanoel|
 
 <br>
 
@@ -95,9 +95,9 @@ Não deixe de enumerar os casos de teste de forma sequencial e garantir que o(s)
 |:---: |:---: |
 | Requisito associado | RF-009 - O sistema deve permitir que o usuário altere suas receitas e despesas	 |
 | Objetivo do teste | Verificar se a aplicação permite ao usuário alterar suas receitas e despesas corretamente. |
-| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Clicar em cima da receita ou despesa desejada <br> - Realizar as alterações e salvar |
 | Critério de êxito | - A aplicação permite ao usuário alterar suas receitas e despesas corretamente. |
-| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+| Responsável pela elaboração do caso de teste | Guilherme Emanoel|
 
 <br>
 
@@ -105,9 +105,9 @@ Não deixe de enumerar os casos de teste de forma sequencial e garantir que o(s)
 |:---: |:---: |
 | Requisito associado | RF-010 - O sistema deve permitir que o usuário exclua suas receitas e despesas	 |
 | Objetivo do teste | Verificar se a aplicação permite que o usuário exclua suas receitas e despesas corretamente. |
-| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Clicar em cima da receita ou despesa desejada <br> - Realizar a exclusão |
 | Critério de êxito | - A aplicação permite que o usuário exclua suas receitas e despesas corretamente. |
-| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+| Responsável pela elaboração do caso de teste | Guilherme Emanoel|
 
 <br>
 
@@ -115,9 +115,9 @@ Não deixe de enumerar os casos de teste de forma sequencial e garantir que o(s)
 |:---: |:---: |
 | Requisito associado | RF-011 - O sistema deve permitir que o usuário adicione uma descrição nas suas receitas e despesas	 |
 | Objetivo do teste | Verificar se a aplicação o usuário adicionar descrição nas suas receitas e despesas corretamente. |
-| Passos | - Passo 1 <br> - Passo 2 <br> |
+| Passos | - Acessar o navegador <br> - Efetuar login <br> - Clicar no botão "+" <br> - Adicionar uma despesa ou receita <br> - Preencher o campo de descrição |
 | Critério de êxito | - A aplicação permite ao usuário adicionar descrição nas suas receitas e despesas corretamente. |
-| Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
+| Responsável pela elaboração do caso de teste | Guilherme Emanoel|
 
 <br>
 
