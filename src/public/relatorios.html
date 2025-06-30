@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Finance | Relatórios</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/relatorios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./assets/js/login.js"></script>
+    <script>
+        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+        if (!usuarioCorrente.login) {
+            window.location.href = LOGIN_URL;
+        }
+
+        function exibeUsuarios() {
+
+            // Popula a tabela com os registros do banco de dados
+            let listaUsuarios = '';
+            for (i = 0; i < db_usuarios.length; i++) {
+                let usuario = db_usuarios[i];
+                listaUsuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
+            }
+
+            // Substitui as linhas do corpo da tabela
+            document.getElementById("table-usuarios").innerHTML = listaUsuarios
+
+        }
+
+        function initPage() {
+
+            // Associa a função de logout ao botão
+            document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            // Informa o nome do usuário logado
+            document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+
+            // Lista os usuários 
+            exibeUsuarios ();
+        }
+
+        // Associa ao evento de carga da página a função para verificar se o usuário está logado
+        window.addEventListener('load', initPage);
+    </script>
+</head>
+
+<body>
+    <header>
+        <h2>Smart Finance</h2>
+        <div>
+            <nav class="nav-principal">
+                <ul class="ul-nav-principal">
+                    <li>
+                        <a href="index.html" style="text-align: center;">
+                            <i data-lucide="house" class="icon-menu"></i>
+                            Visão Geral
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html" class="active">
+                            <i data-lucide="chart-pie" class="icon-menu"></i>
+                            Relatórios
+                        </a>
+                    </li>
+                </ul>
+                <button class="btnLogoutNav" onclick="logoutUser()">
+                    <i data-lucide="log-out" class="icon-menu"></i>
+                    Logout
+                </button>
+            </nav>
+        </div>
+        <div class="user-info">
+            <div id="login-ok" style="text-align: right;"></div>
+            <button class="btnLogoutMenu" onclick="logoutUser()">
+                Logout
+                <i data-lucide="log-out"></i>
+            </button>
+        </div>
+    </header>
+    <div class="nav-meses">
+        <div class="meses">
+            <button id="btn-anterior" class="btnMes"><i data-lucide="chevron-left" class="icon-seta"></i></button>
+            <div id="meses" style="display: inline-flex; gap: 1rem;"></div>
+            <button id="btn-proximo" class="btnMes"><i data-lucide="chevron-right" class="icon-seta"></i></button>
+        </div>
+        <button id="btn-hoje" style="display: none;">Voltar para o mês atual</button>
+    </div>
+    <!-- Gráfico de balanço do mês-->
+    <div class="graficos">
+        <div id="titulo-grafico"></div>
+        <div class="grafico-container">
+            <canvas id="grafico-balanco"></canvas>
+        </div>
+        <div id="dados-grafico-balanco"></div>
+    </div>
+    <!-- Gráfico de receitas por categorias-->
+    <div class="graficos">
+        <h4 id="titulo-grafico">Receitas por categorias</h4>
+        <div class="grafico-container">
+            <canvas id="grafico-receitas"></canvas>
+        </div>
+        <div id="dados-grafico-receitas"></div>
+    </div>
+    <!-- Gráfico de despesas por categorias-->
+    <div class="graficos ultimo-grafico" style="margin-bottom: 5em;">
+        <h4 id="titulo-grafico">Despesas por categorias</h4>
+        <div class="grafico-container">
+            <canvas id="grafico-despesas"></canvas>
+        </div>
+        <div id="dados-grafico-despesas"></div>
+    </div>
+
+
+    <script>lucide.createIcons();</script>
+    <script src="assets/js/receitas.js" defer></script>
+    <script src="assets/js/relatorios.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

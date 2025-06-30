@@ -6,16 +6,13 @@
 
 `1º semestre/2025`
 
-Objetivo do Projeto
-
-O objetivo deste projeto é desenvolver uma plataforma que permita aos usuários monitorar seus gastos financeiros de forma fácil e organizada. A plataforma ajudará a registrar despesas, categorizar os gastos e fornecer relatórios que facilitem a visualização do orçamento pessoal. Com isso, buscamos auxiliar os usuários no controle financeiro, permitindo que tomem decisões mais conscientes sobre seu dinheiro. Além disso, o sistema poderá oferecer gráficos e alertas para ajudar na gestão financeira de forma eficiente.
+O Smart Finance tem como principal objetivo oferecer uma solução digital simples, intuitiva e acessível para auxiliar usuários no controle de suas finanças pessoais. Através de uma aplicação web responsiva, buscamos facilitar o registro e a visualização de receitas e despesas, promovendo uma gestão financeira mais clara, organizada e consciente.
 
 ## Integrantes
  
 * Gabriel Soares Cardoso Paiva
 * Guilherme Emanoel Guimarães
 * Gustavo de Faria Melo
-* Gustavo Victor de Paula
 * Samuel Aguiar Carvalho Gusmão
 * Samuel Elias Alves Quirino
 * Thiago Fernandes Lemos
@@ -26,13 +23,42 @@ O objetivo deste projeto é desenvolver uma plataforma que permita aos usuários
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+O Smart Finance é uma aplicação web desenvolvida para auxiliar no controle de finanças pessoais. Com ele, o usuário pode registrar receitas, despesas e acompanhar seu saldo em tempo real.
 
-Não deixe de informar o link onde a aplicação estará disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+Abaixo estão as instruções para instalar e executar a aplicação, seja localmente ou por meio do ambiente online.
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
+Online: nossa aplicação está hospedade no Replit de forma gratuita, ou seja, o deploy não é permanente, o repositório do Replit pode ser acessado pelo seguinte link: [Repositório Smart Finance no Replit](https://replit.com/@acgsamuel92/SmartFinance) e a aplicação na web acessada por esse: [Smart Finance Aplicação Web](https://8f000477-ad8f-450e-8dd0-6c655c718eb2-00-1qlqz9hv6719k.picard.replit.dev/login.html) (Importante frisar que esse link corresponde ao repositório original e só estará online quando estiver em fase de "Run", em caso de cópia do repositório será gerado um novo link).
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+Ambiente local: para acessar nossa aplicação via ambiente local é preciso seguir alguns passos:
+
+Antes de tudo, é necessário que modifique no arquivo [package.json](src/package.json) a linha 7 onde está: 
+
+```
+"start": "node index.js"
+```
+
+Por: 
+
+```
+"start": "json-server --watch ./db/db.json"
+```
+
+Para executar a aplicação de back-end e permitir o acesso ao seu site, é necessário instalar o Node.js em seu computador. Para isso, siga as instruções disponíveis no site do [**Node.js**](https://nodejs.org/), realizando o download da versão LTS (a versão mais estável do ambiente).
+
+Assim que o Node.js estiver instalado em seu computador, deve-se abrir o terminal na pasta do seu projeto e executar o seguinte comando:
+
+```
+$> npm install
+```
+
+Isso permitirá que o NPM instale todos os pacotes necessários para a execução do back-end. O NPM é o aplicativo responsável por gerenciar as dependências de um projeto e instalar os pacotes do Node.js.
+
+Em seguida, com os pacotes já instalados, basta executar o seguinte comando:
+
+```
+$> npm start
+```
+
 
 # Documentação
 
@@ -58,8 +84,3 @@ O link e o usuário/senha descritos acima são apenas exemplos de como tais info
 * <a href="presentation/README.md">Apresentação do projeto</a>
 
 
-
-
-> **Links úteis**:
-> - [Sintaxe básica de gravação e formatação no GitHub - GitHub Docs](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-> - [Markdown® Básico: Sintaxe, Uso &amp; Exemplos [Passo a Passo]](https://markdown.net.br/sintaxe-basica/)

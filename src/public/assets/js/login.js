@@ -2,18 +2,22 @@
 //
 // Esse módulo realiza o registro de novos usuários e login para aplicações com 
 // backend baseado em API REST provida pelo JSONServer
-// Os dados de usuário estão localizados no arquivo db.json que acompanha este projeto.
+// Os dados de usuário estão disponíveis na seguinte URL
+// https://jsonserver.rommelpuc.repl.co/usuarios
+//
+// Para fazer o seu servidor, acesse o projeto do JSONServer no Replit, faça o 
+// fork do projeto e altere o arquivo db.json para incluir os dados do seu projeto.
+// URL Projeto JSONServer: https://replit.com/@rommelpuc/JSONServer
 //
 // Autor: Rommel Vieira Carneiro (rommelcarneiro@gmail.com)
-// Data: 09/09/2024
+// Data: 29/04/2024
 //
 // Código LoginApp  
 
 
 // Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
-let RETURN_URL = "/modulos/login/index.html";
-const API_URL = '/usuarios';
+const LOGIN_URL = "login.html";
+const apiUrl = '/usuarios';
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
@@ -21,52 +25,52 @@ var db_usuarios = {};
 // Objeto para o usuário corrente
 var usuarioCorrente = {};
 
-// Inicializa a aplicação de Login
-function initLoginApp () {
-    let pagina = window.location.pathname;
-    if (pagina != LOGIN_URL) {
-        // CONFIGURA A URLS DE RETORNO COMO A PÁGINA ATUAL
-        sessionStorage.setItem('returnURL', pagina);
-        RETURN_URL = pagina;
-
-        // INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
-        usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
-        if (usuarioCorrenteJSON) {
-            usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
-        } else {
-            window.location.href = LOGIN_URL;
+// função para gerar códigos randômicos a serem utilizados como código de usuário
+// Fonte: https://stackoverflow.com/questions/105034/how-to-create-guid-uuid
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();//Timestamp
+    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
         }
-
-        // REGISTRA LISTENER PARA O EVENTO DE CARREGAMENTO DA PÁGINA PARA ATUALIZAR INFORMAÇÕES DO USUÁRIO
-        document.addEventListener('DOMContentLoaded', function () {
-            showUserInfo ('userInfo');
-        });
-    }
-    else {
-        // VERIFICA SE A URL DE RETORNO ESTÁ DEFINIDA NO SESSION STORAGE, CASO CONTRARIO USA A PÁGINA INICIAL
-        let returnURL = sessionStorage.getItem('returnURL');
-        RETURN_URL = returnURL || RETURN_URL
-        
-        // INICIALIZA BANCO DE DADOS DE USUÁRIOS
-        carregarUsuarios(() => {
-            console.log('Usuários carregados...');
-        });
-    }
-};
-
-
-function carregarUsuarios(callback) {
-    fetch(API_URL)
-    .then(response => response.json())
-    .then(data => {
-        db_usuarios = data;
-        callback ()
-    })
-    .catch(error => {
-        console.error('Erro ao ler usuários via API JSONServer:', error);
-        displayMessage("Erro ao ler usuários");
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
 }
+
+
+// Dados de usuários para serem utilizados como carga inicial
+const dadosIniciais = {
+    usuarios: [
+        { "id": generateUUID (), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com"},
+        { "id": generateUUID (), "login": "user", "senha": "123", "nome": "Usuario Comum", "email": "user@abc.com"},
+    ]
+};
+
+// Inicializa o usuarioCorrente e banco de dados de usuários da aplicação de Login
+function initLoginApp () {
+    // PARTE 1 - INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
+    usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    if (usuarioCorrenteJSON) {
+        usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
+    }
+
+    // PARTE 2 - INICIALIZA BANCO DE DADOS DE USUÁRIOS
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            db_usuarios = data;
+        })
+        .catch(error => {
+            console.error('Erro ao ler usuários via API JSONServer:', error);
+        });
+};
+
 
 // Verifica se o login do usuário está ok e, se positivo, direciona para a página inicial
 function loginUser (login, senha) {
@@ -97,17 +101,19 @@ function loginUser (login, senha) {
 
 // Apaga os dados do usuário corrente no sessionStorage
 function logoutUser () {
-    sessionStorage.removeItem ('usuarioCorrente');
+    usuarioCorrente = {};
+    sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
     window.location = LOGIN_URL;
 }
 
 function addUser (nome, login, senha, email) {
 
     // Cria um objeto de usuario para o novo usuario 
-    let usuario = { "login": login, "senha": senha, "nome": nome, "email": email };
+    let newId = generateUUID ();
+    let usuario = { "id": newId, "login": login, "senha": senha, "nome": nome, "email": email };
 
     // Envia dados do novo usuário para ser inserido no JSON Server
-    fetch(API_URL, {
+    fetch(apiUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -118,20 +124,13 @@ function addUser (nome, login, senha, email) {
         .then(data => {
             // Adiciona o novo usuário na variável db_usuarios em memória
             db_usuarios.push (usuario);
-            displayMessage("Usuário inserido com sucesso");
+            alert("Usuário inserido com sucesso");
+            window.location.href = LOGIN_URL;
         })
         .catch(error => {
             console.error('Erro ao inserir usuário via API JSONServer:', error);
-            displayMessage("Erro ao inserir usuário");
+            alert("Erro ao inserir usuário");
         });
-}
-
-function showUserInfo (element) {
-    var elemUser = document.getElementById(element);
-    if (elemUser) {
-        elemUser.innerHTML = `${usuarioCorrente.nome} (${usuarioCorrente.login}) 
-                    <a onclick="logoutUser()">❌</a>`;
-    }
 }
 
 // Inicializa as estruturas utilizadas pelo LoginApp

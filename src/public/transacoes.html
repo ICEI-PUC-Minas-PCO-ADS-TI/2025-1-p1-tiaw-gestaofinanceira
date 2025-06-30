@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Finance</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/saldo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./assets/js/login.js"></script>
+    <script>
+        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+        if (!usuarioCorrente.login) {
+            window.location.href = LOGIN_URL;
+        }
+
+        function exibeUsuarios() {
+
+            // Popula a tabela com os registros do banco de dados
+            let listaUsuarios = '';
+            for (i = 0; i < db_usuarios.length; i++) {
+                let usuario = db_usuarios[i];
+                listaUsuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
+            }
+
+            // Substitui as linhas do corpo da tabela
+            document.getElementById("table-usuarios").innerHTML = listaUsuarios
+
+        }
+
+        function initPage() {
+
+            // Associa a função de logout ao botão
+            document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            // Informa o nome do usuário logado
+            document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+
+            // Lista os usuários 
+            exibeUsuarios ();
+        }
+
+        // Associa ao evento de carga da página a função para verificar se o usuário está logado
+        window.addEventListener('load', initPage);
+    </script>
+</head>
+<body>
+    <header>
+        <h2>Smart Finance</h2>
+        <div>
+            <nav class="nav-principal">
+                <ul class="ul-nav-principal">
+                    <li>
+                        <a href="index.html" style="text-align: center;">
+                            <i data-lucide="house" class="icon-menu"></i>
+                            Visão Geral
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html" class="active">
+                            <i data-lucide="arrow-down-up" class="icon-menu"></i>
+                            Transações
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html">
+                            <i data-lucide="chart-pie" class="icon-menu"></i>
+                            Relatórios
+                        </a>
+                    </li>
+                </ul>
+                <button class="btnLogoutNav" onclick="logoutUser()">
+                    <i data-lucide="log-out" class="icon-menu"></i>
+                    Logout
+                </button>
+            </nav>
+        </div>
+        <div class="user-info">
+            <div id="login-ok" style="text-align: right;"></div>
+            <button class="btnLogoutMenu" onclick="logoutUser()">
+                Logout
+                <i data-lucide="log-out"></i>
+            </button>
+        </div>
+    </header>
+    <section style="display: flex; width: 50vw; margin: 4em auto 0; padding: 4em; border-radius: 1em; align-items: center; flex-direction: column; text-align: center; background-color: var(--gray-50);">
+        <i data-lucide="triangle-alert" class="alert" style="color: yellow; width: 4em; height: 4em;"></i>
+        <h3>Função em desenvolvimento</h3>
+        <p>Controle suas finanças pela seção de receitas recentes e despesas recentes em <a href="index.html" style="color: inherit;">Visão Geral</a>.</p>
+    </section>
+
+    <script>lucide.createIcons();</script>
+    <script src="./assets/js/receitas.js" defer></script>
+    <script src="./assets/js/despesas.js" defer></script>
+    <script src="./assets/js/categorias-receitas.js" defer></script>
+    <script src="./assets/js/categorias-despesas.js" defer></script>
+    <script src="./assets/js/receitas-recentes.js" defer></script>
+    <script src="./assets/js/despesas-recentes.js"></script>
+    <script src="./assets/js/saldo.js" defer></script>
+    <script src="./assets/js/saldo-contas.js" defer></script>
+    <script src="./assets/js/contas-despesas.js" defer></script>
+    <script src="./assets/js/contas-receitas.js" defer></script>
+</body>
+</html>
